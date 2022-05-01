@@ -29,4 +29,12 @@ public class Util {
   public static int max3Elem(int a, int b, int c) {
     return Math.max(a, Math.max(b, c));
   }
+
+  public static boolean isInbound(char[][] grid, int r, int c) {
+    return r >= 0 && r < grid.length && c >= 0 && c < grid.length;
+  }
+
+  public static boolean isInbound(int[][] grid, int r, int c) {
+    return r >= 0 && r < grid.length && c >= 0 && c < grid.length;
+  }
 }
