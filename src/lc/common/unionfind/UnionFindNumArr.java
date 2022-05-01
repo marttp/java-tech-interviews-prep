@@ -31,6 +31,7 @@ public class UnionFindNumArr implements UnionFind<Integer> {
         this.rank[rootX] = rootY;
         this.rank[rootY]++;
       }
+      return true;
     }
     return false;
   }
