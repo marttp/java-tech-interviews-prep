@@ -1,5 +1,7 @@
 package lc.common;
 
+import lc.blind75.easy.ReverseLinkedList_206;
+
 public class ListNode {
 
   public int val;
@@ -15,5 +17,9 @@ public class ListNode {
   public ListNode(int val, ListNode next) {
     this.val = val;
     this.next = next;
+  }
+
+  public static ListNode reverseLinkedList(ListNode head) {
+    return new ReverseLinkedList_206().reverseLinkedList(head);
   }
 }
