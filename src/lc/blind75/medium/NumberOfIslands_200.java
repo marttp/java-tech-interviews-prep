@@ -2,7 +2,7 @@ package lc.blind75.medium;
 
 import utility.Util;
 
-public class NumberOfIslands {
+public class NumberOfIslands_200 {
 
   private static final char WATER = '0';
   private static final char LAND = '1';
