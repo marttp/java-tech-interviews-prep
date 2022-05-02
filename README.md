@@ -38,12 +38,12 @@ ___
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 ___
 ### Books for Technical interviews
-- [Elements of Programming Interviews in Java: The Insiders' Guide 2nd Edition](https://www.amazon.com/gp/product/1517671272)
+- ❤️ [Elements of Programming Interviews in Java: The Insiders' Guide 2nd Edition](https://www.amazon.com/gp/product/1517671272)
 - [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms#toc)
 - [Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition](https://www.amazon.com/gp/product/0984782850)
 - [The Complete Coding Interview Guide in Java: An effective guide for aspiring Java developers to ace their programming interviews](https://www.amazon.com/gp/product/1839212063)
-- [System Design Interview – An insider's guide](https://www.amazon.com/gp/product/B08CMF2CQF)
-- [](https://www.amazon.com/gp/product/1736049119)
+- ❤️ [System Design Interview – An insider's guide](https://www.amazon.com/gp/product/B08CMF2CQF)
+- ❤️ [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.com/gp/product/1736049119)
 ___
 ### Video Lectures (for virtual learner)
 - [CSE 373 -- Fall 2020](https://youtube.com/playlist?list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx) Analysis of Algorithms by Steven Skiena
