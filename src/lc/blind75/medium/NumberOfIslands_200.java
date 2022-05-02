@@ -1,13 +1,14 @@
 package lc.blind75.medium;
 
+import static constant.GraphConstant.DIR_C;
+import static constant.GraphConstant.DIR_R;
+
 import utility.Util;
 
 public class NumberOfIslands_200 {
 
   private static final char WATER = '0';
   private static final char LAND = '1';
-  private static final int[] DIR_R = {-1, 0, 1, 0};
-  private static final int[] DIR_C = {0, 1, 0, -1};
 
   public int numIslands(char[][] grid) {
     if (grid == null || grid.length == 0 || grid[0].length == 0) {
