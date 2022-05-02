@@ -1,5 +1,7 @@
 package additional;
 
+import static utility.Util.reverse;
+
 public class ReverseWordsInString {
 
   public String reverseWord(String strs) {
@@ -19,13 +21,5 @@ public class ReverseWordsInString {
       reverse(words, start, end - 1);
     }
     return String.valueOf(words);
-  }
-
-  private void reverse(char[] words, int start, int end) {
-    for (int i = start, j = end; i < j; i++, j--) {
-      char tmp = words[i];
-      words[i] = words[j];
-      words[j] = tmp;
-    }
   }
 }
