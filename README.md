@@ -1,10 +1,9 @@
 # Leetcode & Technical Interview practices
 
 `Creator & Maintainer: Thanaphoom Babparn`
-
-
-##### TODO: วางแผนว่าจะ Data structure & Algorithms version พื้นฐานข้างล่างนี้ คัดคำพูดให้จบใน 1 README
-
+___
+### Data Structures & Algorithms (รวบรัด)
+[Directory javadsa](https://github.com/marttp/java-leetcode-practice/blob/main/javadsa/README.md)
 ___
 ### Recommended Online Judges
 - [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
