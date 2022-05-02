@@ -38,8 +38,15 @@ ___
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 ___
 ### Books for Technical interviews
-- [TBC]
+- [Elements of Programming Interviews in Java: The Insiders' Guide 2nd Edition](https://www.amazon.com/gp/product/1517671272)
+- [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms#toc)
+- [Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition](https://www.amazon.com/gp/product/0984782850)
+- [The Complete Coding Interview Guide in Java: An effective guide for aspiring Java developers to ace their programming interviews](https://www.amazon.com/gp/product/1839212063)
+- [System Design Interview – An insider's guide](https://www.amazon.com/gp/product/B08CMF2CQF)
+- [](https://www.amazon.com/gp/product/1736049119)
 ___
 ### Video Lectures (for virtual learner)
-- [TBC] from top universities
+- [CSE 373 -- Fall 2020](https://youtube.com/playlist?list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx) Analysis of Algorithms by Steven Skiena
+- [MIT 6.006 Introduction to Algorithms, Spring 2020](https://youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY) by MIT OpenCourseWare
+- [MIT 6.046J Design and Analysis of Algorithms, Spring 2015](https://youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp) by MIT OpenCourseWare
 - [ไอต้าวแว่นทำ Leetcode v1](https://youtube.com/playlist?list=PLm3A9eDaMzum0utChSxo2mei2KGVaHAOm) <br/> วางแผนไว้ว่าจะปรับปรุงในอนาคตเป็น Free Course บน Youtube เลย แต่รอให้ตัวเองไปได้ก่อน 😄
