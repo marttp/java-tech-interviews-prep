@@ -10,6 +10,7 @@ import utility.Util;
 
 public class CourseScheduleII_210 {
 
+  // Kahn's Algorithm
   public int[] findOrder(int numCourses, int[][] prerequisites) {
     Map<Integer, List<Integer>> graph = new HashMap<>();
     int[] inDegree = new int[numCourses];
