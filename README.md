@@ -1,8 +1,14 @@
 # Leetcode & Technical Interview practices
 
-`Creator & Maintainer: Thanaphoom Babparn`
+`Creator & Maintainer: Thanaphoom Babparn` [LinkedIn](https://www.linkedin.com/in/thanaphoom-babparn/)
+
+Repository นี้ถูกสร้างขึ้นมา เพื่อใช้เก็บ Solutions ต่าง ๆ จากการทำ Leetcode,  
+เนื้อหาเพิ่มเติมที่สอดแทรก และรวมถึง resources ในการเตรียมตัวสำหรับ Technical interviews  
+ที่อาจจะมาถึงในไม่ช้าของผู้อ่าน  
+
+เหมาะกับผู้ที่สนใจต้องการหาความรู้เพิ่มเติม หรือผู้ที่ฝึกฝน Data structures & Algorithms question type
 ___
-### Data Structures & Algorithms (รวบรัด)
+### Data Structures & Algorithms (Short-note รวบรัด)
 [Directory javadsa](https://github.com/marttp/java-leetcode-practice/blob/main/javadsa/README.md)
 ___
 ### Recommended Online Judges
