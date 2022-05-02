@@ -1,5 +1,6 @@
 package utility;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
@@ -40,5 +41,27 @@ public class Util {
 
   public static int getLowercaseIndex(char c) {
     return c - 'a';
+  }
+
+  public static void reverse(char[] words, int start, int end) {
+    for (int i = start, j = end; i < j; i++, j--) {
+      char tmp = words[i];
+      words[i] = words[j];
+      words[j] = tmp;
+    }
+  }
+
+  public static void reverse(int[] words, int start, int end) {
+    for (int i = start, j = end; i < j; i++, j--) {
+      int tmp = words[i];
+      words[i] = words[j];
+      words[j] = tmp;
+    }
+  }
+
+  public static <T> void reverse(List<T> A, int start, int end) {
+    for (int i = start, j = end; i < j; i++, j--) {
+      Collections.swap(A, i, j);
+    }
   }
 }
