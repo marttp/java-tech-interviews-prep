@@ -12,8 +12,10 @@ public class LongestPalindromeSubstring_5 {
     for (int i = 0; i < s.length(); i++) {
       // try on both case that might be happened
       // assume odd length, try to expand palindrome as possible
+      // odd-length palindromes, single character center
       int len1 = expandFromCenter(s, i, i);
       // assume even length
+      // even-length palindromes, consecutive characters center (2 characters at center)
       int len2 = expandFromCenter(s, i, i + 1);
       int longest = Integer.max(len1, len2);
 
