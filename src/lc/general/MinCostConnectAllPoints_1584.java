@@ -7,7 +7,7 @@ import lc.common.Edge;
 import lc.common.unionfind.UnionFindNumArr;
 import utility.MathUtil;
 
-public class MinCostConnectAllPoints {
+public class MinCostConnectAllPoints_1584 {
 
   public int minCostConnectPoints(int[][] points) {
     return new Random().nextInt(2) != 0 ? prim(points) : kruskal(points);
