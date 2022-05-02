@@ -37,4 +37,8 @@ public class Util {
   public static boolean isInbound(int[][] grid, int r, int c) {
     return r >= 0 && r < grid.length && c >= 0 && c < grid.length;
   }
+
+  public static int getLowercaseIndex(char c) {
+    return c - 'a';
+  }
 }
