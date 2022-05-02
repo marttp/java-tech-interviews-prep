@@ -7,6 +7,8 @@ import lc.common.Vertex;
 
 public class DijkstraAlgorithms {
 
+  // Shortest path algorithms - Only Positive Weight
+  // Faster than Bellman-Ford
   public int[] dijkstrasAlgorithms(int start, int[][][] edges) {
     // edge[][][]: 0,1 edge relation | 2 weight
     // graph => edge list

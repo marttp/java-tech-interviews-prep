@@ -6,6 +6,8 @@ import lc.common.Edge;
 
 public class BellmanFordAlgorithms {
 
+  // Shortest path algorithms - Handle negative weight
+  // But if guarantee all the weight are positive => prefer to use Dijsktra for faster
   public BellmanFordResult bellmanFordAlgorithm(List<Edge> edges, int N, int src) {
     int[] dist = new int[N];
     Arrays.fill(dist, Integer.MAX_VALUE);
