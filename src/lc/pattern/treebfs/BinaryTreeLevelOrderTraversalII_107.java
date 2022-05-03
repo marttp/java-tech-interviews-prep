@@ -7,26 +7,21 @@ import java.util.List;
 import java.util.Queue;
 import lc.common.TreeNode;
 
-public class BinaryTreeZigzagLevelOrderTraversal_103 {
+public class BinaryTreeLevelOrderTraversalII_107 {
 
-  public List<List<Integer>> levelZigzagOrder(TreeNode root) {
+  public List<List<Integer>> levelOrderBottom(TreeNode root) {
     if (root == null) {
       return Collections.emptyList();
     }
     List<List<Integer>> result = new ArrayList<>();
     Queue<TreeNode> q = new LinkedList<>();
     q.add(root);
-    boolean isFromRight = true;
     while (!q.isEmpty()) {
       int size = q.size();
       List<Integer> currentLevel = new ArrayList<>();
       while (size-- > 0) {
         var node = q.poll();
-        if (isFromRight) {
-          currentLevel.add(node.val);
-        } else {
-          currentLevel.add(0, node.val);
-        }
+        currentLevel.add(node.val);
         if (node.left != null) {
           q.add(node.left);
         }
@@ -34,8 +29,7 @@ public class BinaryTreeZigzagLevelOrderTraversal_103 {
           q.add(node.right);
         }
       }
-      result.add(currentLevel);
-      isFromRight = !isFromRight;
+      result.add(0, currentLevel);
     }
     return result;
   }
