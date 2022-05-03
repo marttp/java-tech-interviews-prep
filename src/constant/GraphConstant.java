@@ -14,4 +14,12 @@ public class GraphConstant {
       {0, -1}, /*SKIP CENTER*/ {0, 1},
       {1, -1}, {1, 0}, {1, 1}
   };
+
+  // Knight Possible Moves
+  public static final int[][] KNIGHT_MOVES = {
+      {-1, -2}, {1, -2},
+      {-2, -1}, {2, -1},
+      {-2, 1}, {2, 1},
+      {-1, 2}, {1, 2}
+  };
 }
