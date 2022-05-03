@@ -2,14 +2,19 @@
 
 `Creator & Maintainer: Thanaphoom Babparn` [LinkedIn](https://www.linkedin.com/in/thanaphoom-babparn/)
 
-Repository นี้ถูกสร้างขึ้นมา เพื่อใช้เก็บ Solutions ต่าง ๆ จากการทำ Leetcode,  
-เนื้อหาเพิ่มเติมที่สอดแทรก และรวมถึง resources ในการเตรียมตัวสำหรับ Technical interviews  
-ที่อาจจะมาถึงในไม่ช้าของผู้อ่าน  
+Repository นี้ถูกสร้างขึ้นมา ด้วยวัตถุประสงค์ดังนี้  
+1. เพื่อใช้เก็บ Solutions ต่าง ๆ จากการทำ Leetcode
+2. คัดแยก Type of question เป็นเรื่อง ๆ เพื่อส่งเสรืมการพัฒนาให้คุ้นชินกับ Pattern
+3. รวบรวมทรัพยากรในการศึกษา เพื่อให้สะดวกในการอ้างอิงในภายหลัง (มีทั้งฟรีและเสียค่าใช้จ่าย)
+4. ให้ความรู้และเนื้อหาเพิ่มเติมในการเตรียมตัวสำหรับ Technical Interviews ที่อาจจะมาถึงในไม่ช้าของผู้อ่าน
+5. สนับสนุน ส่งเสริมคุณภาพของนักพัฒนาที่สนใจในภาษา Java (สามารถ transferable และปรับเปลี่ยนให้เข้ากับภาษาที่ตัวเองถนัดได้)
+6. ปูความรู้ให้กับนักพัฒนาที่อยากไปท้าทายความสามารถในต่างประเทศ รวมถึงตระกูล Big tech company
+7. ให้ผู้เขียนย้อนกลับมาอ่านเมื่อลืม (พอดีขึ้ลืมมาก ๆ) จึงออกแบบให้ Refresh Knowledge ให้เร็วที่สุด และคุ้มค่าที่สุด
 
-เหมาะกับผู้ที่สนใจต้องการหาความรู้เพิ่มเติม หรือผู้ที่ฝึกฝน Data structures & Algorithms question type
+เหมาะกับผู้ที่สนใจต้องการหาความรู้เพิ่มเติม หรือผู้ที่ฝึกฝน Data structures & Algorithms questions type
 ___
-### Data Structures & Algorithms (Short-note รวบรัด)
-[Directory javadsa](https://github.com/marttp/java-leetcode-practice/blob/main/javadsa/README.md)
+### Technical Interviews Fundamental
+[Redirect to Technical knowledge for interviews](https://github.com/marttp/java-leetcode-practice/blob/main/technicalknowledge)
 ___
 ### Recommended Online Judges
 - [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
