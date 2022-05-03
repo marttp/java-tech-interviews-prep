@@ -1,7 +1,7 @@
 package lc.blind75.medium;
 
-import lc.common.unionfind.UnionFind;
-import lc.common.unionfind.UnionFindMap;
+import common.unionfind.UnionFind;
+import common.unionfind.UnionFindMap;
 import utility.GenerateExample;
 
 public class GraphValidTree_261 implements GenerateExample {

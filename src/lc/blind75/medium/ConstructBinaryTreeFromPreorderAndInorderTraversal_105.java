@@ -3,7 +3,7 @@ package lc.blind75.medium;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal_105 {
 

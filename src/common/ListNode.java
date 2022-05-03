@@ -1,4 +1,4 @@
-package lc.common;
+package common;
 
 import lc.blind75.easy.ReverseLinkedList_206;
 

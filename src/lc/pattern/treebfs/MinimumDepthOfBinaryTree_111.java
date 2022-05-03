@@ -2,7 +2,7 @@ package lc.pattern.treebfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class MinimumDepthOfBinaryTree_111 {
 

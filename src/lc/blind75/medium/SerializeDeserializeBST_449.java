@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class SerializeDeserializeBST_449 {
 

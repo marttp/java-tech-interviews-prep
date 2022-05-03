@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class BinaryTreeLevelOrderTraversal_102 {
 

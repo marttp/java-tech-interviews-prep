@@ -2,7 +2,7 @@ package additional.advgraph;
 
 import java.util.Arrays;
 import java.util.List;
-import lc.common.Edge;
+import common.Edge;
 
 public class BellmanFordAlgorithms {
 

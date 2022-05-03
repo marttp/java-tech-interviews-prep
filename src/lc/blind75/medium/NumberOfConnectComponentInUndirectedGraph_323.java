@@ -2,7 +2,7 @@ package lc.blind75.medium;
 
 import java.util.HashSet;
 import java.util.Set;
-import lc.common.unionfind.UnionFindNumArr;
+import common.unionfind.UnionFindNumArr;
 
 public class NumberOfConnectComponentInUndirectedGraph_323 {
 

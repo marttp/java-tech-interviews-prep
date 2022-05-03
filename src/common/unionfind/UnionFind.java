@@ -1,4 +1,4 @@
-package lc.common.unionfind;
+package common.unionfind;
 
 public interface UnionFind<T> {
 

@@ -2,7 +2,7 @@ package lc.general;
 
 import java.util.HashMap;
 import java.util.Map;
-import lc.common.NodeWithRandomPointer;
+import common.NodeWithRandomPointer;
 
 public class CopyListWithRandomPointer_138 {
 

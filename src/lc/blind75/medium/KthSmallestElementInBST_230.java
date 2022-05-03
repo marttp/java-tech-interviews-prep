@@ -2,7 +2,7 @@ package lc.blind75.medium;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class KthSmallestElementInBST_230 {
 
