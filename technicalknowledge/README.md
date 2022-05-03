@@ -7,3 +7,5 @@
 - Back to back high level design
 - System Design Interviews component must knows
 - Object-Oriented Design
+- Database Schema Design
+- SQL crash course
