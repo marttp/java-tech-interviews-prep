@@ -3,7 +3,7 @@ package additional.advgraph;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
-import lc.common.Vertex;
+import common.Vertex;
 
 public class DijkstraAlgorithms {
 

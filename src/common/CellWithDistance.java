@@ -1,4 +1,4 @@
-package lc.common;
+package common;
 
 public class CellWithDistance extends Cell {
 

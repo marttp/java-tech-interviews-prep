@@ -1,6 +1,6 @@
 package lc.blind75.easy;
 
-import lc.common.ListNode;
+import common.ListNode;
 
 public class ReverseLinkedList_206 {
 

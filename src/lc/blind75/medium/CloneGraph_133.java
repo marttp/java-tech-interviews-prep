@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
-import lc.common.Node;
+import common.Node;
 
 public class CloneGraph_133 {
 

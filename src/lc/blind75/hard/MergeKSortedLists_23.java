@@ -2,7 +2,7 @@ package lc.blind75.hard;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
-import lc.common.ListNode;
+import common.ListNode;
 
 public class MergeKSortedLists_23 {
 

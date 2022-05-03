@@ -3,7 +3,7 @@ package additional.advgraph;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-import lc.common.Edge;
+import common.Edge;
 
 public class PrimAlgorithms {
 

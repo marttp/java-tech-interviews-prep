@@ -1,6 +1,6 @@
 package lc.blind75.medium;
 
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class ValidateBST_98 {
 

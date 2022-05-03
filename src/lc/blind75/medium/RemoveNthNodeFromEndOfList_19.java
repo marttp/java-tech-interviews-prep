@@ -1,6 +1,6 @@
 package lc.blind75.medium;
 
-import lc.common.ListNode;
+import common.ListNode;
 
 public class RemoveNthNodeFromEndOfList_19 {
 

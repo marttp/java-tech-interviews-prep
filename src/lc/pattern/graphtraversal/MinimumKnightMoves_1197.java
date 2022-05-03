@@ -3,7 +3,7 @@ package lc.pattern.graphtraversal;
 import constant.GraphConstant;
 import java.util.LinkedList;
 import java.util.Queue;
-import lc.common.CellWithDistance;
+import common.CellWithDistance;
 
 public class MinimumKnightMoves_1197 {
 

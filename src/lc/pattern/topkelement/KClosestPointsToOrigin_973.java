@@ -1,7 +1,7 @@
 package lc.pattern.topkelement;
 
 import java.util.PriorityQueue;
-import lc.common.Point;
+import common.Point;
 
 public class KClosestPointsToOrigin_973 {
 

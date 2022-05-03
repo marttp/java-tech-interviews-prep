@@ -3,8 +3,8 @@ package additional.advgraph;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-import lc.common.Edge;
-import lc.common.unionfind.UnionFindNumArr;
+import common.Edge;
+import common.unionfind.UnionFindNumArr;
 
 public class KruskalAlgorithms {
 

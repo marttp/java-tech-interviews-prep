@@ -3,8 +3,8 @@ package lc.general;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Random;
-import lc.common.Edge;
-import lc.common.unionfind.UnionFindNumArr;
+import common.Edge;
+import common.unionfind.UnionFindNumArr;
 import utility.MathUtil;
 
 public class MinCostConnectAllPoints_1584 {

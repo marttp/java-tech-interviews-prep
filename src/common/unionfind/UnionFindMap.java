@@ -1,4 +1,4 @@
-package lc.common.unionfind;
+package common.unionfind;
 
 import java.util.HashMap;
 import java.util.Map;

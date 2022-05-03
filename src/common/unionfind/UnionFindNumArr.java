@@ -1,4 +1,4 @@
-package lc.common.unionfind;
+package common.unionfind;
 
 public class UnionFindNumArr implements UnionFind<Integer> {
 

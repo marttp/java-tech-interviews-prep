@@ -1,4 +1,4 @@
-package lc.blind75.medium;
+package lc.pattern.treebfs;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Queue;
 import common.TreeNode;
 
-public class BinaryTreeLevelOrderTraversal_102 {
+public class BinaryTreeLevelOrderTraversalII_107 {
 
-  public List<List<Integer>> levelOrderTraversal(TreeNode root) {
+  public List<List<Integer>> levelOrderBottom(TreeNode root) {
     if (root == null) {
       return Collections.emptyList();
     }
@@ -20,7 +20,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
       int size = q.size();
       List<Integer> currentLevel = new ArrayList<>();
       while (size-- > 0) {
-        TreeNode node = q.poll();
+        var node = q.poll();
         currentLevel.add(node.val);
         if (node.left != null) {
           q.add(node.left);
@@ -29,7 +29,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
           q.add(node.right);
         }
       }
-      result.add(currentLevel);
+      result.add(0, currentLevel);
     }
     return result;
   }

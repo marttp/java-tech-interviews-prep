@@ -1,6 +1,6 @@
 package lc.blind75.easy;
 
-import lc.common.TreeNode;
+import common.TreeNode;
 
 public class SubTreeOfAnotherTree_572 {
 

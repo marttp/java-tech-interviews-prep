@@ -1,6 +1,6 @@
 package additional;
 
-import lc.common.ListNode;
+import common.ListNode;
 
 public class RearrangeLinkedList {
 
