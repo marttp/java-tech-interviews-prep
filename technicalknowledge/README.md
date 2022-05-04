@@ -10,3 +10,5 @@
 - Object-Oriented Design
 - Database Schema Design
 - SQL crash course
+- Testing fundamental
+- Network 101
