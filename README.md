@@ -17,27 +17,29 @@ ___
 [Redirect to Technical knowledge for interviews](https://github.com/marttp/java-leetcode-practice/blob/main/technicalknowledge)
 ___
 ### Recommended Online Judges
-- [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
+- ⭐️ [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
 - [AlgoExpert](https://www.algoexpert.io/product) - เป็น Platform รวมที่มีให้ coding, video solutions และรวมถึง SystemExpert product
 - [codewars](https://www.codewars.com/)
-- [InterviewBit](https://www.interviewbit.com/practice/)
+- ⭐️ [InterviewBit](https://www.interviewbit.com/practice/)
 - [HackerRank](https://www.hackerrank.com/dashboard)
 - [CodeSignal](https://app.codesignal.com/)
 
 ___
 ### Leetcode Lists
-- [Blind 75 Must Do Leetcode](https://leetcode.com/list/9ox075v5)
+- ⭐️ [Blind 75 Must Do Leetcode](https://leetcode.com/list/9ox075v5)
 - [60 questions to solve](https://leetcode.com/list/9pyzpzvh)
 - [Must Do Easy Questions](https://leetcode.com/list/9emfoder)
 - [Must Do Medium Questions](https://leetcode.com/list/9emfelot)
-- [List of questions sorted by common patterns.](https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-common-patterns.)
-
+- ⭐️ [List of questions sorted by common patterns.](https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-common-patterns.)
+- ⭐️ [LEETCODE PATTERNS](https://seanprashad.com/leetcode-patterns/) by Sean Prashad
+- [neetcode.io](https://neetcode.io/)
+- [Grind 75 questions](https://www.techinterviewhandbook.org/grind75)
 ___
 ### Additional resources
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
-- [LEETCODE PATTERNS](https://seanprashad.com/leetcode-patterns/) by Sean Prashad
+- [Striver’s SDE Sheet – Top Coding Interview Problems](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 - [TECHIE DELIGHT](https://www.techiedelight.com/) for learning & reading approaches
-- [Java | Data Structure Mostly used Syntax](https://leetcode.com/discuss/study-guide/1170715/Java-or-Data-Structure-Mostly-used-Syntax)
+- ⭐️ [Java | Data Structure Mostly used Syntax](https://leetcode.com/discuss/study-guide/1170715/Java-or-Data-Structure-Mostly-used-Syntax)
 - [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
