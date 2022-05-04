@@ -64,4 +64,16 @@ public class Util {
       Collections.swap(A, i, j);
     }
   }
+
+  public static void swap(int[] arr, int i, int j) {
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
+
+  public static <T> void swap(T[] arr, int i, int j) {
+    T tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
 }
