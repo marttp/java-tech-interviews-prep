@@ -1,6 +1,8 @@
 package lc.general;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import utility.GenerateExample;
 
@@ -39,6 +41,8 @@ public class MakingFileNamesUnique_1487 implements GenerateExample {
 
   @Override
   public void example() {
-
+    List<String> testData = List.of("fifo", "fifo(1)", "fifo", "fifo(1)");
+    String[] result = getFolderNames(testData.toArray(new String[0]));
+    System.out.println("Result: " + Arrays.toString(result)); // [fifo, fifo(1), fifo(2), fifo(1)(2)]
   }
 }
