@@ -18,7 +18,7 @@ ___
 ___
 ### Recommended Online Judges
 - ⭐️ [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
-- [Educative.io](https://www.educative.io/) - มีให้เรียนหลายแบบ ไม่ใช่แค่ [interviews prep](https://learn.educative.io/interview-prep) เป็นรูปแบบ text based (ผู้เขียนใช้แล้วโอเค)
+- [Educative.io](https://www.educative.io/) - มีให้เรียนหลายแบบ ไม่ใช่แค่ [interviews prep](https://learn.educative.io/interview-prep) เป็นรูปแบบ text based (ผู้เขียนใช้แล้วรู้สึกโอเคเลย)
 - [AlgoExpert](https://www.algoexpert.io/product) - เป็น Platform รวมที่มีให้ coding, video solutions และรวมถึง SystemExpert product (ผู้เขียนใช้แล้ว ดีเลยละ แต่วีดีโออาจจะนานไปหน่อยนึง)
 - [codewars](https://www.codewars.com/)
 - ⭐️ [InterviewBit](https://www.interviewbit.com/practice/)
