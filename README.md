@@ -4,7 +4,7 @@
 
 Repository นี้ถูกสร้างขึ้นมา ด้วยวัตถุประสงค์ดังนี้  
 1. เพื่อใช้เก็บ Solutions ต่าง ๆ จากการทำ Leetcode
-2. คัดแยก Type of question เป็นเรื่อง ๆ เพื่อส่งเสรืมการพัฒนาให้คุ้นชินกับ Pattern
+2. คัดแยก Type of question เป็นเรื่อง ๆ เพื่อส่งเสริมการพัฒนาให้คุ้นชินกับ Pattern
 3. รวบรวมทรัพยากรในการศึกษา เพื่อให้สะดวกในการอ้างอิงในภายหลัง (มีทั้งฟรีและเสียค่าใช้จ่าย)
 4. ให้ความรู้และเนื้อหาเพิ่มเติมในการเตรียมตัวสำหรับ Technical Interviews ที่อาจจะมาถึงในไม่ช้าของผู้อ่าน
 5. สนับสนุน ส่งเสริมคุณภาพของนักพัฒนาที่สนใจในภาษา Java (สามารถ transferable และปรับเปลี่ยนให้เข้ากับภาษาที่ตัวเองถนัดได้)
@@ -18,7 +18,8 @@ ___
 ___
 ### Recommended Online Judges
 - ⭐️ [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
-- [AlgoExpert](https://www.algoexpert.io/product) - เป็น Platform รวมที่มีให้ coding, video solutions และรวมถึง SystemExpert product
+- [Educative.io](https://www.educative.io/) - มีให้เรียนหลายแบบ ไม่ใช่แค่ [interviews prep](https://learn.educative.io/interview-prep) เป็นรูปแบบ text based (ผู้เขียนใช้แล้วโอเค)
+- [AlgoExpert](https://www.algoexpert.io/product) - เป็น Platform รวมที่มีให้ coding, video solutions และรวมถึง SystemExpert product (ผู้เขียนใช้แล้ว ดีเลยละ แต่วีดีโออาจจะนานไปหน่อยนึง)
 - [codewars](https://www.codewars.com/)
 - ⭐️ [InterviewBit](https://www.interviewbit.com/practice/)
 - [HackerRank](https://www.hackerrank.com/dashboard)
