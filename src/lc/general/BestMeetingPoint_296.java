@@ -3,7 +3,7 @@ package lc.general;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BestMeetingPoint {
+public class BestMeetingPoint_296 {
 
   public int minTotalDistance(int[][] grid) {
     if (grid.length == 1 && grid[0].length == 1) {
