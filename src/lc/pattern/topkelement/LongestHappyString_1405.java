@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
 public class LongestHappyString_1405 {
+
   public String longestDiverseString(int a, int b, int c) {
     Map<Character, Integer> map = new HashMap<>();
     if (a > 0) {
