@@ -1,5 +1,7 @@
 package lc.blind75.medium;
 
+import static constant.StringConstant.LOWERCASE_AMOUNT;
+
 import utility.Util;
 
 public class DesignAddSearchWord_211 {
@@ -50,8 +52,6 @@ public class DesignAddSearchWord_211 {
   }
 
   private static class TrieNode {
-
-    private static final int LOWERCASE_AMOUNT = 25;
     boolean isWord = true;
     TrieNode[] children = new TrieNode[LOWERCASE_AMOUNT];
   }

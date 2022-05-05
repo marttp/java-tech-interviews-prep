@@ -1,5 +1,7 @@
 package lc.blind75.hard;
 
+import static constant.StringConstant.LOWERCASE_AMOUNT;
+
 import constant.GraphConstant;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +63,6 @@ public class WordSearchII_212 {
   private static class TrieNode {
 
     String word = null;
-    TrieNode[] children = new TrieNode[26];
+    TrieNode[] children = new TrieNode[LOWERCASE_AMOUNT];
   }
 }

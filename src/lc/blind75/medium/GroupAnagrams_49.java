@@ -1,5 +1,7 @@
 package lc.blind75.medium;
 
+import static constant.StringConstant.LOWERCASE_AMOUNT;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -28,7 +30,7 @@ public class GroupAnagrams_49 implements GenerateExample {
   public List<List<String>> groupAnagramsOptimize(String[] strs) {
     Map<String, List<String>> group = new HashMap<>();
     for (var s : strs) {
-      int[] counter = new int[26];
+      int[] counter = new int[LOWERCASE_AMOUNT];
       for (char c : s.toCharArray()) {
         counter[c - 'a']++;
       }
