@@ -1,4 +1,4 @@
-package lc.pattern.dp.knapsack;
+package lc.pattern.dp.unboundknapsack;
 
 import java.util.Random;
 
