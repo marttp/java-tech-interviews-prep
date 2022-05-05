@@ -1,5 +1,7 @@
 package lc.blind75.medium;
 
+import static constant.StringConstant.LOWERCASE_AMOUNT;
+
 import java.util.List;
 import utility.GenerateExample;
 import utility.Util;
@@ -62,7 +64,6 @@ public class ImplementTrie_208 implements GenerateExample {
 
   private static class TrieNode {
 
-    private static final int LOWERCASE_AMOUNT = 25;
     boolean isWord = true;
     TrieNode[] children = new TrieNode[LOWERCASE_AMOUNT];
   }
