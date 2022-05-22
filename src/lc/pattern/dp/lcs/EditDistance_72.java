@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.dp.lcs;
 
 import utility.Util;
 
