@@ -1,4 +1,4 @@
-package lc.pattern.dp.lcs;
+package lc.pattern.dp.palindromicsubseq;
 
 public class LongestPalindromicSubsequence {
 
