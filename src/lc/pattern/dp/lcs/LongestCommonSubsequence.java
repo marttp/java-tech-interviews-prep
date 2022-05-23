@@ -25,6 +25,26 @@ public class LongestCommonSubsequence {
       }
       return maxLength;
     }
+
+    public int findLCSLengthSpaceOptimize(String s1, String s2) {
+      int m = s1.length();
+      int n = s2.length();
+      int[][] dp = new int[2][n + 1];
+      int maxLength = 0;
+      for (int i1 = 1; i1 <= m; i1++) {
+        for (int i2 = 1; i2 <= n; i2++) {
+          if (s1.charAt(i1 - 1) == s2.charAt(i2 - 1)) {
+            dp[i1 % 2][i2] = 1 + dp[(i1 - 1) % 2][i2 - 1];
+          } else {
+            dp[i1 % 2][i2] = Math.max(dp[(i1 - 1) % 2][i2], dp[i1 % 2][i2 - 1]);
+          }
+          maxLength = Math.max(maxLength, dp[i1 % 2][i2]);
+        }
+      }
+      return maxLength;
+    }
+
+
   }
 
   public static class TopDown {
