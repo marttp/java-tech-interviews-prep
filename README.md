@@ -33,8 +33,8 @@ ___
 - [Must Do Medium Questions](https://leetcode.com/list/9emfelot)
 - ⭐️ [List of questions sorted by common patterns.](https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-common-patterns.)
 - ⭐️ [LEETCODE PATTERNS](https://seanprashad.com/leetcode-patterns/) by Sean Prashad
-- [neetcode.io](https://neetcode.io/)
-- [Grind 75 questions](https://www.techinterviewhandbook.org/grind75)
+- ⭐️ [neetcode.io](https://neetcode.io/)
+- ⭐️ [Grind 75 questions](https://www.techinterviewhandbook.org/grind75)
 ___
 ### Additional resources
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
