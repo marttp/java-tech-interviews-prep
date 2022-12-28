@@ -6,7 +6,7 @@
 - Data Structures & Algorithms in Java
 - Object-Oriented Programming
 - Back to back high level design
-- System Design Interviews component must know
+- [System Design Interviews component must know](#)
 - Object-Oriented Design
 - Database Schema Design
 - SQL crash course
