@@ -2,7 +2,7 @@
 
 TBC
 
-## Target roles: Beginner, Mid-Level, Senior
+**Target roles:** Beginner, Mid-Level, Senior
 
 ## Topics
 
