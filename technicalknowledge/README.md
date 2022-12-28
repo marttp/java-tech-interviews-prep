@@ -1,6 +1,6 @@
-# README
+# Technical knowledge for Java developer interviewing (Beginner/Mid-Level/Senior)
 
-### Planning
+TBC
 
 - [Java crash course](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/java_fundamental.md)
 - [Java possible technical questions that have a chance to come up](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/java_tech_qna.md)
