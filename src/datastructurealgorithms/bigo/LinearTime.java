@@ -1,6 +1,8 @@
 package datastructurealgorithms.bigo;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class LinearTime {
 
@@ -34,5 +36,18 @@ public class LinearTime {
             max = Integer.max(max, array[i]);
         }
         return List.of(min, max);
+    }
+
+    public static boolean hasDuplicateElement(List<Integer> a, List<Integer> b) {
+        Set<Integer> set = new HashSet<>();
+        for (int n : a) {
+            set.add(n);
+        }
+        for (int n : b) {
+            if (b.contains(n)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
