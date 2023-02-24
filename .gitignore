@@ -98,3 +98,6 @@ fabric.properties
 
 .idea/
 *.iml
+
+.metals/
+.vscode/

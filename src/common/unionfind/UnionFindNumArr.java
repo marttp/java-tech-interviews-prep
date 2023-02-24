@@ -24,9 +24,9 @@ public class UnionFindNumArr implements UnionFind<Integer> {
       int rankX = this.rank[rootX];
       int rankY = this.rank[rootY];
       if (rankX > rankY) {
-        this.rank[rootY] = rootX;
+        this.parent[rootY] = rootX;
       } else if (rankX < rankY) {
-        this.rank[rootX] = rootY;
+        this.parent[rootX] = rootY;
       } else {
         this.rank[rootX] = rootY;
         this.rank[rootY]++;
