@@ -8,7 +8,7 @@
 
 ### Java Fundamentals ✅
 
-คิดว่าสามารถดูได้จากตรงนี้แทน ขออภัยด้วยนะครับที่เป็น Video format
+คิดว่าสามารถดูได้จากตรงนี้แทน มาจาก channel ของผมเอง ขออภัยด้วยนะครับที่เป็น Video format 🙇‍♂️
 - [Java 21 + OOP - ภาษาไทย [2024]](https://youtube.com/playlist?list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&si=Qsx1nH3tKbm_C92Y)
 - [Object-oriented programming crash course ด้วย Java](https://www.youtube.com/watch?v=mqoNdgn9-bU&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=27&pp=gAQBiAQB)
 - [SOLID principles crash course สไตล์แอดมาร์ท](https://www.youtube.com/watch?v=1r1doEAGyus&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=29&t=16s&pp=gAQBiAQB)
