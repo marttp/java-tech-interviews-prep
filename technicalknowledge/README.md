@@ -14,6 +14,10 @@
 - [SOLID principles crash course สไตล์แอดมาร์ท](https://www.youtube.com/watch?v=1r1doEAGyus&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=29&t=16s&pp=gAQBiAQB)
 - [Tips & Tricks - Data structures ใช้บ่อยบนภาษา Java ตอนสัมภาษณ์งาน และทำ Online Assessment](https://www.youtube.com/watch?v=K9KzARJUIsU&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=37&t=6213s&pp=gAQBiAQB)
 
+### Spring Boot - Backend ✅
+
+- [เนื้อหา Spring Boot ตามใจฉัน](https://youtube.com/playlist?list=PLm3A9eDaMzum5fChmohnoWscmRHaK9aOJ&si=CsHAXf6GF7JuCUKy)
+
 ### Data Structures & Algorithms ⏳
 
 - [Data Structures & Algorithms in Java](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/dsa_java.md)
