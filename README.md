@@ -21,7 +21,7 @@ ___
 - [Educative.io](https://www.educative.io/) - มีให้เรียนหลายแบบ ไม่ใช่แค่ [interviews prep](https://learn.educative.io/interview-prep) เป็นรูปแบบ text based (ผู้เขียนใช้แล้วรู้สึกโอเคเลย)
 - [AlgoExpert](https://www.algoexpert.io/product) - เป็น Platform รวมที่มีให้ coding, video solutions และรวมถึง SystemExpert product (ผู้เขียนใช้แล้ว ดีเลยละ แต่วีดีโออาจจะนานไปหน่อยนึง)
 - [codewars](https://www.codewars.com/)
-- ⭐️ [InterviewBit](https://www.interviewbit.com/practice/)
+- [InterviewBit](https://www.interviewbit.com/practice/)
 - [HackerRank](https://www.hackerrank.com/dashboard)
 - [CodeSignal](https://app.codesignal.com/)
 
@@ -29,9 +29,9 @@ ___
 ### Leetcode Lists
 - ⭐️ [Blind 75 Must Do Leetcode](https://leetcode.com/list/9ox075v5)
 - ⭐️ [List of questions sorted by common patterns.](https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-common-patterns.)
-- ⭐️ [LEETCODE PATTERNS](https://seanprashad.com/leetcode-patterns/) by Sean Prashad
-- ⭐️ [neetcode.io](https://neetcode.io/)
-- ⭐️ [Grind 75 questions](https://www.techinterviewhandbook.org/grind75)
+- [LEETCODE PATTERNS](https://seanprashad.com/leetcode-patterns/) by Sean Prashad
+- [neetcode.io](https://neetcode.io/)
+- [Grind 75 questions](https://www.techinterviewhandbook.org/grind75)
 ___
 ### Additional resources
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
