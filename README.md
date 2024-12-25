@@ -15,6 +15,11 @@ Repository นี้ถูกสร้างขึ้นมา ด้วยว�
 ___
 ### Technical Interviews Fundamental
 [Redirect to Technical knowledge for interviews](https://github.com/marttp/java-leetcode-practice/blob/main/technicalknowledge)
+
+### Mock Interview example
+
+[Mock Interview เพื่อการศึกษา feat. เพจ เมื่อฉันมีสามีเป็นโปรแกรมเมอร์](https://youtu.be/PaJxy8qSMOE?si=M5e6l_ilHrsAULzY)
+
 ___
 ### Recommended Online Judges
 - ⭐️ [Leetcode](https://leetcode.com/) - For technical interview questions resources, เรียนรู้ได้จากโจทย์ หรือที่ Tab Discussion
