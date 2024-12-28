@@ -1,6 +1,6 @@
 # Data Structures & Algorithms in Java (Crash Course)
 
-### Video format
+## Video format
 
 [Data Structures & Algorithms in Java ที่พอจำเป็นในการใช้สมัครงาน](https://youtube.com/playlist?list=PLm3A9eDaMzun0A4KBOHYBAr8m_4Avad5C&si=J22RFpAHBzsT0nBt)
 
@@ -11,7 +11,9 @@ Structures และ Algorithms โดยมีเป้าหมายเพื
 ไม่ว่าคุณจะเป็นนักพัฒนาที่มีประสบการณ์ที่ต้องการทบทวนทักษะของคุณ หรือเป็นผู้เริ่มต้นที่ต้องการเรียนรู้ Playlist
 นี้ถูกออกแบบมาสำหรับทุกคน
 
-### TODO: วางแผนว่าจะ Data structure & Algorithms version พื้นฐานข้างล่างนี้ คัดคำพูดให้จบใน 1 README
+## เนื้อหา
+
+TODO: วางแผนว่าจะ Data structure & Algorithms version พื้นฐานข้างล่างนี้ คัดคำพูดให้จบใน 1 README
 
 1. Introduction - How's important of Data Structures & Algorithms
 2. Big-O Notation
