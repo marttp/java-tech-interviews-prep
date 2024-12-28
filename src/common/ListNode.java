@@ -22,4 +22,9 @@ public class ListNode {
   public static ListNode reverseLinkedList(ListNode head) {
     return new ReverseLinkedList_206().reverseLinkedList(head);
   }
+
+  @Override
+  public String toString() {
+    return "[" + val + "]";
+  }
 }
