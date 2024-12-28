@@ -43,6 +43,7 @@ ___
 - ⭐️ [Java | Data Structure Mostly used Syntax](https://leetcode.com/discuss/study-guide/1170715/Java-or-Data-Structure-Mostly-used-Syntax)
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [hello interview - System Design](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction)
 ___
 ### Books for Technical interviews
 - ❤️ [Elements of Programming Interviews in Java: The Insiders' Guide 2nd Edition](https://www.amazon.com/gp/product/1517671272)
