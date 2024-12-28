@@ -21,7 +21,7 @@
 ### Data Structures & Algorithms ⏳
 
 - [Data Structures & Algorithms in Java](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/dsa_java.md)
-- [Java possible technical questions that have a chance to come up](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/java_tech_qna.md)
+- [Coding question patterns](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/question_pattern.md)
 
 ### System Design Interviews ⏳
 
