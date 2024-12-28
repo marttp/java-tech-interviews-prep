@@ -35,6 +35,11 @@ public class BinarySearchTreeNode<T extends Comparable<T>> {
         }
     }
 
+    @Override
+    public String toString() {
+        return "(" + this.value + ")";
+    }
+
     public static <T extends Comparable<T>> BinarySearchTreeNode<T> searchBST(BinarySearchTreeNode<T> root, T val) {
         if (root == null) {
             return null;
