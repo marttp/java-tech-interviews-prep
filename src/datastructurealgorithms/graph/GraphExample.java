@@ -14,13 +14,24 @@ public class GraphExample {
         return graph;
     }
 
+    public static Map<Integer, List<Integer>> buildGraph(List<List<Integer>> edges) {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        for (var e : edges) {
+            graph.putIfAbsent(e.getFirst(), new ArrayList<>());
+            graph.putIfAbsent(e.getLast(), new ArrayList<>());
+            graph.get(e.getFirst()).add(e.getLast());
+            graph.get(e.getLast()).add(e.getFirst());
+        }
+        return graph;
+    }
+
     public static boolean dfs(int source, int destination, Map<Integer, List<Integer>> graph,
                                  Set<Integer> visited) {
         if (source == destination) {
             return true;
         }
         for (int v : graph.get(source)) {
-            if (!visited.add(v)) {
+            if (visited.add(v)) {
                 if (dfs(v, destination, graph, visited)) {
                     return true;
                 }
