@@ -44,6 +44,8 @@ ___
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [hello interview - System Design](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction)
+- ⭐️ [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=bZ1go_DrsNMDdnT6)
+- ⭐️ [Graph Algorithms for Technical Interviews - Full Course](https://youtu.be/tWVWeAqZ0WU?si=YJmiwY6KD-tYuuYe)
 ___
 ### Books for Technical interviews
 - ❤️ [Elements of Programming Interviews in Java: The Insiders' Guide 2nd Edition](https://www.amazon.com/gp/product/1517671272)
