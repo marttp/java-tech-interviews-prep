@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.unionfind;
 
 import common.unionfind.UnionFindNumArr;
 
