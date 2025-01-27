@@ -4,7 +4,40 @@ import java.util.*;
 
 public class CourseScheduleIV_1462 {
 
-    public List<Boolean> checkIfPrerequisiteSolution1(
+    public List<Boolean> checkIfPrerequisite(
+            int numCourses,
+            int[][] prerequisites,
+            int[][] queries
+    ) {
+        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        for (var p : prerequisites) {
+            adjList.putIfAbsent(p[0], new ArrayList<>());
+            adjList.get(p[0]).add(p[1]);
+        }
+
+        boolean[][] isPrerequisiteTable = new boolean[numCourses][numCourses];
+        for (int course = 0; course < numCourses; course++) {
+            LinkedList<Integer> queue = new LinkedList<>();
+            queue.offer(course);
+            while (!queue.isEmpty()) {
+                int current = queue.poll();
+                for (int next : adjList.getOrDefault(current, List.of())) {
+                    if (!isPrerequisiteTable[course][next]) {
+                        isPrerequisiteTable[course][next] = true;
+                        queue.offer(next);
+                    }
+                }
+            }
+        }
+
+        List<Boolean> result = new ArrayList<>();
+        for (var q : queries) {
+            result.add(isPrerequisiteTable[q[0]][q[1]]);
+        }
+        return result;
+    }
+
+    public List<Boolean> checkIfPrerequisiteNaive(
             int numCourses,
             int[][] prerequisites,
             int[][] queries
