@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.dp.fibonacci;
 
 public class MinCostClimbingStairs_746 {
     public int minCostClimbingStairs(int[] cost) {
