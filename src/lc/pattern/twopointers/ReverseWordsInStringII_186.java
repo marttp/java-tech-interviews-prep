@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.twopointers;
 
 import utility.Util;
 
