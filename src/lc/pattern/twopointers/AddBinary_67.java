@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.twopointers;
 
 public class AddBinary_67 {
     public String addBinary(String a, String b) {
