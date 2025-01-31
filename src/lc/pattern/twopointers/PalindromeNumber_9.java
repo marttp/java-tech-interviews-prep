@@ -1,4 +1,4 @@
-package lc.general;
+package lc.pattern.twopointers;
 
 public class PalindromeNumber_9 {
 
