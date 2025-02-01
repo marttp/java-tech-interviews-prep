@@ -1,4 +1,4 @@
-package lc.general;
+package lc.general.medium;
 
 import java.util.LinkedList;
 import java.util.Queue;
