@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class LetterTilePossibilities_1079 {
 
-
     public int numTilePossibilities(String tiles) {
         Set<String> result = new HashSet<>();
         boolean[] isUsed = new boolean[tiles.length()];
