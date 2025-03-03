@@ -35,5 +35,28 @@ public class PartitionArrayAccordingToGivenPivot_2161 {
             return nums;
         }
     }
-    
+
+    class Solution2 {
+        public int[] pivotArray(int[] nums, int pivot) {
+            int length = nums.length;
+            int[] result = new int[length];
+            int writeIndex = 0;
+            for (int n : nums) {
+                if (n < pivot) {
+                    result[writeIndex++] = n;
+                }
+            }
+            for (int n : nums) {
+                if (n == pivot) {
+                    result[writeIndex++] = n;
+                }
+            }
+            for (int n : nums) {
+                if (n > pivot) {
+                    result[writeIndex++] = n;
+                }
+            }
+            return result;
+        }
+    }
 }
