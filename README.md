@@ -59,3 +59,4 @@ ___
 - [CSE 373 -- Fall 2020](https://youtube.com/playlist?list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx) Analysis of Algorithms by Steven Skiena
 - [MIT 6.006 Introduction to Algorithms, Spring 2020](https://youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY) by MIT OpenCourseWare
 - [MIT 6.046J Design and Analysis of Algorithms, Spring 2015](https://youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp) by MIT OpenCourseWare
+- [Data Structures & Algorithms in Java ที่พอจำเป็นในการใช้สมัครงาน](https://youtube.com/playlist?list=PLm3A9eDaMzun0A4KBOHYBAr8m_4Avad5C&si=nlSBYrjdl62BJQu3) by ผมเองเนี่ยแหละ
