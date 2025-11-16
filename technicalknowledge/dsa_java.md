@@ -49,32 +49,7 @@ Bit manipulation is the act of algorithmically manipulating bits or other pieces
 *   Clearing a bit: `n & ~(1 << k)` clears the k-th bit of n.
 *   Toggling a bit: `n ^ (1 << k)` toggles the k-th bit of n.
 
-```java
-public class BitManipulationExample {
-    public static void main(String[] args) {
-        int n = 10; // 1010 in binary
 
-        // Check if even or odd
-        if ((n & 1) == 0) {
-            System.out.println(n + " is even.");
-        } else {
-            System.out.println(n + " is odd.");
-        }
-
-        // Set the 2nd bit (0-indexed)
-        int numberWithBitSet = n | (1 << 2); // 1010 | 0100 = 1110 (14)
-        System.out.println("Setting the 2nd bit of " + n + ": " + numberWithBitSet);
-
-        // Clear the 3rd bit
-        int numberWithBitCleared = n & ~(1 << 3); // 1010 & ~(1000) = 1010 & 0111 = 0010 (2)
-        System.out.println("Clearing the 3rd bit of " + n + ": " + numberWithBitCleared);
-
-        // Toggle the 1st bit
-        int numberWithBitToggled = n ^ (1 << 1); // 1010 ^ 0010 = 1000 (8)
-        System.out.println("Toggling the 1st bit of " + n + ": " + numberWithBitToggled);
-    }
-}
-```
 
 ## 3. Pointers and References in Java
 Java does not have explicit pointers like C or C++. Instead, it uses references. (Java ไม่มีพอยน์เตอร์ที่ชัดเจนเหมือนใน C หรือ C++ แต่จะใช้การอ้างอิงแทน)
@@ -82,44 +57,7 @@ Java does not have explicit pointers like C or C++. Instead, it uses references.
 *   **Primitive Types**: `int`, `char`, `boolean`, etc., are passed by value. When you pass a primitive variable to a method, a copy of the variable is made. (ประเภทข้อมูลพื้นฐาน: `int`, `char`, `boolean` ฯลฯ จะถูกส่งผ่านค่า เมื่อคุณส่งตัวแปรประเภทข้อมูลพื้นฐานไปยังเมธอด จะมีการสร้างสำเนาของตัวแปรขึ้น)
 *   **Object Types**: All objects in Java are accessed through references. When you pass an object to a method, the reference to the object is passed by value. This means the method gets a copy of the reference, but both the original reference and the copy point to the same object in memory. Therefore, changes made to the object's state within the method will be reflected outside the method. (ประเภทอ็อบเจกต์: อ็อบเจกต์ทั้งหมดใน Java จะถูกเข้าถึงผ่านการอ้างอิง เมื่อคุณส่งอ็อบเจกต์ไปยังเมธอด การอ้างอิงไปยังอ็อบเจกต์จะถูกส่งผ่านค่า ซึ่งหมายความว่าเมธอดจะได้รับสำเนาของการอ้างอิง แต่ทั้งการอ้างอิงดั้งเดิมและสำเนาจะชี้ไปที่อ็อบเจกต์เดียวกันในหน่วยความจำ ดังนั้น การเปลี่ยนแปลงสถานะของอ็อบเจกต์ภายในเมธอดจะส่งผลต่อนอกเมธอดด้วย)
 
-```java
-public class PassByValueVsReference {
 
-    public static void main(String[] args) {
-        // Pass-by-value for primitive types
-        int x = 10;
-        System.out.println("Before calling modifyPrimitive: " + x);
-        modifyPrimitive(x);
-        System.out.println("After calling modifyPrimitive: " + x);
-
-        System.out.println("--------------------");
-
-        // Pass-by-reference for object types
-        MyObject obj = new MyObject(20);
-        System.out.println("Before calling modifyObject: " + obj.value);
-        modifyObject(obj);
-        System.out.println("After calling modifyObject: " + obj.value);
-    }
-
-    public static void modifyPrimitive(int value) {
-        value = 100;
-        System.out.println("Inside modifyPrimitive: " + value);
-    }
-
-    public static void modifyObject(MyObject myObj) {
-        myObj.value = 200;
-        System.out.println("Inside modifyObject: " + myObj.value);
-    }
-}
-
-class MyObject {
-    public int value;
-
-    public MyObject(int value) {
-        this.value = value;
-    }
-}
-```
 
 ## 4. Linked Lists
 A linked list is a linear data structure where elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. (Linked list เป็นโครงสร้างข้อมูลเชิงเส้นที่องค์ประกอบไม่ได้ถูกจัดเก็บไว้ในตำแหน่งหน่วยความจำที่ต่อเนื่องกัน องค์ประกอบใน linked list จะถูกเชื่อมโยงโดยใช้พอยน์เตอร์)
@@ -129,42 +67,7 @@ A linked list is a linear data structure where elements are not stored at contig
 ### Singly Linked List
 Each node in a singly linked list contains a data field and a `next` field, which points to the next node in the sequence. (แต่ละโหนดใน singly linked list จะมีฟิลด์ข้อมูลและฟิลด์ `next` ซึ่งชี้ไปยังโหนดถัดไปในลำดับ)
 
-```java
-class Node {
-    int data;
-    Node next;
 
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-class SinglyLinkedList {
-    Node head;
-
-    public void append(int data) {
-        if (head == null) {
-            head = new Node(data);
-            return;
-        }
-        Node current = head;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = new Node(data);
-    }
-
-    public void printList() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " -> ");
-            current = current.next;
-        }
-        System.out.println("null");
-    }
-}
-```
 
 **Complexity:**
 *   Access: O(n)
@@ -201,44 +104,7 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 **Implementation:**
 *   Using an array or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์หรือ linked list)
 
-```java
-import java.util.EmptyStackException;
 
-class ArrayStack {
-    private int[] arr;
-    private int top;
-
-    public ArrayStack(int capacity) {
-        arr = new int[capacity];
-        top = -1;
-    }
-
-    public void push(int element) {
-        if (top == arr.length - 1) {
-            throw new StackOverflowError("Stack is full");
-        }
-        arr[++top] = element;
-    }
-
-    public int pop() {
-        if (isEmpty()) {
-            throw new EmptyStackException();
-        }
-        return arr[top--];
-    }
-
-    public int peek() {
-        if (isEmpty()) {
-            throw new EmptyStackException();
-        }
-        return arr[top];
-    }
-
-    public boolean isEmpty() {
-        return top == -1;
-    }
-}
-```
 
 **Complexity (for both array and linked list implementations):**
 *   Push: O(1)
@@ -273,105 +139,7 @@ A queue is a linear data structure that follows the First-In, First-Out (FIFO) p
 
 
 
-```java
 
-import java.util.NoSuchElementException;
-
-
-
-class LinkedListQueue {
-
-    private Node front, rear;
-
-
-
-    private class Node {
-
-        int data;
-
-        Node next;
-
-
-
-        public Node(int data) {
-
-            this.data = data;
-
-            this.next = null;
-
-        }
-
-    }
-
-
-
-    public void enqueue(int element) {
-
-        Node newNode = new Node(element);
-
-        if (isEmpty()) {
-
-            front = rear = newNode;
-
-        } else {
-
-            rear.next = newNode;
-
-            rear = newNode;
-
-        }
-
-    }
-
-
-
-    public int dequeue() {
-
-        if (isEmpty()) {
-
-            throw new NoSuchElementException("Queue is empty");
-
-        }
-
-        int data = front.data;
-
-        front = front.next;
-
-        if (front == null) {
-
-            rear = null;
-
-        }
-
-        return data;
-
-    }
-
-
-
-    public int peek() {
-
-        if (isEmpty()) {
-
-            throw new NoSuchElementException("Queue is empty");
-
-        }
-
-        return front.data;
-
-    }
-
-
-
-    public boolean isEmpty() {
-
-        return front == null;
-
-    }
-
-}
-
-```
 
 
 
@@ -393,29 +161,7 @@ Linear search is a simple search algorithm that sequentially checks each element
 
 
 
-```java
 
-public class LinearSearch {
-
-    public int search(int[] arr, int target) {
-
-        for (int i = 0; i < arr.length; i++) {
-
-            if (arr[i] == target) {
-
-                return i; // Return the index of the target
-
-            }
-
-        }
-
-        return -1; // Target not found
-
-    }
-
-}
-
-```
 
 
 
@@ -435,51 +181,7 @@ Binary search is an efficient algorithm for finding an item from a **sorted** li
 
 
 
-```java
 
-public class BinarySearch {
-
-    public int search(int[] arr, int target) {
-
-        int left = 0;
-
-        int right = arr.length - 1;
-
-
-
-        while (left <= right) {
-
-            int mid = left + (right - left) / 2;
-
-
-
-            if (arr[mid] == target) {
-
-                return mid;
-
-            }
-
-
-
-            if (arr[mid] < target) {
-
-                left = mid + 1;
-
-            } else {
-
-                right = mid - 1;
-
-            }
-
-        }
-
-        return -1; // Target not found
-
-    }
-
-}
-
-```
 
 
 
@@ -511,61 +213,7 @@ A hash table is a data structure that implements an associative array abstract d
 
 
 
-```java
 
-import java.util.HashMap;
-
-import java.util.Map;
-
-
-
-public class HashTableExample {
-
-    public static void main(String[] args) {
-
-        Map<String, Integer> map = new HashMap<>();
-
-
-
-        // Add key-value pairs
-
-        map.put("apple", 1);
-
-        map.put("banana", 2);
-
-        map.put("cherry", 3);
-
-
-
-        // Access a value
-
-        System.out.println("The value for 'banana' is: " + map.get("banana"));
-
-
-
-        // Check if a key exists
-
-        if (map.containsKey("apple")) {
-
-            System.out.println("The map contains the key 'apple'.");
-
-        }
-
-
-
-        // Iterate over the map
-
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-
-        }
-
-    }
-
-}
-
-```
 
 
 
@@ -585,18 +233,7 @@ Recursion is a method of solving a problem where the solution depends on solutio
 *   **Recursive Step**: The part of the function that calls itself. (ส่วนของฟังก์ชันที่เรียกตัวเอง)
 
 **Example: Factorial**
-```java
-public class RecursionExample {
-    public int factorial(int n) {
-        // Base case
-        if (n == 0) {
-            return 1;
-        }
-        // Recursive step
-        return n * factorial(n - 1);
-    }
-}
-```
+
 
 **Stack Overflow:**
 If the base case is not reached or the recursion is too deep, it can lead to a stack overflow error. (หากไม่ถึงกรณีพื้นฐานหรือการเรียกซ้ำลึกเกินไป อาจทำให้เกิดข้อผิดพลาด stack overflow)
@@ -605,21 +242,7 @@ If the base case is not reached or the recursion is too deep, it can lead to a s
 ### Insertion Sort
 Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. (Insertion sort เป็นอัลกอริทึมการเรียงลำดับอย่างง่ายที่สร้างอาร์เรย์ที่เรียงลำดับแล้วทีละรายการ มันมีประสิทธิภาพน้อยกว่ามากในรายการขนาดใหญ่เมื่อเทียบกับอัลกอริทึมขั้นสูงเช่น quicksort, heapsort หรือ merge sort)
 
-```java
-public class InsertionSort {
-    public void sort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            int key = arr[i];
-            int j = i - 1;
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
-            }
-            arr[j + 1] = key;
-        }
-    }
-}
-```
+
 
 **Complexity:**
 *   Best Case: O(n) (if the array is already sorted)
@@ -629,23 +252,7 @@ public class InsertionSort {
 ### Selection Sort
 Selection sort is an in-place comparison sorting algorithm. It has an O(n^2) time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort. (Selection sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบในพื้นที่ มีความซับซ้อนด้านเวลา O(n^2) ซึ่งทำให้ไม่มีประสิทธิภาพในรายการขนาดใหญ่ และโดยทั่วไปแล้วจะมีประสิทธิภาพต่ำกว่า insertion sort ที่คล้ายกัน)
 
-```java
-public class SelectionSort {
-    public void sort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
-                }
-            }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
-        }
-    }
-}
-```
+
 
 **Complexity:**
 *   Best Case: O(n^2)
@@ -655,21 +262,7 @@ public class SelectionSort {
 ### Bubble Sort
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. (Bubble sort เป็นอัลกอริทึมการเรียงลำดับอย่างง่ายที่วนซ้ำผ่านรายการ เปรียบเทียบองค์ประกอบที่อยู่ติดกันและสลับตำแหน่งหากเรียงลำดับผิด)
 
-```java
-public class BubbleSort {
-    public void sort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-    }
-}
-```
+
 
 **Complexity:**
 *   Best Case: O(n) (if the array is already sorted)
@@ -679,39 +272,7 @@ public class BubbleSort {
 ### Quick Sort
 Quicksort is an efficient, in-place sorting algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. (Quicksort เป็นอัลกอริทึมการเรียงลำดับในพื้นที่ที่มีประสิทธิภาพ ทำงานโดยการเลือกองค์ประกอบ 'pivot' จากอาร์เรย์และแบ่งองค์ประกอบอื่น ๆ ออกเป็นสองอาร์เรย์ย่อย ตามว่าน้อยกว่าหรือมากกว่า pivot จากนั้นอาร์เรย์ย่อยจะถูกเรียงลำดับแบบเรียกซ้ำ)
 
-```java
-public class QuickSort {
-    public void sort(int[] arr, int begin, int end) {
-        if (begin < end) {
-            int partitionIndex = partition(arr, begin, end);
 
-            sort(arr, begin, partitionIndex - 1);
-            sort(arr, partitionIndex + 1, end);
-        }
-    }
-
-    private int partition(int[] arr, int begin, int end) {
-        int pivot = arr[end];
-        int i = (begin - 1);
-
-        for (int j = begin; j < end; j++) {
-            if (arr[j] <= pivot) {
-                i++;
-
-                int swapTemp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = swapTemp;
-            }
-        }
-
-        int swapTemp = arr[i + 1];
-        arr[i + 1] = arr[end];
-        arr[end] = swapTemp;
-
-        return i + 1;
-    }
-}
-```
 
 **Complexity:**
 *   Best Case: O(n log n)
@@ -721,59 +282,7 @@ public class QuickSort {
 ### Merge Sort
 Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ υλο hóa ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
 
-```java
-public class MergeSort {
-    void merge(int arr[], int l, int m, int r) {
-        int n1 = m - l + 1;
-        int n2 = r - m;
 
-        int L[] = new int[n1];
-        int R[] = new int[n2];
-
-        for (int i = 0; i < n1; ++i)
-            L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
-
-        int i = 0, j = 0;
-
-        int k = l;
-        while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
-                arr[k] = L[i];
-                i++;
-            } else {
-                arr[k] = R[j];
-                j++;
-            }
-            k++;
-        }
-
-        while (i < n1) {
-            arr[k] = L[i];
-            i++;
-            k++;
-        }
-
-        while (j < n2) {
-            arr[k] = R[j];
-            j++;
-            k++;
-        }
-    }
-
-    void sort(int arr[], int l, int r) {
-        if (l < r) {
-            int m = l + (r - l) / 2;
-
-            sort(arr, l, m);
-            sort(arr, m + 1, r);
-
-            merge(arr, l, m, r);
-        }
-    }
-}
-```
 
 **Complexity:**
 *   Best Case: O(n log n)
@@ -783,43 +292,7 @@ public class MergeSort {
 ### Counting Sort
 Counting sort is a sorting algorithm that sorts the elements of an array by counting the number of occurrences of each unique element in the array. It is only efficient if the range of input data is not significantly greater than the number of objects to be sorted. (Counting sort เป็นอัลกอริทึมการเรียงลำดับที่เรียงลำดับองค์ประกอบของอาร์เรย์โดยการนับจำนวนการปรากฏของแต่ละองค์ประกอบที่ไม่ซ้ำกันในอาร์เรย์ จะมีประสิทธิภาพก็ต่อเมื่อช่วงของข้อมูลอินพุตไม่มากกว่าจำนวนอ็อบเจกต์ที่จะเรียงลำดับอย่างมีนัยสำคัญ)
 
-```java
-public class CountingSort {
-    void sort(int arr[]) {
-        int n = arr.length;
 
-        // The output array that will have sorted arr
-        int output[] = new int[n];
-
-        // Create a count array to store count of individual
-        // characters and initialize count array as 0
-        int count[] = new int[256];
-        for (int i = 0; i < 256; ++i)
-            count[i] = 0;
-
-        // store count of each character
-        for (int i = 0; i < n; ++i)
-            ++count[arr[i]];
-
-        // Change count[i] so that count[i] now contains actual
-        // position of this character in output array
-        for (int i = 1; i <= 255; ++i)
-            count[i] += count[i - 1];
-
-        // Build the output character array
-        // To make it stable we are operating in reverse order.
-        for (int i = n - 1; i >= 0; i--) {
-            output[count[arr[i]] - 1] = arr[i];
-            --count[arr[i]];
-        }
-
-        // Copy the output array to arr, so that arr now
-        // contains sorted characters
-        for (int i = 0; i < n; ++i)
-            arr[i] = output[i];
-    }
-}
-```
 
 **Complexity:**
 *   Best Case: O(n + k) (where k is the range of the input data)
@@ -836,73 +309,12 @@ A tree is a hierarchical data structure that consists of nodes connected by edge
 *   **Pre-order Traversal**: Root, Left, Right. (ราก, ซ้าย, ขวา)
 *   **Post-order Traversal**: Left, Right, Root. (ซ้าย, ขวา, ราก)
 
-```java
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-public class TreeTraversal {
-    // In-order traversal
-    public void inOrder(TreeNode node) {
-        if (node != null) {
-            inOrder(node.left);
-            System.out.print(node.val + " ");
-            inOrder(node.right);
-        }
-    }
-
-    // Pre-order traversal
-    public void preOrder(TreeNode node) {
-        if (node != null) {
-            System.out.print(node.val + " ");
-            preOrder(node.left);
-            preOrder(node.right);
-        }
-    }
-
-    // Post-order traversal
-    public void postOrder(TreeNode node) {
-        if (node != null) {
-            postOrder(node.left);
-            postOrder(node.right);
-            System.out.print(node.val + " ");
-        }
-    }
-}
-```
 
 ### Binary Search Tree (BST)
 A binary search tree is a binary tree in which for each node, all elements in the left subtree are less than the node, and all elements in the right subtree are greater than the node. (Binary search tree เป็น binary tree ที่สำหรับแต่ละโหนด องค์ประกอบทั้งหมดในแผนผังย่อยด้านซ้ายจะน้อยกว่าโหนด และองค์ประกอบทั้งหมดในแผนผังย่อยด้านขวาจะมากกว่าโหนด)
 
-```java
-public class BST {
-    TreeNode root;
 
-    public void insert(int value) {
-        root = insertRecursive(root, value);
-    }
-
-    private TreeNode insertRecursive(TreeNode current, int value) {
-        if (current == null) {
-            return new TreeNode(value);
-        }
-
-        if (value < current.val) {
-            current.left = insertRecursive(current.left, value);
-        } else if (value > current.val) {
-            current.right = insertRecursive(current.right, value);
-        }
-
-        return current;
-    }
-}
-```
 
 **Complexity:**
 *   Average Case (for search, insert, delete): O(log n)
@@ -930,64 +342,7 @@ A graph is a data structure that consists of a set of vertices (or nodes) and a 
 *   **Depth-First Search (DFS)**: Explores as far as possible along each branch before backtracking. (สำรวจไปตามแต่ละสาขาให้ไกลที่สุดเท่าที่จะทำได้ก่อนที่จะย้อนกลับ)
 *   **Breadth-First Search (BFS)**: Explores the neighbor nodes first, before moving to the next level neighbors. (สำรวจโหนดเพื่อนบ้านก่อน จากนั้นจึงย้ายไปยังโหนดเพื่อนบ้านระดับถัดไป)
 
-```java
-import java.util.*;
 
-class Graph {
-    private int V; // No. of vertices
-    private LinkedList<Integer> adj[]; // Adjacency Lists
-
-    Graph(int v) {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i = 0; i < v; ++i)
-            adj[i] = new LinkedList();
-    }
-
-    void addEdge(int v, int w) {
-        adj[v].add(w);
-    }
-
-    void DFSUtil(int v, boolean visited[]) {
-        visited[v] = true;
-        System.out.print(v + " ");
-
-        Iterator<Integer> i = adj[v].listIterator();
-        while (i.hasNext()) {
-            int n = i.next();
-            if (!visited[n])
-                DFSUtil(n, visited);
-        }
-    }
-
-    void DFS(int v) {
-        boolean visited[] = new boolean[V];
-        DFSUtil(v, visited);
-    }
-
-    void BFS(int s) {
-        boolean visited[] = new boolean[V];
-        LinkedList<Integer> queue = new LinkedList<Integer>();
-
-        visited[s] = true;
-        queue.add(s);
-
-        while (queue.size() != 0) {
-            s = queue.poll();
-            System.out.print(s + " ");
-
-            Iterator<Integer> i = adj[s].listIterator();
-            while (i.hasNext()) {
-                int n = i.next();
-                if (!visited[n]) {
-                    visited[n] = true;
-                    queue.add(n);
-                }
-            }
-        }
-    }
-}
-```
 
 ### Disjoint Set (Union-Find)
 A disjoint-set data structure is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. A union-find algorithm is an algorithm that performs two useful operations on such a data structure:
@@ -1017,72 +372,7 @@ Backtracking is a general algorithm for finding all (or some) solutions to some 
 *   Sudoku
 *   Combinations and Permutations
 
-```java
-public class NQueens {
 
-    final int N = 4;
-
-    void printSolution(int board[][]) {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++)
-                System.out.print(" " + board[i][j]
-                                 + " ");
-            System.out.println();
-        }
-    }
-
-    boolean isSafe(int board[][], int row, int col) {
-        int i, j;
-
-        for (i = 0; i < col; i++)
-            if (board[row][i] == 1)
-                return false;
-
-        for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
-            if (board[i][j] == 1)
-                return false;
-
-        for (i = row, j = col; j >= 0 && i < N; i++, j--)
-            if (board[i][j] == 1)
-                return false;
-
-        return true;
-    }
-
-    boolean solveNQUtil(int board[][], int col) {
-        if (col >= N)
-            return true;
-
-        for (int i = 0; i < N; i++) {
-            if (isSafe(board, i, col)) {
-                board[i][col] = 1;
-
-                if (solveNQUtil(board, col + 1) == true)
-                    return true;
-
-                board[i][col] = 0; // BACKTRACK
-            }
-        }
-
-        return false;
-    }
-
-    boolean solveNQ() {
-        int board[][] = {{0, 0, 0, 0},
-                         {0, 0, 0, 0},
-                         {0, 0, 0, 0},
-                         {0, 0, 0, 0}};
-
-        if (solveNQUtil(board, 0) == false) {
-            System.out.print("Solution does not exist");
-            return false;
-        }
-
-        printSolution(board);
-        return true;
-    }
-}
-```
 
 [INSERT_DIAGRAM] A diagram of a backtracking algorithm solving a maze. The diagram should show the algorithm exploring a path, hitting a dead end, and then backtracking to try another path.
 
@@ -1094,24 +384,7 @@ A greedy algorithm is an algorithmic paradigm that follows the problem-solving h
 *   Activity Selection problem
 *   Huffman Coding
 
-```java
-import java.util.Arrays;
 
-public class CoinChange {
-    public int coinChange(int[] coins, int amount) {
-        Arrays.sort(coins);
-        int count = 0;
-        for (int i = coins.length - 1; i >= 0; i--) {
-            if (amount >= coins[i]) {
-                int numCoins = amount / coins[i];
-                amount -= numCoins * coins[i];
-                count += numCoins;
-            }
-        }
-        return amount == 0 ? count : -1;
-    }
-}
-```
 
 **Note:** Greedy algorithms do not always yield the optimal solution, but for many problems they do. (หมายเหตุ: อัลกอริทึมแบบละโมบไม่ได้รับประกันว่าจะให้ผลลัพธ์ที่ดีที่สุดเสมอไป แต่สำหรับหลาย ๆ ปัญหาก็สามารถทำได้)
 
