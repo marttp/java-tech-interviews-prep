@@ -62,6 +62,53 @@ SQL (Structured Query Language) เป็นภาษาที่ใช้ใน
 * JOIN: ใช้เพื่อรวมแถวจากตารางตั้งแต่สองตารางขึ้นไปตาม Column ที่เกี่ยวข้องกัน
 * UNION: ใช้เพื่อรวมผลลัพธ์ของคำสั่ง SELECT ตั้งแต่สองคำสั่งขึ้นไปให้เป็นชุดผลลัพธ์เดียว
 
+## Data Types
+In SQL, each column in a table is required to have a name and a data type.
+
+*   **Numeric Types**: `INT`, `BIGINT`, `DECIMAL`, `FLOAT`, etc.
+*   **String Types**: `VARCHAR`, `CHAR`, `TEXT`, etc.
+*   **Date/Time Types**: `DATE`, `TIME`, `TIMESTAMP`, etc.
+*   **Boolean Types**: `BOOLEAN` or `TINYINT(1)`.
+
+## Constraints
+Constraints are rules enforced on data columns to ensure data accuracy and reliability.
+
+*   **PRIMARY KEY**: Uniquely identifies each record in a table.
+*   **FOREIGN KEY**: Links two tables together.
+*   **UNIQUE**: Ensures that all values in a column are different.
+*   **NOT NULL**: Ensures that a column cannot have a NULL value.
+*   **CHECK**: Ensures that the values in a column satisfy a specific condition.
+*   **DEFAULT**: Provides a default value for a column when none is specified.
+
+## Advanced SQL Queries
+
+### GROUP BY
+The `GROUP BY` statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+
+### HAVING
+The `HAVING` clause was added to SQL because the `WHERE` keyword could not be used with aggregate functions.
+
+### Subqueries
+A subquery is a query within another query.
+
+### Window Functions
+A window function performs a calculation across a set of table rows that are somehow related to the current row.
+
+## Transactions and ACID Properties
+A transaction is a sequence of operations performed as a single logical unit of work.
+
+*   **Atomicity**: A transaction must be all or nothing. If one part of the transaction fails, the entire transaction fails.
+*   **Consistency**: A transaction must bring the database from one valid state to another.
+*   **Isolation**: Concurrent transactions must not interfere with each other.
+*   **Durability**: Once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors.
+
+## Indexing
+An index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure.
+
+*   **B-Tree Index**: The most common type of index. It's a balanced tree structure that keeps data sorted and allows for efficient searching, inserting, deleting, and sequential access.
+*   **Hash Index**: Useful for equality comparisons, but not for range queries.
+*   **Full-text Index**: Used for searching text-based data.
+
 ## Other resources
 
 [Introduction to DBMS with PostgreSQL สำหรับใช้งานทั่วไป](https://youtu.be/vlOugsopjyg?si=omWNMOq2-wbhLoUS)
