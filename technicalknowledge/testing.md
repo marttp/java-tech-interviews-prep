@@ -1,40 +1,40 @@
 # Software Testing
 
 ## 1. The Testing Pyramid
-The testing pyramid is a framework that helps developers and teams think about how to build a balanced and effective testing strategy.
+พีระมิดการทดสอบเป็นกรอบแนวคิดที่ช่วยให้นักพัฒนาและทีมงานสามารถคิดเกี่ยวกับการสร้างกลยุทธ์การทดสอบที่สมดุลและมีประสิทธิภาพ
 
 [INSERT_DIAGRAM] A diagram of the testing pyramid. The pyramid has three layers: Unit Tests (at the bottom), Integration Tests (in the middle), and End-to-End Tests (at the top).
 
-*   **Unit Tests**: Test individual components or functions in isolation. They are fast, cheap, and easy to write.
-*   **Integration Tests**: Test how multiple components work together. They are slower and more expensive than unit tests.
-*   **End-to-End (E2E) Tests**: Test the entire application from the user's perspective. They are the slowest and most expensive type of test.
+*   **Unit Tests**: ทดสอบส่วนประกอบหรือฟังก์ชันแต่ละส่วนแยกกัน พวกมันรวดเร็ว ราคาถูก และเขียนง่าย
+*   **Integration Tests**: ทดสอบว่าส่วนประกอบหลายส่วนทำงานร่วมกันอย่างไร พวกมันช้ากว่าและมีค่าใช้จ่ายสูงกว่าการทดสอบหน่วย
+*   **End-to-End (E2E) Tests**: ทดสอบแอปพลิเคชันทั้งหมดจากมุมมองของผู้ใช้ พวกมันเป็นการทดสอบที่ช้าที่สุดและมีค่าใช้จ่ายสูงที่สุด
 
 ## 2. Types of Testing
 
 ### a. Functional Testing
-Functional testing is a type of testing that verifies that the software performs its intended functions.
+การทดสอบฟังก์ชันเป็นการทดสอบประเภทหนึ่งที่ตรวจสอบว่าซอฟต์แวร์ทำงานตามฟังก์ชันที่ตั้งใจไว้หรือไม่
 
-*   **Unit Testing**: Testing individual units or components of a software.
-*   **Integration Testing**: Testing the integration of two or more software components.
-*   **System Testing**: Testing the complete and integrated software.
-*   **Acceptance Testing**: Testing the software against the user's requirements.
+*   **Unit Testing**: การทดสอบหน่วยย่อยหรือส่วนประกอบแต่ละส่วนของซอฟต์แวร์
+*   **Integration Testing**: การทดสอบการรวมกันของส่วนประกอบซอฟต์แวร์สองส่วนขึ้นไป
+*   **System Testing**: การทดสอบซอฟต์แวร์ที่สมบูรณ์และรวมเข้าด้วยกัน
+*   **Acceptance Testing**: การทดสอบซอฟต์แวร์เทียบกับความต้องการของผู้ใช้
 
 ### b. Non-Functional Testing
-Non-functional testing is a type of testing that verifies the non-functional aspects of the software, such as performance, usability, and reliability.
+การทดสอบที่ไม่ใช่ฟังก์ชันเป็นการทดสอบประเภทหนึ่งที่ตรวจสอบคุณสมบัติที่ไม่ใช่ฟังก์ชันของซอฟต์แวร์ เช่น ประสิทธิภาพ, ความสามารถในการใช้งาน, และความน่าเชื่อถือ
 
-*   **Performance Testing**: Testing how the software performs in terms of responsiveness and stability under a particular workload.
-*   **Load Testing**: Testing the software's ability to handle a large number of concurrent users.
-*   **Stress Testing**: Testing the software's ability to handle extreme loads.
-*   **Usability Testing**: Testing how easy it is for users to use the software.
-*   **Security Testing**: Testing the software for security vulnerabilities.
+*   **Performance Testing**: การทดสอบว่าซอฟต์แวร์ทำงานอย่างไรในแง่ของการตอบสนองและความเสถียรภายใต้ภาระงานที่กำหนด
+*   **Load Testing**: การทดสอบความสามารถของซอฟต์แวร์ในการรองรับผู้ใช้พร้อมกันจำนวนมาก
+*   **Stress Testing**: การทดสอบความสามารถของซอฟต์แวร์ในการรองรับภาระงานที่สูงมาก
+*   **Usability Testing**: การทดสอบว่าผู้ใช้สามารถใช้งานซอฟต์แวร์ได้ง่ายเพียงใด
+*   **Security Testing**: การทดสอบซอฟต์แวร์เพื่อหาช่องโหว่ด้านความปลอดภัย
 
 ## 3. Testing Best Practices
 
-*   **Write clean, readable, and maintainable tests.**
-*   **Tests should be independent and repeatable.**
-*   **Test for both positive and negative cases.**
-*   **Use a consistent naming convention for your tests.**
-*   **Don't write tests for the sake of writing tests. Write tests that add value.**
-*   **Run your tests automatically as part of a CI/CD pipeline.**
-*   **Measure your test coverage, but don't make it a goal in itself.**
-*   **Use a testing framework**, such as JUnit for Java, PyTest for Python, or Jest for JavaScript.
+*   ควรตั้งเป้าหมายที่จะเขียนการทดสอบที่สะอาด อ่านง่าย และบำรุงรักษาได้ง่าย
+*   จะดีที่สุดหากการทดสอบเป็นอิสระจากกันและสามารถรันซ้ำได้พร้อมผลลัพธ์ที่สอดคล้องกัน
+*   อย่าลืมครอบคลุมทั้งสถานการณ์ที่คาดหวัง และกรณีที่เป็นเคสเชิงลบ
+*   พยายามใช้รูปแบบการตั้งชื่อที่สอดคล้องกันสำหรับการทดสอบ มันช่วยให้การจัดระเบียบดีขึ้นมาก
+*   ให้มุ่งเน้นไปที่การทดสอบที่เพิ่มคุณค่าอย่างแท้จริงให้กับโปรเจกต์ของคุณ ไม่ใช่แค่เขียนไปเฉย ๆ (เช่นถ้าเขียนให้ผ่าน coverage ไปเฉย ๆ ควรดูว่ามีตรงไหนที่มันแยก branch ไปอีกบ้าง)
+*   Regression Test - ถ้าทำไปอยู่ใน CI/CD pipeline ได้จะดีมาก (Shift left)
+*   ให้มุ่งเน้นที่คุณภาพมากกว่าปริมาณ
+*   ใช้ Framework เช่น JUnit สำหรับ Java, PyTest สำหรับ Python, หรือ Jest สำหรับ JavaScript เพื่อปรับปรุงกระบวนการทดสอบให้มีประสิทธิภาพมากขึ้น
