@@ -49,15 +49,11 @@ Bit manipulation is the act of algorithmically manipulating bits or other pieces
 *   Clearing a bit: `n & ~(1 << k)` clears the k-th bit of n.
 *   Toggling a bit: `n ^ (1 << k)` toggles the k-th bit of n.
 
-
-
 ## 3. Pointers and References in Java
 Java does not have explicit pointers like C or C++. Instead, it uses references. (Java ไม่มีพอยน์เตอร์ที่ชัดเจนเหมือนใน C หรือ C++ แต่จะใช้การอ้างอิงแทน)
 
 *   **Primitive Types**: `int`, `char`, `boolean`, etc., are passed by value. When you pass a primitive variable to a method, a copy of the variable is made. (ประเภทข้อมูลพื้นฐาน: `int`, `char`, `boolean` ฯลฯ จะถูกส่งผ่านค่า เมื่อคุณส่งตัวแปรประเภทข้อมูลพื้นฐานไปยังเมธอด จะมีการสร้างสำเนาของตัวแปรขึ้น)
 *   **Object Types**: All objects in Java are accessed through references. When you pass an object to a method, the reference to the object is passed by value. This means the method gets a copy of the reference, but both the original reference and the copy point to the same object in memory. Therefore, changes made to the object's state within the method will be reflected outside the method. (ประเภทอ็อบเจกต์: อ็อบเจกต์ทั้งหมดใน Java จะถูกเข้าถึงผ่านการอ้างอิง เมื่อคุณส่งอ็อบเจกต์ไปยังเมธอด การอ้างอิงไปยังอ็อบเจกต์จะถูกส่งผ่านค่า ซึ่งหมายความว่าเมธอดจะได้รับสำเนาของการอ้างอิง แต่ทั้งการอ้างอิงดั้งเดิมและสำเนาจะชี้ไปที่อ็อบเจกต์เดียวกันในหน่วยความจำ ดังนั้น การเปลี่ยนแปลงสถานะของอ็อบเจกต์ภายในเมธอดจะส่งผลต่อนอกเมธอดด้วย)
-
-
 
 ## 4. Linked Lists
 A linked list is a linear data structure where elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. (Linked list เป็นโครงสร้างข้อมูลเชิงเส้นที่องค์ประกอบไม่ได้ถูกจัดเก็บไว้ในตำแหน่งหน่วยความจำที่ต่อเนื่องกัน องค์ประกอบใน linked list จะถูกเชื่อมโยงโดยใช้พอยน์เตอร์)
@@ -66,8 +62,6 @@ A linked list is a linear data structure where elements are not stored at contig
 
 ### Singly Linked List
 Each node in a singly linked list contains a data field and a `next` field, which points to the next node in the sequence. (แต่ละโหนดใน singly linked list จะมีฟิลด์ข้อมูลและฟิลด์ `next` ซึ่งชี้ไปยังโหนดถัดไปในลำดับ)
-
-
 
 **Complexity:**
 *   Access: O(n)
@@ -104,123 +98,62 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 **Implementation:**
 *   Using an array or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์หรือ linked list)
 
-
-
 **Complexity (for both array and linked list implementations):**
 *   Push: O(1)
 *   Pop: O(1)
 *   Peek: O(1)
 
 ## 6. Queues
-
 A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. (Queue เป็นโครงสร้างข้อมูลเชิงเส้นที่ทำงานตามหลักการ First-In, First-Out (FIFO))
-
-
 
 [INSERT_DIAGRAM] A diagram of a queue, showing the enqueue and dequeue operations.
 
-
-
 **Common Operations:**
-
 *   `enqueue(element)`: Adds an element to the rear of the queue. (เพิ่มองค์ประกอบที่ด้านหลังของคิว)
-
 *   `dequeue()`: Removes and returns the front element of the queue. (ลบและคืนค่าองค์ประกอบด้านหน้าของคิว)
-
 *   `peek()`: Returns the front element of the queue without removing it. (คืนค่าองค์ประกอบด้านหน้าของคิวโดยไม่ลบออก)
-
 *   `isEmpty()`: Checks if the queue is empty. (ตรวจสอบว่าคิวว่างเปล่าหรือไม่)
 
-
-
 **Implementation:**
-
 *   Using an array (with a circular buffer) or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์ (พร้อมบัฟเฟอร์แบบวงกลม) หรือ linked list)
 
-
-
-
-
-
-
 **Complexity (for both array and linked list implementations):**
-
 *   Enqueue: O(1)
-
 *   Dequeue: O(1)
-
 *   Peek: O(1)
 
 
 
 ## 7. Searching
-
 ### Linear Search
-
 Linear search is a simple search algorithm that sequentially checks each element of a list until a match is found or the whole list has been searched. (Linear search เป็นอัลกอริทึมการค้นหาอย่างง่ายที่ตรวจสอบแต่ละองค์ประกอบของรายการตามลำดับจนกว่าจะพบรายการที่ตรงกันหรือค้นหารายการทั้งหมดแล้ว)
 
-
-
-
-
-
-
 **Complexity:**
-
 *   Best Case: O(1) (the first element is the match)
-
 *   Worst Case: O(n)
-
 *   Average Case: O(n)
 
-
-
 ### Binary Search
-
 Binary search is an efficient algorithm for finding an item from a **sorted** list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one. (Binary search เป็นอัลกอริทึมที่มีประสิทธิภาพในการค้นหารายการจากรายการที่ **เรียงลำดับแล้ว** โดยจะทำงานโดยการแบ่งครึ่งส่วนของรายการที่อาจมีรายการนั้นซ้ำ ๆ จนกว่าคุณจะจำกัดตำแหน่งที่เป็นไปได้ให้เหลือเพียงตำแหน่งเดียว)
 
-
-
-
-
-
-
 **Complexity:**
-
 *   Best Case: O(1)
-
 *   Worst Case: O(log n)
-
 *   Average Case: O(log n)
 
 
 
 ## 8. Hash Tables
-
 A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. (Hash table เป็นโครงสร้างข้อมูลที่ υλο hóa ชนิดข้อมูลนามธรรมของอาร์เรย์ที่เชื่อมโยง ซึ่งเป็นโครงสร้างที่สามารถจับคู่คีย์กับค่าได้ Hash table ใช้ฟังก์ชันแฮชเพื่อคำนวณดัชนีลงในอาร์เรย์ของบักเก็ตหรือสล็อต ซึ่งสามารถค้นหาค่าที่ต้องการได้)
-
-
 
 [INSERT_DIAGRAM] A diagram of a hash table. It should show keys being passed through a hash function to generate an index. The diagram should also illustrate how collisions are handled, for example, by using a linked list at each index.
 
-
-
 **Collision Handling:**
-
 *   **Separate Chaining**: Each bucket is independent, and has some sort of list of entries with the same index. (แต่ละบักเก็ตเป็นอิสระต่อกัน และมีรายการของรายการที่มีดัชนีเดียวกัน)
-
 *   **Open Addressing**: All entry records are stored in the bucket array itself. When a new entry has to be inserted, the buckets are examined, starting with the hashed-to slot and proceeding in some probe sequence, until an unoccupied slot is found. (เรกคอร์ดรายการทั้งหมดจะถูกเก็บไว้ในอาร์เรย์บักเก็ตเอง เมื่อต้องแทรกรายการใหม่ บักเก็ตจะถูกตรวจสอบ โดยเริ่มจากสล็อตที่แฮชไปและดำเนินการต่อไปในลำดับการตรวจสอบบางอย่าง จนกว่าจะพบสล็อตที่ว่าง)
 
-
-
-
-
-
-
 **Complexity:**
-
 *   Average Case (for search, insert, delete): O(1)
-
 *   Worst Case (with collisions): O(n)
 
 
@@ -242,8 +175,6 @@ If the base case is not reached or the recursion is too deep, it can lead to a s
 ### Insertion Sort
 Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. (Insertion sort เป็นอัลกอริทึมการเรียงลำดับอย่างง่ายที่สร้างอาร์เรย์ที่เรียงลำดับแล้วทีละรายการ มันมีประสิทธิภาพน้อยกว่ามากในรายการขนาดใหญ่เมื่อเทียบกับอัลกอริทึมขั้นสูงเช่น quicksort, heapsort หรือ merge sort)
 
-
-
 **Complexity:**
 *   Best Case: O(n) (if the array is already sorted)
 *   Worst Case: O(n^2)
@@ -251,8 +182,6 @@ Insertion sort is a simple sorting algorithm that builds the final sorted array 
 
 ### Selection Sort
 Selection sort is an in-place comparison sorting algorithm. It has an O(n^2) time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort. (Selection sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบในพื้นที่ มีความซับซ้อนด้านเวลา O(n^2) ซึ่งทำให้ไม่มีประสิทธิภาพในรายการขนาดใหญ่ และโดยทั่วไปแล้วจะมีประสิทธิภาพต่ำกว่า insertion sort ที่คล้ายกัน)
-
-
 
 **Complexity:**
 *   Best Case: O(n^2)
@@ -262,8 +191,6 @@ Selection sort is an in-place comparison sorting algorithm. It has an O(n^2) tim
 ### Bubble Sort
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. (Bubble sort เป็นอัลกอริทึมการเรียงลำดับอย่างง่ายที่วนซ้ำผ่านรายการ เปรียบเทียบองค์ประกอบที่อยู่ติดกันและสลับตำแหน่งหากเรียงลำดับผิด)
 
-
-
 **Complexity:**
 *   Best Case: O(n) (if the array is already sorted)
 *   Worst Case: O(n^2)
@@ -271,8 +198,6 @@ Bubble sort is a simple sorting algorithm that repeatedly steps through the list
 
 ### Quick Sort
 Quicksort is an efficient, in-place sorting algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. (Quicksort เป็นอัลกอริทึมการเรียงลำดับในพื้นที่ที่มีประสิทธิภาพ ทำงานโดยการเลือกองค์ประกอบ 'pivot' จากอาร์เรย์และแบ่งองค์ประกอบอื่น ๆ ออกเป็นสองอาร์เรย์ย่อย ตามว่าน้อยกว่าหรือมากกว่า pivot จากนั้นอาร์เรย์ย่อยจะถูกเรียงลำดับแบบเรียกซ้ำ)
-
-
 
 **Complexity:**
 *   Best Case: O(n log n)
@@ -282,8 +207,6 @@ Quicksort is an efficient, in-place sorting algorithm. It works by selecting a '
 ### Merge Sort
 Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ υλο hóa ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
 
-
-
 **Complexity:**
 *   Best Case: O(n log n)
 *   Worst Case: O(n log n)
@@ -291,8 +214,6 @@ Merge sort is an efficient, stable, comparison-based sorting algorithm. Most imp
 
 ### Counting Sort
 Counting sort is a sorting algorithm that sorts the elements of an array by counting the number of occurrences of each unique element in the array. It is only efficient if the range of input data is not significantly greater than the number of objects to be sorted. (Counting sort เป็นอัลกอริทึมการเรียงลำดับที่เรียงลำดับองค์ประกอบของอาร์เรย์โดยการนับจำนวนการปรากฏของแต่ละองค์ประกอบที่ไม่ซ้ำกันในอาร์เรย์ จะมีประสิทธิภาพก็ต่อเมื่อช่วงของข้อมูลอินพุตไม่มากกว่าจำนวนอ็อบเจกต์ที่จะเรียงลำดับอย่างมีนัยสำคัญ)
-
-
 
 **Complexity:**
 *   Best Case: O(n + k) (where k is the range of the input data)
@@ -309,12 +230,8 @@ A tree is a hierarchical data structure that consists of nodes connected by edge
 *   **Pre-order Traversal**: Root, Left, Right. (ราก, ซ้าย, ขวา)
 *   **Post-order Traversal**: Left, Right, Root. (ซ้าย, ขวา, ราก)
 
-
-
 ### Binary Search Tree (BST)
 A binary search tree is a binary tree in which for each node, all elements in the left subtree are less than the node, and all elements in the right subtree are greater than the node. (Binary search tree เป็น binary tree ที่สำหรับแต่ละโหนด องค์ประกอบทั้งหมดในแผนผังย่อยด้านซ้ายจะน้อยกว่าโหนด และองค์ประกอบทั้งหมดในแผนผังย่อยด้านขวาจะมากกว่าโหนด)
-
-
 
 **Complexity:**
 *   Average Case (for search, insert, delete): O(log n)
@@ -341,8 +258,6 @@ A graph is a data structure that consists of a set of vertices (or nodes) and a 
 ### Graph Traversal
 *   **Depth-First Search (DFS)**: Explores as far as possible along each branch before backtracking. (สำรวจไปตามแต่ละสาขาให้ไกลที่สุดเท่าที่จะทำได้ก่อนที่จะย้อนกลับ)
 *   **Breadth-First Search (BFS)**: Explores the neighbor nodes first, before moving to the next level neighbors. (สำรวจโหนดเพื่อนบ้านก่อน จากนั้นจึงย้ายไปยังโหนดเพื่อนบ้านระดับถัดไป)
-
-
 
 ### Disjoint Set (Union-Find)
 A disjoint-set data structure is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. A union-find algorithm is an algorithm that performs two useful operations on such a data structure:
@@ -372,8 +287,6 @@ Backtracking is a general algorithm for finding all (or some) solutions to some 
 *   Sudoku
 *   Combinations and Permutations
 
-
-
 [INSERT_DIAGRAM] A diagram of a backtracking algorithm solving a maze. The diagram should show the algorithm exploring a path, hitting a dead end, and then backtracking to try another path.
 
 ## 14. Greedy Algorithms
@@ -383,8 +296,6 @@ A greedy algorithm is an algorithmic paradigm that follows the problem-solving h
 *   Coin Change problem
 *   Activity Selection problem
 *   Huffman Coding
-
-
 
 **Note:** Greedy algorithms do not always yield the optimal solution, but for many problems they do. (หมายเหตุ: อัลกอริทึมแบบละโมบไม่ได้รับประกันว่าจะให้ผลลัพธ์ที่ดีที่สุดเสมอไป แต่สำหรับหลาย ๆ ปัญหาก็สามารถทำได้)
 
