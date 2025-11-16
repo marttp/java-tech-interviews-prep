@@ -3,7 +3,7 @@
 ## 1. The Testing Pyramid
 พีระมิดการทดสอบเป็นกรอบแนวคิดที่ช่วยให้นักพัฒนาและทีมงานสามารถคิดเกี่ยวกับการสร้างกลยุทธ์การทดสอบที่สมดุลและมีประสิทธิภาพ
 
-![Testing Pyramid](img/testing/Testing%20Pyramid.webp) A diagram of the testing pyramid. The pyramid has three layers: Unit Tests (at the bottom), Integration Tests (in the middle), and End-to-End Tests (at the top).
+![Testing Pyramid](img/testing/Testing%20Pyramid.webp)
 
 *   **Unit Tests**: ทดสอบส่วนประกอบหรือฟังก์ชันแต่ละส่วนแยกกัน พวกมันรวดเร็ว ราคาถูก และเขียนง่าย
 *   **Integration Tests**: ทดสอบว่าส่วนประกอบหลายส่วนทำงานร่วมกันอย่างไร พวกมันช้ากว่าและมีค่าใช้จ่ายสูงกว่าการทดสอบหน่วย
