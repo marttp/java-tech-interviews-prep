@@ -3,82 +3,92 @@
 ## Core Principles and Strategies
 
 ### 1. Design For Failure
-Systems will fail. It's not a matter of *if*, but *when*. A resilient system anticipates failures and is designed to handle them gracefully.
 
-*   **Embrace Redundancy**: Have multiple copies of components (servers, databases, etc.) so that if one fails, another can take over.
-*   **Fault Isolation**: Isolate components so that a failure in one does not cascade to others. This can be achieved through techniques like bulkheads and circuit breakers.
-*   **Automated Recovery**: Implement mechanisms for automatic recovery from failures, such as auto-scaling and self-healing.
+ระบบย่อมมีความล้มเหลวเกิดขึ้น ไม่ใช่เรื่องของ _if_ แต่เป็นเรื่องของ _when_ ระบบที่ทนทานจะคาดการณ์ความล้มเหลวและได้รับการออกแบบมาให้จัดการกับมันได้อย่างราบรื่น
+
+- **Embrace Redundancy**: มีส่วนประกอบหลายชุด (เซิร์ฟเวอร์, ฐานข้อมูล ฯลฯ) เพื่อให้หากตัวหนึ่งล้มเหลว อีกตัวสามารถทำงานแทนได้
+- **Fault Isolation**: แยกส่วนประกอบออกจากกัน เพื่อให้ความล้มเหลวในจุดหนึ่งไม่ลามไปยังจุดอื่น ๆ สามารถทำได้โดยใช้เทคนิคเช่น bulkheads และ circuit breakers
+- **Automated Recovery**: ใช้กลไกสำหรับการกู้คืนอัตโนมัติจากความล้มเหลว เช่น auto-scaling และ self-healing
 
 ### 2. Keep Things Simple and Robust (KISS)
-Complex systems are harder to build, maintain, and debug. Strive for simplicity in your design.
 
-*   **Avoid Over-engineering**: Don't add complexity for features that are not needed right now.
-*   **Use Proven Technologies**: Choose technologies that are well-understood and have a proven track record.
-*   **Modularity**: Break down the system into smaller, independent modules that are easier to understand and manage.
+ระบบที่ซับซ้อนยากต่อการสร้าง บำรุงรักษา และแก้ไขจุดบกพร่อง พยายามออกแบบให้เรียบง่ายที่สุด
+
+- **Avoid Over-engineering**: อย่าเพิ่มความซับซ้อนสำหรับฟีเจอร์ที่ยังไม่จำเป็นในตอนนี้
+- **Use Proven Technologies**: เลือกใช้เทคโนโลยีที่เป็นที่เข้าใจดีและมีประวัติการใช้งานที่พิสูจน์แล้ว
+- **Modularity**: แบ่งระบบออกเป็นโมดูลเล็ก ๆ ที่เป็นอิสระต่อกัน ซึ่งเข้าใจและจัดการได้ง่ายกว่า
 
 ### 3. Redundancy and Fault Recovery
-Redundancy is about having duplicate components, while fault recovery is about how the system recovers from a failure.
 
-*   **Active-Passive vs. Active-Active**: In an active-passive setup, one component is on standby, while in an active-active setup, both components are active and share the load.
-*   **Backup and Restore**: Regularly back up your data and have a well-tested process for restoring it.
-*   **Graceful Degradation**: If a non-critical component fails, the system should continue to function, albeit with reduced functionality.
+ความซ้ำซ้อนคือการมีส่วนประกอบที่ซ้ำกัน ในขณะที่การกู้คืนความเสียหายคือวิธีที่ระบบฟื้นตัวจากความล้มเหลว
+
+- **Active-Passive vs. Active-Active**: ในการตั้งค่าแบบ active-passive ส่วนประกอบหนึ่งจะสแตนด์บายรอ ในขณะที่ active-active ส่วนประกอบทั้งสองจะทำงานและแชร์โหลดกัน
+- **Backup and Restore**: สำรองข้อมูลอย่างสม่ำเสมอและมีกระบวนการกู้คืนที่ผ่านการทดสอบแล้ว
+- **Graceful Degradation**: หากส่วนประกอบที่ไม่สำคัญล้มเหลว ระบบควรยังคงทำงานต่อไปได้ แต่อาจมีฟังก์ชันการทำงานที่ลดลง
 
 ### 4. Multi-tenancy
-Multi-tenancy is an architecture in which a single instance of a software application serves multiple customers. Each customer is called a tenant.
 
-*   **Data Isolation**: Ensure that each tenant's data is isolated and not accessible by other tenants.
-*   **Resource Pooling**: Share resources among tenants to reduce costs.
-*   **Scalability**: The architecture should be able to scale to support a large number of tenants.
+Multi-tenancy คือสถาปัตยกรรมที่แอปพลิเคชันซอฟต์แวร์อินสแตนซ์เดียวให้บริการลูกค้าหลายราย ซึ่งเรียกว่าผู้เช่า (tenants)
+
+- **Data Isolation**: ตรวจสอบให้แน่ใจว่าข้อมูลของผู้เช่าแต่ละรายถูกแยกออกจากกันและผู้เช่ารายอื่นไม่สามารถเข้าถึงได้
+- **Resource Pooling**: แชร์ทรัพยากรระหว่างผู้เช่าเพื่อลดต้นทุน
+- **Scalability**: สถาปัตยกรรมควรสามารถขยายเพื่อรองรับผู้เช่าจำนวนมากได้
 
 ### 5. Service Health Check
-Health checks are used to determine if a service is running and healthy.
 
-*   **Liveness Probe**: Checks if the application is running. If the liveness probe fails, the application is restarted.
-*   **Readiness Probe**: Checks if the application is ready to accept traffic. If the readiness probe fails, the application is not sent any traffic.
-*   **Deep Health Checks**: Go beyond simple pings and check the health of downstream services and dependencies.
+การตรวจสอบสุขภาพใช้เพื่อตรวจสอบว่าบริการกำลังทำงานและปกติดีหรือไม่
+
+- **Liveness Probe**: ตรวจสอบว่าแอปพลิเคชันกำลังทำงานอยู่หรือไม่ หาก liveness probe ล้มเหลว แอปพลิเคชันจะถูกรีสตาร์ท
+- **Readiness Probe**: ตรวจสอบว่าแอปพลิเคชันพร้อมที่จะรับทราฟฟิกหรือไม่ หาก readiness probe ล้มเหลว แอปพลิเคชันจะไม่ได้รับทราฟฟิกใด ๆ
+- **Deep Health Checks**: ตรวจสอบลึกกว่าแค่การ ping ธรรมดา โดยตรวจสอบสุขภาพของบริการปลายทางและสิ่งที่ต้องพึ่งพาด้วย
 
 ### 6. Development Parity with Production
-The development environment should be as similar to the production environment as possible. This helps to catch issues early and reduces the risk of surprises when deploying to production.
 
-*   **Infrastructure as Code**: Use tools like Terraform or CloudFormation to provision and manage your infrastructure in a repeatable way.
-*   **Containerization**: Use containers (e.g., Docker) to package your application and its dependencies, ensuring consistency across environments.
-*   **Continuous Integration/Continuous Deployment (CI/CD)**: Automate the build, test, and deployment process.
+สภาพแวดล้อมการพัฒนาควรเหมือนกับสภาพแวดล้อมการใช้งานจริงมากที่สุดเท่าที่จะเป็นไปได้ เพื่อช่วยจับประเด็นปัญหาได้ตั้งแต่เนิ่น ๆ และลดความเสี่ยงที่จะเกิดเรื่องเซอร์ไพรส์เมื่อ deploy ขึ้น production
+
+- **Infrastructure as Code**: ใช้เครื่องมือเช่น Terraform หรือ CloudFormation เพื่อจัดเตรียมและจัดการโครงสร้างพื้นฐานในรูปแบบที่ทำซ้ำได้
+- **Containerization**: ใช้คอนเทนเนอร์ (เช่น Docker) เพื่อแพ็คเกจแอปพลิเคชันและสิ่งที่ต้องใช้รวมกัน เพื่อให้แน่ใจว่ามีความสอดคล้องกันในทุกสภาพแวดล้อม
+- **Continuous Integration/Continuous Deployment (CI/CD)**: ทำกระบวนการ build, test และ deploy ให้เป็นอัตโนมัติ
 
 ### 7. Zero Trust Architecture
-In a zero-trust architecture, no user or device is trusted by default, whether inside or outside the network.
 
-*   **Authenticate and Authorize Everything**: Every request must be authenticated and authorized.
-*   **Least Privilege**: Give users and services only the permissions they need to do their job.
-*   **Micro-segmentation**: Divide the network into small, isolated segments to limit the blast radius of an attack.
+ในสถาปัตยกรรมแบบ zero-trust จะไม่มีผู้ใช้หรืออุปกรณ์ใดได้รับความไว้วางใจโดยค่าเริ่มต้น ไม่ว่าจะอยู่ภายในหรือภายนอกเครือข่าย
+
+- **Authenticate and Authorize Everything**: ทุกคำขอต้องได้รับการตรวจสอบตัวตนและได้รับอนุญาต
+- **Least Privilege**: ให้สิทธิ์ผู้ใช้และบริการเฉพาะเท่าที่จำเป็นสำหรับการทำงานเท่านั้น
+- **Micro-segmentation**: แบ่งเครือข่ายออกเป็นส่วนเล็ก ๆ ที่แยกจากกันเพื่อจำกัดวงความเสียหายของการโจมตี
 
 ### 8. Don't Repeat Yourself (DRY)
-The DRY principle is aimed at reducing repetition of software patterns, replacing it with abstractions or using data normalization to avoid redundancy.
 
-*   **Code Reusability**: Create reusable libraries and services.
-*   **Single Source of Truth**: Have a single source of truth for your data.
-*   **Avoid Copy-Paste**: Don't copy and paste code. Instead, create a function or a class.
+หลักการ DRY มีเป้าหมายเพื่อลดการทำซ้ำของรูปแบบซอฟต์แวร์ โดยการใช้ abstraction หรือการทำ data normalization แทน
+
+- **Code Reusability**: สร้างไลบรารีและบริการที่สามารถนำกลับมาใช้ใหม่ได้
+- **Single Source of Truth**: มีแหล่งข้อมูลความจริงเพียงแหล่งเดียวสำหรับข้อมูลของคุณ
+- **Avoid Copy-Paste**: อย่าคัดลอกและวางโค้ด ให้สร้างฟังก์ชันหรือคลาสแทน
 
 ### 9. Independent Workloads/Clusters
-Isolate workloads and clusters to prevent them from interfering with each other.
 
-*   **Resource Quotas**: Set resource quotas to prevent one workload from consuming all the resources.
-*   **Separate Environments**: Use separate environments for development, testing, and production.
-*   **Cell-based Architecture**: The system is divided into a collection of self-contained cells, each with its own data and services.
+แยกเวิร์กโหลดและคลัสเตอร์ออกจากกันเพื่อป้องกันไม่ให้รบกวนซึ่งกันและกัน
+
+- **Resource Quotas**: กำหนดโควตาทรัพยากรเพื่อป้องกันไม่ให้เวิร์กโหลดหนึ่งใช้ทรัพยากรทั้งหมด
+- **Separate Environments**: ใช้สภาพแวดล้อมแยกต่างหากสำหรับการพัฒนา การทดสอบ และการใช้งานจริง
+- **Cell-based Architecture**: ระบบถูกแบ่งออกเป็นกลุ่มของเซลล์ที่มีทุกอย่างในตัว (self-contained) โดยแต่ละเซลล์มีข้อมูลและบริการของตัวเอง
 
 ### 10. Autonomous with Emergency Human Intervention
-The system should be able to operate autonomously, but there should be a way for humans to intervene in case of an emergency.
 
-*   **Automated Alerts**: Set up alerts to notify the team when something goes wrong.
-*   **Runbooks**: Have well-defined procedures for handling common issues.
-*   **Feature Flags**: Use feature flags to enable or disable features without deploying new code.
+ระบบควรสามารถทำงานได้โดยอัตโนมัติ แต่ควรมีวิธีให้มนุษย์เข้ามาจัดการในกรณีฉุกเฉิน
+
+- **Automated Alerts**: ตั้งค่าการแจ้งเตือนเพื่อแจ้งทีมเมื่อมีสิ่งผิดปกติ
+- **Runbooks**: มีขั้นตอนการปฏิบัติงานที่กำหนดไว้ชัดเจนสำหรับการจัดการปัญหาที่พบบ่อย
+- **Feature Flags**: ใช้ feature flags เพื่อเปิดหรือปิดฟีเจอร์โดยไม่ต้อง deploy โค้ดใหม่
 
 ## Common High-Level Design Interview Questions
 
-*   Design a URL shortener (like TinyURL).
-*   Design a social media feed (like Twitter or Facebook).
-*   Design a ride-sharing service (like Uber or Lyft).
-*   Design a video streaming service (like YouTube or Netflix).
-*   Design a distributed key-value store (like Redis or Cassandra).
-*   Design a search engine (like Google).
-*   Design a notification service.
-*   Design a distributed message queue (like Kafka or RabbitMQ).
+- Design a URL shortener (like TinyURL)
+- Design a social media feed (like Twitter or Facebook)
+- Design a ride-sharing service (like Uber or Lyft)
+- Design a video streaming service (like YouTube or Netflix)
+- Design a distributed key-value store (like Redis or Cassandra)
+- Design a search engine (like Google)
+- Design a notification service
+- Design a distributed message queue (like Kafka or RabbitMQ)

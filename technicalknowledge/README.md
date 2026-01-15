@@ -9,6 +9,7 @@
 ### Java Fundamentals ✅
 
 คิดว่าสามารถดูได้จากตรงนี้แทน มาจาก channel ของผมเอง ขออภัยด้วยนะครับที่เป็น Video format 🙇‍♂️
+
 - [Java 21 + OOP - ภาษาไทย [2024]](https://youtube.com/playlist?list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&si=Qsx1nH3tKbm_C92Y)
 - [Object-oriented programming crash course ด้วย Java](https://www.youtube.com/watch?v=mqoNdgn9-bU&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=27&pp=gAQBiAQB)
 - [SOLID principles crash course สไตล์แอดมาร์ท](https://www.youtube.com/watch?v=1r1doEAGyus&list=PLm3A9eDaMzum-APaEr8jY5Ns5cU0KTkRG&index=29&t=16s&pp=gAQBiAQB)
@@ -28,7 +29,7 @@
 - [Back to back high level design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/high_level_design.md)
 - [System Design Interviews component must know](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/sdi_fundemental.md)
 
-### General topics ⏳
+### General topics ✅
 
 - [Object-Oriented Design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/ood.md)
 - [Database Schema Design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/db_schema_design.md)

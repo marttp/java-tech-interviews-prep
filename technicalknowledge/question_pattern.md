@@ -11,11 +11,11 @@
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Hash Table is your best friend**: When you need to find pairs, check for duplicates, or count frequencies, a hash table (or `HashMap` in Java) is often the most efficient data structure. It provides O(1) average time complexity for lookups, insertions, and deletions.
-- **Pre-computation**: Sometimes, you can pre-compute some values to speed up the main computation. For example, you can compute prefix sums or a frequency map.
-- **Think about edge cases**: What if the array is empty? What if it contains only one element? What if all elements are the same?
+- **Hash Table is your best friend**: เมื่อคุณต้องการค้นหาคู่ ตรวจสอบข้อมูลซ้ำ หรือนับความถี่ ตารางแฮช (หรือ `HashMap` ใน Java) มักจะเป็นโครงสร้างข้อมูลที่มีประสิทธิภาพมากที่สุด โดยให้ความซับซ้อนของเวลาเฉลี่ย O(1) สำหรับการค้นหา การแทรก และการลบข้อมูล
+- **Pre-computation**: บางครั้ง คุณสามารถคำนวณค่าล่วงหน้าเพื่อเร่งการคำนวณหลัก ตัวอย่างเช่น คุณสามารถคำนวณผลรวมสะสม (prefix sums) หรือแผนผังความถี่ (frequency map)
+- **Think about edge cases**: จะเกิดอะไรขึ้นถ้าอาร์เรย์ว่างเปล่า? จะเกิดอะไรขึ้นถ้ามีเพียงองค์ประกอบเดียว? จะเกิดอะไรขึ้นถ้าองค์ประกอบทั้งหมดเหมือนกัน?
 
 ## Two-Pointers
 
@@ -24,11 +24,11 @@
 - [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Sorted Arrays**: The two-pointers technique is particularly useful for sorted arrays. You can have one pointer at the beginning and one at the end, and move them towards each other.
-- **Different Speeds**: Sometimes, the two pointers move at different speeds. This is the "fast and slow pointers" technique, which is useful for cycle detection or finding the middle of a linked list.
-- **Sliding Window**: The two pointers can define a "window" that slides over the array. This is useful for problems that ask for a subarray that satisfies certain conditions.
+- **Sorted Arrays**: เทคนิค two-pointers มีประโยชน์อย่างยิ่งสำหรับอาร์เรย์ที่เรียงลำดับแล้ว คุณสามารถมีพอยน์เตอร์หนึ่งตัวที่จุดเริ่มต้นและอีกตัวที่จุดสิ้นสุด และขยับพวกมันเข้าหากัน
+- **Different Speeds**: บางครั้ง พอยน์เตอร์ทั้งสองจะเคลื่อนที่ด้วยความเร็วที่แตกต่างกัน นี่คือเทคนิค "fast and slow pointers" ซึ่งมีประโยชน์สำหรับการตรวจจับวงจร (cycle detection) หรือการค้นหากึ่งกลางของ linked list
+- **Sliding Window**: พอยน์เตอร์ทั้งสองสามารถกำหนด "หน้าต่าง" ที่เลื่อนไปบนอาร์เรย์ได้ ซึ่งมีประโยชน์สำหรับปัญหาที่ถามหา subarray ที่ตรงตามเงื่อนไขบางอย่าง
 
 ## Sliding Windows
 
@@ -36,11 +36,11 @@
 - [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Dynamic Window Size**: The size of the window can be dynamic. It can grow or shrink depending on the problem's constraints.
-- **Use a Hash Map**: A hash map can be used to keep track of the characters in the current window and their frequencies.
-- **Two Pointers**: The sliding window is usually implemented with two pointers, a `start` and an `end` pointer. The `end` pointer expands the window, and the `start` pointer shrinks it.
+- **Dynamic Window Size**: ขนาดของหน้าต่างสามารถปรับเปลี่ยนได้ มันสามารถขยายหรือหดได้ขึ้นอยู่กับข้อจำกัดของปัญหา
+- **Use a Hash Map**: สามารถใช้ hash map เพื่อติดตามตัวอักษรในหน้าต่างปัจจุบันและความถี่ของมัน
+- **Two Pointers**: การเลื่อนหน้าต่างมักจะถูกทำโดยใช้สองพอยน์เตอร์ คือ `start` และ `end` โดย `end` จะขยายหน้าต่าง และ `start` จะหดหน้าต่าง
 
 ## String
 
@@ -50,11 +50,11 @@
 - [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Immutability**: In Java, strings are immutable. This means that every time you modify a string, a new string object is created. If you need to do a lot of modifications, it's more efficient to use a `StringBuilder`.
-- **Character Manipulation**: Know how to work with characters. The `char` primitive type and the `Character` wrapper class are your friends.
-- **Common Methods**: Be familiar with the common string methods like `substring()`, `indexOf()`, `charAt()`, `toCharArray()`, `split()`, etc.
+- **Immutability**: ใน Java สตริงจะไม่สามารถแก้ไขได้ (immutable) ซึ่งหมายความว่าทุกครั้งที่คุณแก้ไขสตริง จะมีการสร้างอ็อบเจกต์สตริงใหม่ขึ้นมา หากคุณต้องการทำการแก้ไขมากๆ การใช้ `StringBuilder` จะมีประสิทธิภาพมากกว่า
+- **Character Manipulation**: ควรรู้วิธีการทำงานกับตัวอักษร ประเภท `char` และคลาส `Character` คือเพื่อนของคุณ
+- **Common Methods**: ทำความคุ้นเคยกับเมธอดทั่วไปของสตริง เช่น `substring()`, `indexOf()`, `charAt()`, `toCharArray()`, `split()` ฯลฯ
 
 ## Linked List
 
@@ -65,11 +65,11 @@
 - [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [LRU Cache](https://leetcode.com/problems/lru-cache/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Dummy Head**: When you need to modify the head of the linked list (e.g., remove the first element), it's often easier to use a dummy head. This is a dummy node that points to the head of the list.
-- **Two Pointers**: The two-pointers technique is very common in linked list problems. You can use it to find the middle of the list, detect a cycle, or reverse a list.
-- **Recursion**: Linked list problems can often be solved recursively. The base case is usually an empty list or a list with one node.
+- **Dummy Head**: เมื่อคุณต้องการแก้ไขส่วนหัวของ linked list (เช่น ลบองค์ประกอบแรก) มักจะง่ายกว่าหากใช้ dummy head ซึ่งเป็นโหนดจำลองที่ชี้ไปยังส่วนหัวของรายการ
+- **Two Pointers**: เทคนิค two-pointers เป็นที่นิยมมากในปัญหา linked list คุณสามารถใช้เพื่อหาจุดกึ่งกลางของรายการ ตรวจสอบวงจร หรือกลับด้านรายการ
+- **Recursion**: ปัญหา linked list มักจะสามารถแก้ไขได้ด้วยวิธีการเรียกซ้ำ (recursion) โดย case พื้นฐานมักจะเป็นรายการว่างหรือรายการที่มีเพียงหนึ่งโหนด
 
 ## Fast & Slow Pointers
 
@@ -78,11 +78,11 @@
 - [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Cycle Detection**: If the fast pointer and the slow pointer meet, it means there is a cycle in the linked list.
-- **Finding the Middle**: When the fast pointer reaches the end of the list, the slow pointer will be at the middle.
-- **Array Problems**: The fast and slow pointers technique can also be used in array problems, for example, to find a duplicate number.
+- **Cycle Detection**: หากพอยน์เตอร์แบบเร็วและแบบช้ามาเจอกัน แสดงว่ามีวงจรใน linked list
+- **Finding the Middle**: เมื่อพอยน์เตอร์แบบเร็วไปถึงจุดสิ้นสุดของรายการ พอยน์เตอร์แบบช้าจะอยู่ที่จุดกึ่งกลางพอดี
+- **Array Problems**: เทคนิคพอยน์เตอร์แบบเร็วและแบบช้ายังสามารถใช้ในปัญหาอาร์เรย์ได้อีกด้วย เช่น การหาตัวเลขที่ซ้ำกัน
 
 ## Modified Binary Search
 
@@ -90,11 +90,11 @@
 - [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Search Space**: The key to binary search is to correctly define the search space. The search space should be sorted and you should be able to discard half of it in each step.
-- **Variants**: There are many variants of binary search. For example, you might need to find the first or last occurrence of an element, or find the smallest element that is greater than a given value.
-- **2D Matrix**: Binary search can be applied to a 2D matrix that is sorted in a special way.
+- **Search Space**: กุญแจสำคัญของ binary search คือการกำหนดขอบเขตพื้นที่ค้นหาให้ถูกต้อง พื้นที่ค้นหาควรถูกเรียงลำดับและคุณควรจะสามารถตัดครึ่งหนึ่งของพื้นที่ทิ้งได้ในแต่ละขั้นตอน
+- **Variants**: มี binary search หลายรูปแบบ ตัวอย่างเช่น คุณอาจต้องหาตำแหน่งแรกหรือตำแหน่งสุดท้ายที่องค์ประกอบปรากฏ หรือหาองค์ประกอบที่เล็กที่สุดที่มากกว่าค่าที่กำหนด
+- **2D Matrix**: Binary search สามารถนำไปใช้กับเมทริกซ์ 2 มิติ ที่มีการเรียงลำดับในลักษณะพิเศษได้
 
 ## Stack & Queue
 
@@ -102,11 +102,11 @@
 - [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **LIFO vs. FIFO**: Remember that a stack is Last-In, First-Out (LIFO) and a queue is First-In, First-Out (FIFO).
-- **Use Cases for Stack**: Stacks are useful for problems that involve matching parentheses, evaluating expressions, and traversing a tree or graph (DFS).
-- **Use Cases for Queue**: Queues are useful for problems that involve processing items in the order they were added, and for traversing a tree or graph (BFS).
+- **LIFO vs. FIFO**: จำไว้ว่า Stack เป็นแบบเข้าหลังออกก่อน (LIFO) และ Queue เป็นแบบเข้าก่อนออกก่อน (FIFO)
+- **Use Cases for Stack**: Stacks มีประโยชน์สำหรับปัญหาที่เกี่ยวข้องกับการจับคู่วงเล็บ การประเมินนิพจน์ และการ traverse tree หรือ graph (DFS)
+- **Use Cases for Queue**: Queues มีประโยชน์สำหรับปัญหาที่เกี่ยวข้องกับการประมวลผลรายการตามลำดับที่เพิ่มเข้ามา และสำหรับการ traverse tree หรือ graph (BFS)
 
 ## Monotonic Stack
 
@@ -115,11 +115,11 @@
 - [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 - [Online Stock Span](https://leetcode.com/problems/online-stock-span/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Increasing or Decreasing**: A monotonic stack is a stack whose elements are always in increasing or decreasing order.
-- **Next Greater/Smaller Element**: Monotonic stacks are very useful for problems that ask for the next greater or smaller element.
-- **Store Indices**: It's often useful to store the indices of the elements in the stack instead of the elements themselves.
+- **Increasing or Decreasing**: Monotonic stack คือ stack ที่องค์ประกอบภายในเรียงลำดับจากน้อยไปมาก หรือมากไปน้อยเสมอ
+- **Next Greater/Smaller Element**: Monotonic stacks มีประโยชน์มากสำหรับปัญหาที่ถามหาองค์ประกอบถัดไปที่มากกว่า หรือน้อยกว่า
+- **Store Indices**: มักจะมีประโยชน์ในการเก็บ index ขององค์ประกอบใน stack แทนที่จะเก็บตัวองค์ประกอบเอง
 
 ## Backtracking
 
@@ -129,11 +129,11 @@
 - [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 - [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Template**: Backtracking problems can often be solved with a standard template. You have a recursive function that explores all possible solutions.
-- **Pruning**: To optimize the backtracking algorithm, you can "prune" the search space by abandoning a path as soon as you know it cannot lead to a valid solution.
-- **State Management**: You need to carefully manage the state of the solution being built. This often involves adding an element to the current solution and then removing it (backtracking) to explore other possibilities.
+- **Template**: ปัญหา backtracking มักจะสามารถแก้ไขได้ด้วย template มาตรฐาน คุณมีฟังก์ชันเรียกซ้ำ (recursive function) ที่ทำการสำรวจความเป็นไปได้ทั้งหมด
+- **Pruning**: เพื่อเพิ่มประสิทธิภาพอัลกอริทึม backtracking คุณสามารถ "ตัดแต่งกิ่ง" (prune) พื้นที่ค้นหาโดยการละทิ้งเส้นทางทันทีที่คุณรู้ว่ามันไม่สามารถนำไปสู่คำตอบที่ถูกต้องได้
+- **State Management**: คุณต้องจัดการสถานะของคำตอบที่กำลังสร้างอย่างระมัดระวัง ซึ่งมักเกี่ยวข้องกับการเพิ่มองค์ประกอบเข้าไปในคำตอบปัจจุบัน แล้วจึงลบออก (backtracking) เพื่อสำรวจความเป็นไปได้อื่น ๆ
 
 ## Merge Interval
 
@@ -141,11 +141,11 @@
 - [Insert Interval](https://leetcode.com/problems/insert-interval/)
 - [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Sort by Start Time**: The first step in most merge interval problems is to sort the intervals by their start times.
-- **Overlapping Intervals**: Two intervals `[a, b]` and `[c, d]` overlap if `a <= d` and `c <= b`.
-- **Merging**: If two intervals overlap, you can merge them into a single interval `[min(a, c), max(b, d)]`.
+- **Sort by Start Time**: ขั้นตอนแรกในปัญหาการรวมช่วงเวลาส่วนใหญ่ คือการเรียงลำดับช่วงเวลาตามเวลาเริ่มต้น
+- **Overlapping Intervals**: ช่วงเวลาสองช่วง `[a, b]` และ `[c, d]` จะทับซ้อนกันถ้า `a <= d` และ `c <= b`
+- **Merging**: หากช่วงเวลาสองช่วงทับซ้อนกัน คุณสามารถรวมพวกมันเป็นช่วงเวลาเดียวได้คือ `[min(a, c), max(b, d)]`
 
 ## Cyclic Sort
 
@@ -153,11 +153,11 @@
 - [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
 - [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Range of Numbers**: Cyclic sort is used for problems where the input is an array of numbers in a specific range (e.g., 1 to n).
-- **In-place**: The idea is to place each number at its correct index. For example, if the numbers are from 1 to n, the number `i` should be at index `i - 1`. This is done in-place, i.e., without using any extra space.
-- **Find Missing/Duplicate Numbers**: After sorting the array with cyclic sort, you can iterate through it to find missing or duplicate numbers.
+- **Range of Numbers**: Cyclic sort ใช้สำหรับปัญหาที่อินพุตเป็นอาร์เรย์ของตัวเลขในช่วงที่กำหนด (เช่น 1 ถึง n)
+- **In-place**: ไอเดียคือการวางตัวเลขแต่ละตัวไว้ที่ index ที่ถูกต้องของมัน ตัวอย่างเช่น หากตัวเลขคือ 1 ถึง n ตัวเลข `i` ควรอยู่ที่ index `i - 1` ซึ่งทำได้แบบ in-place คือไม่ต้องใช้พื้นที่เพิ่มเติม
+- **Find Missing/Duplicate Numbers**: หลังจากเรียงลำดับอาร์เรย์ด้วย cyclic sort แล้ว คุณสามารถวนลูปตรวจสอบเพื่อหาตัวเลขที่หายไป หรือซ้ำกันได้
 
 ## Tree - DFS
 
@@ -169,11 +169,11 @@
 - [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
 - [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Recursion**: DFS on a tree is naturally implemented with recursion. The base case is usually a null node.
-- **Pre-order, In-order, Post-order**: There are three main ways to traverse a tree with DFS: pre-order (root, left, right), in-order (left, root, right), and post-order (left, right, root).
-- **Path Problems**: DFS is useful for problems that involve finding a path from the root to a leaf, or finding the maximum path sum.
+- **Recursion**: DFS บน tree นั้นทำได้โดยธรรมชาติด้วยการเรียกซ้ำ (recursion) โดย case พื้นฐานมักจะเป็น node ที่เป็น null
+- **Pre-order, In-order, Post-order**: มีสามวิธีหลักในการ traverse tree ด้วย DFS: pre-order (root, left, right), in-order (left, root, right), และ post-order (left, right, root)
+- **Path Problems**: DFS มีประโยชน์สำหรับปัญหาที่เกี่ยวข้องกับการค้นหาเส้นทางจาก root ไปยัง leaf หรือการหาผลรวมเส้นทางสูงสุด
 
 ## Tree - BFS
 
@@ -183,11 +183,11 @@
 - [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 - [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Queue**: BFS on a tree is implemented with a queue. You add the root to the queue, and then in each step, you dequeue a node and enqueue its children.
-- **Level Order Traversal**: BFS is used for level order traversal of a tree, where you visit the nodes level by level.
-- **Shortest Path**: BFS is useful for finding the shortest path from the root to a node.
+- **Queue**: BFS บน tree จะถูก implement ด้วย queue คุณเพิ่ม root เข้าไปใน queue และในแต่ละขั้นตอน คุณจะ dequeue ปมออกมาและ enqueue ลูก ๆ ของมันเข้าไป
+- **Level Order Traversal**: BFS ใช้สำหรับการ traverse tree แบบทีละระดับ (level by level)
+- **Shortest Path**: BFS มีประโยชน์ในการค้นหาเส้นทางที่สั้นที่สุดจาก root ไปยัง node ใดๆ
 
 ## Trie
 
@@ -196,11 +196,11 @@
 - [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
 - [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Prefix Problems**: Tries are very useful for problems that involve prefixes, such as autocomplete or finding all words with a given prefix.
-- **Node Structure**: Each node in a trie represents a character. A common way to implement a trie node is with a hash map or an array to store its children.
-- **End of Word**: You need a way to mark the end of a word in the trie. This is usually done with a boolean flag in the node.
+- **Prefix Problems**: Tries มีประโยชน์มากสำหรับปัญหาที่เกี่ยวข้องกับคำนำหน้า (prefixes) เช่น autocomplete หรือการค้นหาคำที่มีคำนำหน้าตามที่กำหนด
+- **Node Structure**: แต่ละโหนดใน trie เป็นตัวแทนของตัวอักษรหนึ่งตัว วิธีทั่วไปในการ implement โหนด trie คือการใช้ hash map หรืออาร์เรย์เพื่อเก็บลูก ๆ ของมัน
+- **End of Word**: คุณต้องมีวิธีระบุการสิ้นสุดของคำใน trie ซึ่งมักทำได้ด้วย boolean flag ในโหนด
 
 ## Top K Elements
 
@@ -212,11 +212,11 @@
 - [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
 - [Reorganize String](https://leetcode.com/problems/reorganize-string/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Heap (Priority Queue)**: The most common way to solve "Top K" problems is to use a min-heap or a max-heap (or a `PriorityQueue` in Java).
-- **Min-Heap vs. Max-Heap**: If you need to find the top K largest elements, you can use a min-heap of size K. If you need to find the top K smallest elements, you can use a max-heap of size K.
-- **Quickselect**: Quickselect is another algorithm that can be used to find the Kth smallest or largest element in an unsorted array. It has an average time complexity of O(n).
+- **Heap (Priority Queue)**: วิธีที่พบบ่อยที่สุดในการแก้ปัญหา "Top K" คือการใช้ min-heap หรือ max-heap (หรือ `PriorityQueue` ใน Java)
+- **Min-Heap vs. Max-Heap**: หากคุณต้องการค้นหาองค์ประกอบที่ใหญ่ที่สุด K อันดับแรก คุณสามารถใช้ min-heap ขนาด K หากคุณต้องการค้นหาองค์ประกอบที่เล็กที่สุด K อันดับแรก คุณสามารถใช้ max-heap ขนาด K
+- **Quickselect**: Quickselect เป็นอีกหนึ่งอัลกอริทึมที่สามารถใช้ค้นหาองค์ประกอบที่เล็กที่สุดหรือใหญ่ที่สุดลำดับที่ K ในอาร์เรย์ที่ไม่ได้เรียงลำดับ โดยมีความซับซ้อนของเวลาเฉลี่ย O(n)
 
 ## K-way Merge
 
@@ -225,21 +225,21 @@
 - [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
 - [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Min-Heap**: The K-way merge pattern is used to merge K sorted lists. The most common way to solve this is to use a min-heap.
-- **Storing Tuples**: You can store tuples of (element, list_index, element_index) in the min-heap to keep track of which element came from which list.
-- **Matrix Problems**: This pattern can also be applied to problems that involve a sorted matrix.
+- **Min-Heap**: รูปแบบ K-way merge ถูกใช้เพื่อรวมรายการเรียงลำดับ K รายการ วิธีที่พบบ่อยที่สุดในการแก้ปัญหานี้คือการใช้ min-heap
+- **Storing Tuples**: คุณสามารถเก็บ tuple ของ (ค่า, index ของรายการ, index ขององค์ประกอบ) ใน min-heap เพื่อติดตามว่าองค์ประกอบไหนมาจากรายการใด
+- **Matrix Problems**: รูปแบบนี้ยังสามารถนำไปใช้กับปัญหาที่เกี่ยวข้องกับเมทริกซ์ที่เรียงลำดับแล้วได้อีกด้วย
 
 ## 2 Heaps
 
 - [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Median Problems**: The 2 heaps pattern is very useful for problems that involve finding the median of a stream of numbers.
-- **Max-Heap and Min-Heap**: You use a max-heap to store the smaller half of the numbers and a min-heap to store the larger half.
-- **Balancing**: The two heaps should be kept balanced, so that they have roughly the same number of elements.
+- **Median Problems**: รูปแบบ 2 heaps มีประโยชน์มากสำหรับปัญหาที่เกี่ยวข้องกับการค้นามัธยฐานของกระแสข้อมูลตัวเลข
+- **Max-Heap and Min-Heap**: คุณใช้ max-heap เพื่อเก็บครึ่งหนึ่งที่มีค่าน้อยกว่า และ min-heap เพื่อเก็บครึ่งหนึ่งที่มีค่ามากกว่า
+- **Balancing**: ฮีปทั้งสองควรมีความสมดุล เพื่อให้มีจำนวนองค์ประกอบใกล้เคียงกัน
 
 ## Graph
 
@@ -256,11 +256,11 @@
 - [01 Matrix](https://leetcode.com/problems/01-matrix/)
 - [Word Ladder](https://leetcode.com/problems/word-ladder/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Adjacency List vs. Adjacency Matrix**: You can represent a graph with an adjacency list or an adjacency matrix. An adjacency list is usually more efficient for sparse graphs, while an adjacency matrix is better for dense graphs.
-- **DFS and BFS**: Be comfortable with both Depth-First Search (DFS) and Breadth-First Search (BFS) for traversing a graph.
-- **Visited Set**: When traversing a graph, you need to keep track of the visited nodes to avoid infinite loops.
+- **Adjacency List vs. Adjacency Matrix**: คุณสามารถแสดงกราฟด้วย adjacency list หรือ adjacency matrix โดย adjacency list มักจะมีประสิทธิภาพมากกว่าสำหรับกราฟที่มีเส้นเชื่อน้อย (sparse) ในขณะที่ adjacency matrix เหมาะกับกราฟที่มีเส้นเชื่อมมาก (dense)
+- **DFS and BFS**: ควรทำความเข้าใจทั้ง Depth-First Search (DFS) และ Breadth-First Search (BFS) สำหรับการ traverse กราฟ
+- **Visited Set**: เมื่อ traverse กราฟ คุณต้องติดตาม node ที่เยี่ยมชมแล้วเพื่อป้องกันการวนลูปไม่รู้จบ
 
 ## Union-Find
 
@@ -268,44 +268,44 @@
 - [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
 - [Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Disjoint Sets**: The Union-Find data structure is used to keep track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.
-- **`union()` and `find()`**: The two main operations are `union()`, which merges two subsets, and `find()`, which determines which subset an element belongs to.
-- **Path Compression and Union by Rank/Size**: These are two optimizations that can be used to make the Union-Find data structure more efficient.
+- **Disjoint Sets**: โครงสร้างข้อมูล Union-Find ใช้เพื่อติดตามชุดขององค์ประกอบที่ถูกแบ่งออกเป็นเซตย่อยที่ไม่ซ้ำซ้อนกันหลายชุด
+- **`union()` and `find()`**: สองการดำเนินการหลักคือ `union()` ซึ่งรวมสองเซตย่อยเข้าด้วยกัน และ `find()` ซึ่งกำหนดว่าองค์ประกอบใดอยู่ในเซตย่อยใด
+- **Path Compression and Union by Rank/Size**: เหล่านี้เป็นสองการเพิ่มประสิทธิภาพที่สามารถใช้เพื่อทำให้โครงสร้างข้อมูล Union-Find มีประสิทธิภาพมากขึ้น
 
 ## Topological Sort
 
 - [Course Schedule](https://leetcode.com/problems/course-schedule/)
 - [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **DAGs**: Topological sort is used for Directed Acyclic Graphs (DAGs).
-- **In-degree**: The algorithm uses the in-degree of each node (the number of incoming edges).
-- **Queue**: You start with the nodes that have an in-degree of 0 and add them to a queue. Then, you process the nodes in the queue, and for each node you process, you decrement the in-degree of its neighbors.
+- **DAGs**: Topological sort ใช้สำหรับ Directed Acyclic Graphs (DAGs)
+- **In-degree**: อัลกอริทึมใช้ in-degree ของแต่ละ node (จำนวนเส้นเชื่อมขาเข้า)
+- **Queue**: คุณเริ่มต้นด้วย node ที่มี in-degree เป็น 0 และเพิ่มเข้าไปใน queue จากนั้นคุณประมวลผล node ใน queue และสำหรับแต่ละ node ที่ประมวลผล คุณจะลดค่า in-degree ของเพื่อนบ้านลง
 
 ## Minimum Spanning Tree
 
 - [Min Cost to Connect All Points [Kruskal]](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 - [Min Cost to Connect All Points [Prim]](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Weighted Undirected Graphs**: MST algorithms are used for weighted undirected graphs.
-- **Kruskal's vs. Prim's**: Kruskal's algorithm sorts the edges by weight and adds them to the MST if they don't form a cycle. Prim's algorithm starts from a single node and grows the MST by adding the cheapest edge that connects a node in the MST to a node outside the MST.
-- **Union-Find**: Kruskal's algorithm uses the Union-Find data structure to detect cycles.
+- **Weighted Undirected Graphs**: อัลกอริทึม MST ใช้สำหรับกราฟแบบไม่มีทิศทางที่มีน้ำหนัก
+- **Kruskal's vs. Prim's**: อัลกอริทึม Kruskal's เรียงลำดับเส้นเชื่อมตามน้ำหนักและเพิ่มเข้าไปใน MST หากไม่ทำให้เกิดวงจร ส่วน Prim's เริ่มจาก node เดียวและขยาย MST โดยการเพิ่มเส้นเชื่อมที่ถูกที่สุดที่เชื่อมต่อ node ใน MST กับ node ภายนอก MST
+- **Union-Find**: อัลกอริทึม Kruskal's ใช้โครงสร้างข้อมูล Union-Find เพื่อตรวจสอบวงจร
 
 ## Single-Source-Shortest Path
 
 - [Network Delay Time [Djisktra]](https://leetcode.com/problems/network-delay-time/)
 - [Network Delay Time [Bellman-ford]](https://leetcode.com/problems/network-delay-time/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Dijkstra's vs. Bellman-Ford**: Dijkstra's algorithm is faster, but it only works for graphs with non-negative edge weights. Bellman-Ford is slower, but it can handle negative edge weights.
-- **Priority Queue**: Dijkstra's algorithm uses a priority queue to efficiently select the next node to visit.
-- **Relaxation**: Both algorithms use the concept of "relaxation", where you repeatedly update the estimated shortest distance to a node.
+- **Dijkstra's vs. Bellman-Ford**: Dijkstra's เร็วกว่า แต่ทำงานได้กับกราฟที่มีน้ำหนักเส้นเชื่อมไม่ติดลบเท่านั้น Bellman-Ford ช้ากว่า แต่สามารถจัดการกับน้ำหนักเส้นเชื่อมที่ติดลบได้
+- **Priority Queue**: Dijkstra's ใช Priority Queue เพื่อเลือก node ถัดไปที่จะเยี่ยมชมอย่างมีประสิทธิภาพ
+- **Relaxation**: ทั้งสองอัลกอริทึมใช้แนวคิดของการ "ผ่อนคลาย" (relaxation) ซึ่งคุณจะอัปเดตระยะทางที่สั้นที่สุดที่คาดการณ์ไว้ไปยัง node ซ้ำ ๆ
 
 ## Dynamic Programming - 0/1 Knapsack
 
@@ -313,33 +313,33 @@
 - [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
 - [House Robber](https://leetcode.com/problems/house-robber/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Choice**: For each item, you have two choices: either include it in the knapsack or not.
-- **DP Table**: You can use a 2D DP table, where `dp[i][j]` represents the maximum value you can get with the first `i` items and a knapsack of capacity `j`.
-- **Bottom-up or Top-down**: You can solve knapsack problems with a bottom-up (tabulation) or a top-down (memoization) approach.
+- **Choice**: สำหรับแต่ละไอเทม คุณมีสองทางเลือก: ใส่ไว้ในกระเป๋าเป้ หรือไม่ใส่
+- **DP Table**: คุณสามารถใช้ตาราง DP แบบ 2 มิติ โดย `dp[i][j]` แทนค่าสูงสุดที่คุณจะได้รับด้วยไอเทม `i` ชิ้นแรกและกระเป๋าเป้ที่มีความจุ `j`
+- **Bottom-up or Top-down**: คุณสามารถแก้ปัญหา knapsack ได้ด้วยวิธี bottom-up (tabulation) หรือ top-down (memoization)
 
 ## Dynamic Programming - Unbound Knapsack
 
 - [Coin Change](https://leetcode.com/problems/coin-change/)
 - [Coin Change II](https://leetcode.com/problems/coin-change-ii/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Unlimited Items**: In the unbound knapsack problem, you can use each item an unlimited number of times.
-- **1D DP Table**: You can solve this problem with a 1D DP table, where `dp[j]` represents the maximum value you can get with a knapsack of capacity `j`.
-- **Order of Loops**: The order of the loops matters. The outer loop should be for the items, and the inner loop should be for the knapsack capacity.
+- **Unlimited Items**: ในปัญหา unbound knapsack คุณสามารถใช้แต่ละไอเทมได้ไม่จำกัดจำนวนครั้ง
+- **1D DP Table**: คุณสามารถแก้ปัญหานี้ด้วยตาราง DP แบบ 1 มิติ โดย `dp[j]` แทนค่าสูงสุดที่คุณจะได้รับด้วยกระเป๋าเป้ที่มีความจุ `j`
+- **Order of Loops**: ลำดับของลูปมีความสำคัญ ลูปนอกควรเป็นสำหรับไอเทม และลูปในควรเป็นสำหรับความจุกระเป๋าเป้
 
 ## Dynamic Programming - Fibonacci
 
 - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
 - [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Overlapping Subproblems**: Fibonacci numbers are a classic example of a problem with overlapping subproblems.
-- **Memoization**: You can use memoization (a top-down approach) to store the results of subproblems that have already been solved.
-- **Tabulation**: You can also use tabulation (a bottom-up approach) to solve the problem iteratively.
+- **Overlapping Subproblems**: จำนวน Fibonacci เป็นตัวอย่างคลาสสิกของปัญหาที่มีปัญหาย่อยที่ซ้อนทับกัน (overlapping subproblems)
+- **Memoization**: คุณสามารถใช้ memoization (วิธี top-down) เพื่อเก็บผลลัพธ์ของปัญหาย่อยที่ถูกแก้แล้ว
+- **Tabulation**: คุณยังสามารถใช้ tabulation (วิธี bottom-up) เพื่อแก้ปัญหาแบบวนซ้ำได้ด้วย
 
 ## Dynamic Programming - Longest Palindromic Subsequence (LPS)
 
@@ -347,11 +347,11 @@
 - [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 - [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Reverse the String**: The longest palindromic subsequence of a string is the longest common subsequence of the string and its reverse.
-- **DP Table**: You can use a 2D DP table, where `dp[i][j]` represents the length of the longest palindromic subsequence of the substring `s[i...j]`.
-- **Base Case**: The base case is `dp[i][i] = 1` for all `i`.
+- **Reverse the String**: Longest palindromic subsequence ของสตริง คือ longest common subsequence ของสตริงนั้นกับสตริงที่กลับด้านแล้ว
+- **DP Table**: คุณสามารถใช้ตาราง DP แบบ 2 มิติ โดย `dp[i][j]` แทนความยาวของ longest palindromic subsequence ของ substring `s[i...j]`
+- **Base Case**: base case คือ `dp[i][i] = 1` สำหรับทุก ๆ `i`
 
 ## Dynamic Programming - Longest Common Subsequence (LCS)
 
@@ -360,11 +360,11 @@
 - [Edit Distance](https://leetcode.com/problems/edit-distance/)
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **2D DP Table**: You can use a 2D DP table, where `dp[i][j]` represents the length of the longest common subsequence of the first `i` characters of string `s1` and the first `j` characters of string `s2`.
-- **Recurrence Relation**: If `s1[i] == s2[j]`, then `dp[i][j] = 1 + dp[i-1][j-1]`. Otherwise, `dp[i][j] = max(dp[i-1][j], dp[i][j-1])`.
-- **Variations**: There are many variations of the LCS problem, such as finding the shortest common supersequence or the edit distance between two strings.
+- **2D DP Table**: คุณสามารถใช้ตาราง DP แบบ 2 มิติ โดย `dp[i][j]` แทนความยาวของ longest common subsequence ของ `i` ตัวอักษรแรกของสตริง `s1` และ `j` ตัวอักษรแรกของสตริง `s2`
+- **Recurrence Relation**: ถ้า `s1[i] == s2[j]` แล้ว `dp[i][j] = 1 + dp[i-1][j-1]` มิฉะนั้น `dp[i][j] = max(dp[i-1][j], dp[i][j-1])`
+- **Variations**: มีรูปแบบที่หลากหลายของปัญหา LCS เช่น การหา shortest common supersequence หรือ edit distance ระหว่างสองสตริง
 
 ## Dynamic Programming - General
 
@@ -376,11 +376,11 @@
 - [Concatenated Words](https://leetcode.com/problems/concatenated-words/)
 - [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Identify the Subproblem**: The key to solving a DP problem is to identify the subproblem and the recurrence relation.
-- **Memoization vs. Tabulation**: Decide whether to use a top-down (memoization) or a bottom-up (tabulation) approach. Memoization is often more intuitive, but tabulation can be more efficient.
-- **State Transition**: Think about how to transition from one state to another.
+- **Identify the Subproblem**: กุญแจสำคัญในการแก้ปัญหา DP คือการระบุปัญหาย่อยและความสัมพันธ์เวียนเกิด (recurrence relation)
+- **Memoization vs. Tabulation**: ตัดสินใจว่าจะใช้วิธี top-down (memoization) หรือ bottom-up (tabulation) โดย memoization มักจะเข้าใจง่ายกว่า แต่ tabulation อาจมีประสิทธิภาพมากกว่า
+- **State Transition**: คิดถึงวิธีการเปลี่ยนสถานะจากจุดหนึ่งไปยังอีกจุดหนึ่ง
 
 ## Bitwise
 
@@ -389,8 +389,8 @@
 - [Counting Bits](https://leetcode.com/problems/counting-bits/)
 - [Total Hamming Distance](https://leetcode.com/problems/total-hamming-distance/)
 
-### Tips
+### Tips (เคล็ดลับ)
 
-- **Know the Operators**: Be familiar with the bitwise operators: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (left shift), and `>>` (right shift).
-- **Common Tricks**: There are many common bitwise tricks, such as checking if a number is a power of 2 (`n & (n - 1) == 0`), or swapping two numbers without a temporary variable (`a ^= b; b ^= a; a ^= b;`).
-- **Masks**: You can use masks to set, clear, or toggle a specific bit.
+- **Know the Operators**: ทำความคุ้นเคยกับตัวดำเนินการ bitwise: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (left shift), และ `>>` (right shift)
+- **Common Tricks**: มีเทคนิค bitwise ทั่วไปหลายอย่าง เช่น การตรวจสอบว่าตัวเลขเป็นเลขยกกำลัง 2 หรือไม่ (`n & (n - 1) == 0`) หรือการสลับสองตัวเลขโดยไม่ใช้ตัวแปรชั่วคราว (`a ^= b; b ^= a; a ^= b;`)
+- **Masks**: คุณสามารถใช้ mask เพื่อตั้งค่า ล้าง หรือสลับบิตที่ระบุได้

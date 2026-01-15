@@ -1,106 +1,142 @@
-# System Design Components You Must Know
+# System Design Components You Must Know (องค์ประกอบ System Design ที่ต้องรู้)
 
 ## 1. Load Balancers
-A load balancer is a device that acts as a reverse proxy and distributes network or application traffic across a number of servers. Load balancers are used to increase capacity (concurrent users) and reliability of applications.
+
+Load balancer คืออุปกรณ์ที่ทำหน้าที่เป็น reverse proxy และกระจายทราฟฟิกของเครือข่ายหรือแอปพลิเคชันไปยังเซิร์ฟเวอร์หลายตัว Load balancers ใช้เพื่อเพิ่มความจุ (รองรับผู้ใช้พร้อมกัน) และความน่าเชื่อถือของแอปพลิเคชัน
 
 [INSERT_DIAGRAM] A diagram showing a load balancer distributing traffic from clients to multiple web servers.
 
 **Types of Load Balancers:**
-*   **Layer 4 (Transport Layer)**: Distributes traffic based on IP addresses and ports.
-*   **Layer 7 (Application Layer)**: Distributes traffic based on application-level data, such as HTTP headers or cookies.
+
+- **Layer 4 (Transport Layer)**: กระจายทราฟฟิกโดยดูจาก IP addresses และ ports
+- **Layer 7 (Application Layer)**: กระจายทราฟฟิกโดยดูจากข้อมูลระดับแอปพลิเคชัน เช่น HTTP headers หรือ cookies
 
 **Common Load Balancing Algorithms:**
-*   **Round Robin**: Distributes requests sequentially among the group of servers.
-*   **Least Connections**: Sends traffic to the server with the fewest active connections.
-*   **IP Hash**: The IP address of the client is used to determine which server receives the request.
+
+- **Round Robin**: กระจายคำขอไปยังกลุ่มเซิร์ฟเวอร์ตามลำดับวนไปเรื่อยๆ
+- **Least Connections**: ส่งทราฟฟิกไปยังเซิร์ฟเวอร์ที่มีการเชื่อมต่อ active น้อยที่สุด
+- **IP Hash**: ใช้ IP address ของ client เพื่อกำหนดว่าเซิร์ฟเวอร์ใดจะได้รับคำขอ
 
 ## 2. Web Server
-A web server is a computer system that processes requests via HTTP, the basic network protocol used to distribute information on the World Wide Web.
+
+Web server คือระบบคอมพิวเตอร์ที่ประมวลผลคำขอผ่าน HTTP ซึ่งเป็นโปรโตคอลเครือข่ายพื้นฐานที่ใช้ในการเผยแพร่ข้อมูลบน World Wide Web
 
 **Common Web Servers:**
-*   Nginx
-*   Apache
 
-## 3. Cache
-A cache is a hardware or software component that stores data so that future requests for that data can be served faster.
+- Nginx
+- Apache
+
+## 3. Cache (แคช)
+
+Cache คือส่วนประกอบฮาร์ดแวร์หรือซอฟต์แวร์ที่จัดเก็บข้อมูลเพื่อให้สามารถตอบสนองคำขอข้อมูลนั้นในอนาคตได้เร็วขึ้น
 
 [INSERT_DIAGRAM] A diagram showing a cache sitting between an application and a database. When the application requests data, it first checks the cache. If the data is in the cache (a "cache hit"), it is returned to the application. If the data is not in the cache (a "cache miss"), the application retrieves it from the database, stores it in the cache, and then returns it.
 
 **Caching Strategies:**
-*   **Cache-Aside**: The application is responsible for reading and writing from the cache.
-*   **Read-Through**: The cache is responsible for reading data from the database.
-*   **Write-Through**: Data is written to the cache and the database at the same time.
-*   **Write-Back**: Data is written to the cache, and then asynchronously written to the database.
+
+- **Cache-Aside**: แอปพลิเคชันมีหน้าที่ในการอ่านและเขียนข้อมูลลงใน cache เอง
+- **Read-Through**: Cache มีหน้าที่ในการอ่านข้อมูลจากฐานข้อมูลให้
+- **Write-Through**: ข้อมูลจะถูกเขียนลงใน cache และฐานข้อมูลพร้อมกัน
+- **Write-Back**: ข้อมูลจะถูกเขียนลงใน cache ก่อน แล้วจึงเขียนลงฐานข้อมูลแบบ asynchronously ในภายหลัง
 
 **Common Caching Technologies:**
-*   Redis
-*   Memcached
+
+- Redis
+- Memcached
 
 ## 4. Application Server
-An application server is a server that hosts applications. It provides a framework for developers to create and run applications.
+
+Application server คือเซิร์ฟเวอร์ที่โฮสต์แอปพลิเคชัน ทำหน้าที่จัดเตรียม framework สำหรับนักพัฒนาในการสร้างและรันแอปพลิเคชัน
 
 ## 5. Database Server
-A database server is a server which uses a database application that provides database services to other computer programs or to computers, as defined by the client–server model.
+
+Database server คือเซิร์ฟเวอร์ที่ใช้แอปพลิเคชันฐานข้อมูลในการให้บริการข้อมูลแก่โปรแกรมคอมพิวเตอร์หรือคอมพิวเตอร์เครื่องอื่น ตามโมเดล client–server
 
 **Types of Databases:**
-*   **Relational (SQL)**: Data is stored in tables with rows and columns. Examples: MySQL, PostgreSQL, Oracle.
-*   **NoSQL**: Data is stored in a non-tabular format. Examples: MongoDB, Cassandra, DynamoDB.
+
+- **Relational (SQL)**: ข้อมูลถูกเก็บในตารางที่มีแถวและคอลัมน์ ตัวอย่าง: MySQL, PostgreSQL, Oracle
+- **NoSQL**: ข้อมูลถูกเก็บในรูปแบบที่ไม่ใช่ตาราง ตัวอย่าง: MongoDB, Cassandra, DynamoDB
 
 ## 6. Distributed Messaging Systems
-Distributed messaging systems are used to facilitate communication between different components of a distributed system.
 
-*   **Message Queue**: A point-to-point communication model where a message is sent from a producer to a consumer. Examples: RabbitMQ, Amazon SQS.
-*   **Pub/Sub**: A publish-subscribe model where a message is published to a topic and then received by all the subscribers of that topic. Examples: Apache Kafka, Google Cloud Pub/Sub.
-*   **Streaming**: A real-time data processing model where data is processed as it is generated. Examples: Apache Kafka, Amazon Kinesis.
+Distributed messaging systems ใช้เพื่ออำนวยความสะดวกในการสื่อสารระหว่างส่วนประกอบต่าง ๆ ของระบบแบบกระจาย (distributed system)
+
+- **Message Queue**: โมเดลการสื่อสารแบบจุดต่อจุด (point-to-point) ที่ข้อความถูกส่งจากผู้ผลิต (producer) ไปยังผู้บริโภค (consumer) ตัวอย่าง: RabbitMQ, Amazon SQS
+- **Pub/Sub**: โมเดล publish-subscribe ที่ข้อความถูก publish ไปยังหัวข้อ (topic) และได้รับโดย subscribers ทั้งหมดของหัวข้อนั้น ตัวอย่าง: Apache Kafka, Google Cloud Pub/Sub
+- **Streaming**: โมเดลการประมวลผลข้อมูลแบบเรียลไทม์ที่ข้อมูลถูกประมวลผลในขณะที่ถูกสร้างขึ้น ตัวอย่าง: Apache Kafka, Amazon Kinesis
 
 ## 7. Distributed File Systems
-A distributed file system is a file system that is distributed on multiple file servers or storage devices.
+
+Distributed file system คือระบบไฟล์ที่กระจายอยู่บนไฟล์เซิร์ฟเวอร์หรืออุปกรณ์จัดเก็บข้อมูลหลายตัว
 
 **Common Distributed File Systems:**
-*   Hadoop Distributed File System (HDFS)
-*   Google File System (GFS)
-*   Amazon S3
+
+- Hadoop Distributed File System (HDFS)
+- Google File System (GFS)
+- Amazon S3
 
 ## 8. API (Application Programming Interface)
-An API is a set of rules and protocols for building and interacting with software applications.
+
+API คือชุดของกฎและโปรโตคอลสำหรับการสร้างและโต้ตอบกับแอปพลิเคชันซอฟต์แวร์
 
 **Common API Styles:**
-*   **REST (Representational State Transfer)**: A stateless architecture that uses HTTP methods (GET, POST, PUT, DELETE) to operate on resources.
-*   **RPC (Remote Procedure Call)**: A client executes a procedure or a function on a remote server.
-*   **GraphQL**: A query language for APIs that allows clients to request exactly the data they need.
+
+- **REST (Representational State Transfer)**: สถาปัตยกรรมแบบ stateless ที่ใช้ HTTP methods (GET, POST, PUT, DELETE) ในการทำงานกับทรัพยากร
+- **RPC (Remote Procedure Call)**: Client จะเรียกใช้ procedure หรือฟังก์ชันบนเซิร์ฟเวอร์ระยะไกล
+- **GraphQL**: ภาษา query สำหรับ APIs ที่อนุญาตให้ clients ขอข้อมูลที่ต้องการได้อย่างแม่นยำ
 
 ## 9. Content Delivery Networks (CDN)
-A CDN is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability and performance by distributing the service spatially relative to end-users.
+
+CDN คือเครือข่ายของ proxy servers และศูนย์ข้อมูลที่กระจายอยู่ตามภูมิศาสตร์ เป้าหมายคือเพื่อให้มีความพร้อมใช้งานและประสิทธิภาพสูงโดยการกระจายบริการไปตามพื้นที่ที่ใกล้กับผู้ใช้ปลายทาง
 
 [INSERT_DIAGRAM] A diagram showing a user in a specific geographic location requesting content from a website. The request is routed to the nearest CDN edge server, which serves the content to the user.
 
 ## 10. Cloud Computing & Cloud Infrastructure
-Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.
+
+Cloud computing คือความพร้อมใช้งานตามความต้องการของทรัพยากรระบบคอมพิวเตอร์ โดยเฉพาะที่เก็บข้อมูลและพลังประมวลผล โดยที่ผู้ใช้ไม่ต้องจัดการเองโดยตรง
 
 **Cloud Service Models:**
-*   **Infrastructure as a Service (IaaS)**: Provides virtualized computing resources over the internet.
-*   **Platform as a Service (PaaS)**: Provides a platform allowing customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure.
-*   **Software as a Service (SaaS)**: Provides software applications over the internet, on a subscription basis.
+
+- **Infrastructure as a Service (IaaS)**: ให้บริการทรัพยากรประมวลผลแบบเสมือนจริงผ่านอินเทอร์เน็ต
+- **Platform as a Service (PaaS)**: ให้บริการแพลตฟอร์มที่อนุญาตให้ลูกค้าพัฒนา รัน และจัดการแอปพลิเคชันโดยไม่ต้องยุ่งยากกับการสร้างและบำรุงรักษาโครงสร้างพื้นฐาน
+- **Software as a Service (SaaS)**: ให้บริการแอปพลิเคชันซอฟต์แวร์ผ่านอินเทอร์เน็ตโดยคิดค่าบริการแบบสมาชิก
 
 ## 11. Notifications and Alerts
-Notifications and alerts are used to inform users or administrators about important events in the system.
+
+Notifications และ alerts ใช้เพื่อแจ้งเตือนผู้ใช้หรือผู้ดูแลระบบเกี่ยวกับเหตุการณ์สำคัญในระบบ
 
 **Common Notification Channels:**
-*   Email
-*   SMS
-*   Push notifications
+
+- Email
+- SMS
+- Push notifications
 
 ## 12. Observability Tools
-Observability is the ability to measure the internal states of a system by examining its external outputs.
+
+Observability คือความสามารถในการวัดสถานะภายในของระบบโดยการตรวจสอบผลลัพธ์ภายนอก
 
 **The Three Pillars of Observability:**
-*   **Logs**: A record of events that have occurred in the system.
-*   **Metrics**: A numerical representation of data measured over intervals of time.
-*   **Traces**: A representation of a series of causally related distributed events that encode the end-to-end request flow through a distributed system.
+
+- **Logs**: บันทึกของเหตุการณ์ที่เกิดขึ้นในระบบ
+- **Metrics**: การแสดงข้อมูลในรูปแบบตัวเลขที่วัดได้ในช่วงเวลาหนึ่ง
+- **Traces**: การแสดงภาพของชุดเหตุการณ์ที่สัมพันธ์กันแบบกระจาย ที่เข้ารหัสการไหลของคำขอตั้งแต่ต้นจนจบผ่านระบบแบบกระจาย
 
 ## 13. Full-Text Search
-Full-text search is a technique for searching a single computer-stored document or a collection in a full-text database.
+
+Full-text search คือเทคนิคในการค้นหาเอกสารที่เก็บไว้ในคอมพิวเตอร์หรือคอลเลกชันในฐานข้อมูลแบบ full-text
 
 **Common Full-Text Search Engines:**
-*   Elasticsearch
-*   Apache Solr
+
+- Elasticsearch
+- Apache Solr
+
+## 14. API Gateway
+
+API Gateway คือเซิร์ฟเวอร์พร็อกซีที่ทำหน้าที่เป็นจุดเข้าใช้งานเดียวสำหรับ API ทั้งหมดของระบบ
+
+**Common API Gateway Features:**
+
+- Authentication and authorization
+- Rate limiting
+- Request routing
+- Response transformation
