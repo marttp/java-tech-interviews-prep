@@ -1,52 +1,55 @@
 # Database Schema Design
 
 ## 1. Introduction to Database Schema Design
-A database schema is the blueprint of a database. It specifies how data is organized, how it's structured, and the relationships between different data entities. A well-designed schema is crucial for data integrity, performance, and scalability.
+
+Database Schema เปรียบเสมือนพิมพ์เขียว (Blueprint) ของฐานข้อมูล ซึ่งระบุวิธีจัดระเบียบข้อมูล โครงสร้าง และความสัมพันธ์ระหว่างเอนทิตีข้อมูลต่าง ๆ การออกแบบ Schema ที่ดีมีความสำคัญอย่างยิ่งต่อความถูกต้องของข้อมูล (Data Integrity) ประสิทธิภาพ (Performance) และความสามารถในการขยายระบบ (Scalability)
 
 ## 2. Data Modeling
-Data modeling is the process of creating a conceptual model of the data that will be stored in the database. The most common data model is the Entity-Relationship (ER) model.
 
-*   **Entities**: Real-world objects, concepts, or events. (e.g., `Customer`, `Product`, `Order`).
-*   **Attributes**: Properties of an entity (e.g., `Customer` has `CustomerID`, `FirstName`, `LastName`).
-*   **Relationships**: Associations between entities (e.g., a `Customer` can place many `Orders`).
+Data modeling คือกระบวนการสร้างแบบจำลองแนวคิดของข้อมูลที่จะจัดเก็บในฐานข้อมูล รูปแบบข้อมูลที่นิยมใช้มากที่สุดคือ **Entity-Relationship (ER) model**
 
-[INSERT_DIAGRAM] An ER diagram showing a `Customer` entity with a one-to-many relationship to an `Order` entity. The `Customer` entity has attributes like `CustomerID`, `Name`, and `Email`. The `Order` entity has attributes like `OrderID`, `OrderDate`, and `TotalAmount`.
+- **Entities**: วัตถุในโลกแห่งความเป็นจริง แนวคิด หรือเหตุการณ์ (เช่น `Customer`, `Product`, `Order`)
+- **Attributes**: คุณสมบัติของ Entity (เช่น `Customer` มี `CustomerID`, `FirstName`, `LastName`)
+- **Relationships**: ความสัมพันธ์ระหว่าง Entities (เช่น `Customer` สามารถสร้าง `Orders` ได้หลายรายการ)
 
 ## 3. Normalization
-Normalization is the process of organizing the columns (attributes) and tables (entities) of a relational database to minimize data redundancy.
 
-*   **First Normal Form (1NF)**: Ensures that the table is atomic. Each cell should contain a single, indivisible value, and each record needs to be unique.
-*   **Second Normal Form (2NF)**: The table must be in 1NF, and all non-key attributes must be fully functional on the primary key. This means that every non-key attribute must depend on the whole primary key, not just a part of it.
-*   **Third Normal Form (3NF)**: The table must be in 2NF, and all attributes must be dependent only on the primary key, not on other non-key attributes.
+Normalization คือกระบวนการจัดระเบียบคอลัมน์ (Attributes) และตาราง (Entities) ของฐานข้อมูลเชิงสัมพันธ์เพื่อลดความซ้ำซ้อนของข้อมูล (Data Redundancy)
 
-[INSERT_DIAGRAM] A series of diagrams illustrating the process of normalizing a table from 1NF to 3NF. The example could be a table of `Orders` that initially contains redundant customer information, which is then separated into a `Customers` table.
+- **First Normal Form (1NF)**: ตารางต้องมีความเป็นอะตอม (Atomic) แต่ละช่อง (Cell) ต้องมีค่าเดียว ไม่สามารถแบ่งย่อยได้ และแต่ละแถวต้องไม่ซ้ำกัน
+- **Second Normal Form (2NF)**: ตารางต้องอยู่ในรูป 1NF และ Attribute ที่ไม่ใช่คีย์ทั้งหมดต้องขึ้นอยู่กับ Primary Key อย่างสมบูรณ์ (Fully Functional Dependency) หมายความว่า Attribute ที่ไม่ใช่คีย์ต้องขึ้นอยู่กับ Primary Key ทั้งหมด ไม่ใช่แค่บางส่วน (ในกรณีที่ Key เป็น Composite Key)
+- **Third Normal Form (3NF)**: ตารางต้องอยู่ในรูป 2NF และ Attribute ทั้งหมดต้องขึ้นอยู่กับ Primary Key เท่านั้น ไม่ขึ้นอยู่กับ Attribute อื่นที่ไม่ใช่คีย์ (No Transitive Dependency)
 
 ## 4. Data Types
-Choosing the right data types for your columns is important for data integrity and performance.
 
-*   **Numeric Types**: `INT`, `BIGINT`, `DECIMAL`, `FLOAT`, etc.
-*   **String Types**: `VARCHAR`, `CHAR`, `TEXT`, etc.
-*   **Date/Time Types**: `DATE`, `TIME`, `TIMESTAMP`, etc.
-*   **Boolean Types**: `BOOLEAN` or `TINYINT(1)`.
+การเลือกประเภทข้อมูล (Data Types) ที่เหมาะสมสำหรับคอลัมน์มีความสำคัญต่อความถูกต้องของข้อมูลและประสิทธิภาพ
+
+- **Numeric Types**: `INT`, `BIGINT`, `DECIMAL`, `FLOAT` เป็นต้น
+- **String Types**: `VARCHAR`, `CHAR`, `TEXT` เป็นต้น
+- **Date/Time Types**: `DATE`, `TIME`, `TIMESTAMP` เป็นต้น
+- **Boolean Types**: `BOOLEAN` หรือ `TINYINT(1)`
 
 ## 5. Relationships
-*   **One-to-One**: Each record in Table A corresponds to one and only one record in Table B. (e.g., a `User` and a `UserProfile`).
-*   **One-to-Many**: A record in Table A can be associated with multiple records in Table B, but a record in Table B can only be associated with one record in Table A. (e.g., a `Customer` and their `Orders`).
-*   **Many-to-Many**: A record in Table A can be associated with multiple records in Table B, and a record in Table B can be associated with multiple records in Table A. This is usually implemented with a junction table. (e.g., `Students` and `Courses`).
+
+- **One-to-One**: แต่ละแถวในตาราง A สอดคล้องกับแถวเดียวในตาราง B (เช่น `User` และ `UserProfile`)
+- **One-to-Many**: แถวในตาราง A สามารถเชื่อมโยงกับหลายแถวในตาราง B แต่แถวในตาราง B เชื่อมโยงได้กับแถวเดียวในตาราง A (เช่น `Customer` และ `Orders` ของพวกลูกค้า)
+- **Many-to-Many**: แถวในตาราง A สามารถเชื่อมโยงกับหลายแถวในตาราง B และแถวในตาราง B ก็สามารถเชื่อมโยงกับหลายแถวในตาราง A ได้เช่นกัน โดยปกติจะใช้ตารางกลาง (Junction Table) ในการเชื่อม (เช่น `Students` และ `Courses`)
 
 ## 6. Indexing
-Indexes are used to speed up the retrieval of rows from a table.
 
-*   **B-Tree Index**: The most common type of index. It's a balanced tree structure that keeps data sorted and allows for efficient searching, inserting, deleting, and sequential access.
-*   **Hash Index**: Useful for equality comparisons, but not for range queries.
-*   **Full-text Index**: Used for searching text-based data.
+Index ใช้สำหรับเพิ่มความเร็ในการดึงแถวข้อมูลจากตาราง
+
+- **B-Tree Index**: ประเภทของ Index ที่พบบ่อยที่สุด เป็นโครงสร้างต้นไม้แบบสมดุลที่เก็บข้อมูลอย่างเป็นระเบียบ ช่วยให้การค้นหา การแทรก การลบ และการเข้าถึงแบบเรียงลำดับมีประสิทธิภาพ
+- **Hash Index**: มีประโยชน์สำหรับการเปรียบเทียบความเท่ากัน แต่ไม่เหมาะกับการค้นหาเป็นช่วง (Range Queries)
+- **Full-text Index**: ใช้สำหรับการค้นหาข้อมูลแบบข้อความ (Text-based search)
 
 ## 7. Constraints
-Constraints are rules enforced on data columns to ensure data accuracy and reliability.
 
-*   **PRIMARY KEY**: Uniquely identifies each record in a table.
-*   **FOREIGN KEY**: Links two tables together.
-*   **UNIQUE**: Ensures that all values in a column are different.
-*   **NOT NULL**: Ensures that a column cannot have a NULL value.
-*   **CHECK**: Ensures that the values in a column satisfy a specific condition.
-*   **DEFAULT**: Provides a default value for a column when none is specified.
+Constraints คือกฎที่บังคับใช้กับคอลัมน์ข้อมูลเพื่อให้แน่ใจว่าข้อมูลมีความถูกต้องและเชื่อถือได้
+
+- **PRIMARY KEY**: ระบุแถวแต่ละแถวในตารางอย่างไม่ซ้ำกัน (Unique Identifier)
+- **FOREIGN KEY**: เชื่อมโยงสองตารางเข้าด้วยกัน
+- **UNIQUE**: รับประกันว่าค่าทั้งหมดในคอลัมน์นั้นแตกต่างกัน
+- **NOT NULL**: รับประกันว่าคอลัมน์นั้นไม่สามารถมีค่าว่าง (NULL) ได้
+- **CHECK**: รับประกันว่าค่าในคอลัมน์เป็นไปตามเงื่อนไขที่กำหนด
+- **DEFAULT**: กำหนดค่าเริ่มต้นสำหรับคอลัมน์เมื่อไม่ได้ระบุค่ามา
