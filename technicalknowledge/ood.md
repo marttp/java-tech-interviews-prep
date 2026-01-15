@@ -1,83 +1,261 @@
 # Object-Oriented Design (OOD)
 
-## 1. The Four Pillars of OOP
+## 1. The Four Pillars of OOP (4 เสาหลักของ OOP)
 
-### a. Encapsulation
-Encapsulation is the bundling of data (attributes) and methods that operate on the data into a single unit (a class). It also involves restricting direct access to some of an object's components, which is a means of preventing unintended interference and misuse of the methods.
+### a. Encapsulation (การห่อหุ้มข้อมูล)
 
-*   **Access Modifiers**: `public`, `protected`, `private`.
-*   **Getters and Setters**: Provide controlled access to the attributes of a class.
+Encapsulation คือการรวบรวมข้อมูล (Attributes) และเมธอด (Methods) ที่ทำงานกับข้อมูลนั้นเข้าไว้ด้วยกันในหน่วยเดียว (Class) นอกจากนี้ยังรวมถึงการจำกัดการเข้าถึงโดยตรงต่อองค์ประกอบบางอย่างของวัตถุ ซึ่งเป็นการป้องกันการรบกวนโดยไม่ตั้งใจและการใช้งานเมธอดในทางที่ผิด
 
-### b. Abstraction
-Abstraction is the concept of hiding the complex implementation details and showing only the essential features of the object. It helps in reducing programming complexity and effort.
+- **Access Modifiers**: `public`, `protected`, `private`
+- **Getters and Setters**: ให้การเข้าถึงข้อมูลของคลาสอย่างมีการควบคุม
 
-*   **Abstract Classes**: A class that cannot be instantiated and is meant to be subclassed. It can have both abstract and concrete methods.
-*   **Interfaces**: A contract that defines a set of methods that a class must implement.
+```java
+public class BankAccount {
+    private double balance; // Private attribute: ซ่อนข้อมูลบัญชี
 
-### c. Inheritance
-Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It represents an "is-a" relationship.
+    public BankAccount(double initialBalance) {
+        if (initialBalance > 0) {
+            this.balance = initialBalance;
+        }
+    }
 
-*   **`extends` keyword**: Used to inherit from a class.
-*   **`implements` keyword**: Used to implement an interface.
-*   **Method Overriding**: A subclass provides a specific implementation of a method that is already provided by its parent class.
+    // Public method: ให้คนภายนอกฝากเงินได้
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
 
-### d. Polymorphism
-Polymorphism is the ability of an object to take on many forms. It allows us to perform a single action in different ways.
+    // Public getter: ให้ดูยอดเงินได้ แต่แก้ไขโดยตรงไม่ได้
+    public double getBalance() {
+        return balance;
+    }
+}
+```
 
-*   **Method Overloading (Compile-time Polymorphism)**: A class has multiple methods having same name but different in parameters.
-*   **Method Overriding (Runtime Polymorphism)**: A subclass has the same method as declared in the parent class.
+### b. Abstraction (ความเป็นนามธรรม)
+
+Abstraction คือแนวคิดในการซ่อนรายละเอียดการทำงานที่ซับซ้อน และแสดงเฉพาะคุณสมบัติที่สำคัญของวัตถุเท่านั้น ช่วยลดความซับซ้อนและความพยายามในการเขียนโปรแกรม
+
+- **Abstract Classes**: คลาสที่ไม่สามารถสร้าง Instance ได้โดยตรง ออกแบบมาเพื่อให้คลาสอื่นสืบทอด (Subclass) สามารถมีได้ทั้งเมธอดที่เป็น abstract และ concrete
+- **Interfaces**: ข้อตกลง (Contract) ที่กำหนดชุดของเมธอดที่คลาสต้องนำไป Implement
+
+```java
+// Abstract Class
+abstract class Shape {
+    String color;
+    abstract double area(); // Abstract method: ลูกหลานต้องไปเขียนเอง
+
+    public void display() { // Concrete method
+        System.out.println("This is a shape.");
+    }
+}
+
+// Interface
+interface Drawable {
+    void draw();
+}
+
+class Circle extends Shape implements Drawable {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+```
+
+### c. Inheritance (การสืบทอดคุณสมบัติ)
+
+Inheritance เป็นกลไกที่วัตถุหนึ่งได้รับคุณสมบัติและพฤติกรรมทั้งหมดมาจากวัตถุแม่ (Parent object) โดยแทนความสัมพันธ์แบบ "is-a" (เป็น)
+
+- **`extends` keyword**: ใช้เพื่อสืบทอดจากคลาส
+- **`implements` keyword**: ใช้เพื่อ Implement อินเทอร์เฟซ
+- **Method Overriding**: คลาสลูกทำการเขียนทับการทำงานของเมธอดที่มีอยู่แล้วในคลาสแม่
+
+```java
+class Vehicle {
+    void move() {
+        System.out.println("Vehicle is moving");
+    }
+}
+
+class Car extends Vehicle { // Car "is-a" Vehicle
+    @Override
+    void move() {
+        System.out.println("Car is driving on road");
+    }
+}
+```
+
+### d. Polymorphism (การพ้องรูป)
+
+Polymorphism คือความสามารถของวัตถุในการมีได้หลายรูปแบบ อนุญาตให้เรากระทำการสิ่งเดียวกันในรูปแบบที่แตกต่างกันได้
+
+- **Method Overloading (Compile-time Polymorphism)**: คลาสมีหลายเมธอดชื่อเหมือนกัน แต่พารามิเตอร์ต่างกัน
+- **Method Overriding (Runtime Polymorphism)**: คลาสลูกมีเมธอดชื่อและพารามิเตอร์เหมือนกับที่ประกาศในคลาสแม่
+
+```java
+class Calculator {
+    // Overloading
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+
+class Animal {
+    void sound() { System.out.println("Animal makes a sound"); }
+}
+
+class Dog extends Animal {
+    // Overriding
+    @Override
+    void sound() { System.out.println("Dog barks"); }
+}
+
+// Usage
+Animal myDog = new Dog();
+myDog.sound(); // Output: Dog barks (Runtime Polymorphism)
+```
 
 ## 2. SOLID Principles
-SOLID is an acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
+
+SOLID เป็นตัวย่อของหลักการออกแบบ 5 ประการที่มีจุดมุ่งหมายเพื่อให้การออกแบบซอฟต์แวร์เข้าใจง่าย ยืดหยุ่น และบำรุงรักษาได้ง่าย
 
 ### a. Single Responsibility Principle (SRP)
-A class should have only one reason to change.
+
+คลาสควรมีเหตุผลเดียวเท่านั้นในการเปลี่ยนแปลง (ทำหน้าที่เพียงอย่างเดียว)
+
+```java
+// Bad: คลาสนี้ทำทั้งคำนวณเงินและพิมพ์ใบเสร็จ
+class Invoice {
+    void calculateTotal() { /*...*/ }
+    void printInvoice() { /*...*/ }
+}
+
+// Good: แยกหน้าที่กันชัดเจน
+class InvoiceCalculator {
+    void calculateTotal() { /* calculation logic */ }
+}
+
+class InvoicePrinter {
+    void printInvoice() { /* printing logic */ }
+}
+```
 
 ### b. Open/Closed Principle (OCP)
-Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+
+ซอฟต์แวร์ (Classes, Modules, Functions) ควรเปิดกว้างสำหรับการขยาย (Extension) แต่ปิดสำหรับการแก้ไข (Modification)
+
+```java
+// Good: เราสามารถเพิ่ม Shape ใหม่ๆ ได้โดยไม่ต้องแก้ code เดิมใน AreaCalculator
+interface Shape {
+    double calculateArea();
+}
+
+class Rectangle implements Shape {
+    public double width, height;
+    public double calculateArea() { return width * height; }
+}
+
+class Circle implements Shape {
+    public double radius;
+    public double calculateArea() { return Math.PI * radius * radius; }
+}
+```
 
 ### c. Liskov Substitution Principle (LSP)
-Subtypes must be substitutable for their base types.
+
+Subtypes ต้องสามารถใช้แทน Base types ได้โดยไม่ทำให้โปรแกรมทำงานผิดพลาด
+
+```java
+class Bird {
+    void fly() { /*...*/ }
+}
+
+class Ostrich extends Bird {
+    @Override
+    void fly() {
+        throw new UnsupportedOperationException("Ostrich cannot fly");
+        // ผิดหลัก LSP เพราะ Ostrich ใช้แทน Bird ไม่ได้สมบูรณ์ (บินไม่ได้)
+    }
+}
+// วิธีแก้: แยก Bird เป็น FlyingBird และ NonFlyingBird
+```
 
 ### d. Interface Segregation Principle (ISP)
-Clients should not be forced to depend on interfaces they do not use.
+
+Clients ไม่ควรถูกบังคับให้พึ่งพา Interfaces ที่พวกเขาไม่ได้ใช้งาน
+
+```java
+// Bad: บังคับให้ Robot ต้อง Implement eat() ทั้งที่ไม่จำเป็น
+interface Worker {
+    void work();
+    void eat();
+}
+
+// Good: แยก Interface ให้เล็กและเฉพาะเจาะจง
+interface Workable {
+    void work();
+}
+interface Eatable {
+    void eat();
+}
+
+class Robot implements Workable {
+    public void work() { /*...*/ }
+}
+```
 
 ### e. Dependency Inversion Principle (DIP)
-High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
 
-## 3. Common Design Patterns
+High-level modules ไม่ควรพึ่งพา Low-level modules ทั้งคู่ควรพึ่งพา Abstractions (เช่น Interfaces)
 
-### a. Creational Patterns
-These patterns provide ways to create objects while hiding the creation logic, rather than instantiating objects directly using the `new` operator.
+```java
+// Bad: Switch ต้องรู้จัก LightBulb โดยตรง
+class LightBulb {
+    void turnOn() { /*...*/ }
+}
+class Switch {
+    LightBulb bulb; // Dependency on concrete class
+}
 
-*   **Singleton**: Ensures a class has only one instance and provides a global point of access to it.
-*   **Factory Method**: Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.
-*   **Abstract Factory**: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
-*   **Builder**: Separates the construction of a complex object from its representation so that the same construction process can create different representations.
-*   **Prototype**: Specifies the kinds of objects to create using a prototypical instance, and creates new objects by copying this prototype.
+// Good: Switch พึ่งพา Interface และใช้ Dependency Injection (DI)
+interface Switchable {
+    void turnOn();
+}
 
-### b. Structural Patterns
-These patterns concern class and object composition. They explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
+class LightBulb implements Switchable {
+    @Override
+    public void turnOn() {
+        System.out.println("LightBulb: Bulb turned on...");
+    }
+}
 
-*   **Adapter**: Allows objects with incompatible interfaces to collaborate.
-*   **Bridge**: Lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
-*   **Composite**: Lets you compose objects into tree structures and then work with these structures as if they were individual objects.
-*   **Decorator**: Lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
-*   **Facade**: Provides a simplified interface to a library, a framework, or any other complex set of classes.
-*   **Flyweight**: Lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
-*   **Proxy**: Lets you provide a substitute or placeholder for another object.
+class Switch {
+    private Switchable device; // Dependency on abstraction
 
-### c. Behavioral Patterns
-These patterns are concerned with algorithms and the assignment of responsibilities between objects.
+    // Constructor Injection: ส่ง dependency เข้ามาผ่าน Constructor
+    public Switch(Switchable device) {
+        this.device = device;
+    }
 
-*   **Chain of Responsibility**: Lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
-*   **Command**: Turns a request into a stand-alone object that contains all information about the request.
-*   **Interpreter**: Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
-*   **Iterator**: Lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
-*   **Mediator**: Lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
-*   **Memento**: Lets you save and restore the previous state of an object without revealing the details of its implementation.
-*   **Observer**: Lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
-*   **State**: Lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
-*   **Strategy**: Lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
-*   **Template Method**: Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
-*   **Visitor**: Lets you separate algorithms from the objects on which they operate.
+    public void operate() {
+        device.turnOn();
+    }
+}
+
+// Usage Example
+// Switchable bulb = new LightBulb();
+// Switch mySwitch = new Switch(bulb); // Inject dependency
+// mySwitch.operate();
+```
