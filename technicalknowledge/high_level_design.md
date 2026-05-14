@@ -1,5 +1,7 @@
 # High-Level System Design
 
+![System Design Architecture](img/system_design/system_design.png)
+
 ## Core Principles and Strategies
 
 ### 1. Design For Failure

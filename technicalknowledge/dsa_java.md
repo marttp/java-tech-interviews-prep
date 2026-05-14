@@ -125,27 +125,10 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 *   Peek: O(1)
 
 ## 6. Queues
+
+![Queue Data Structure](img/dsa/queue.png)
+
 A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. (Queue เป็นโครงสร้างข้อมูลเชิงเส้นที่ทำงานตามหลักการ First-In, First-Out (FIFO))
-
-```
-                        enqueue(D)
-                              │
-                              ▼
-┌───┬───┬───┬───┐
-│ A │ B │ C │ D │
-└───┴───┴───┴───┘
-▲                             ▲
-FRONT                        REAR
-│
-dequeue() → returns A
-
-After dequeue:
-┌───┬───┬───┐
-│ B │ C │ D │
-└───┴───┴───┘
-▲             ▲
-FRONT        REAR
-```
 
 **Common Operations:**
 *   `enqueue(element)`: Adds an element to the rear of the queue. (เพิ่มองค์ประกอบที่ด้านหลังของคิว)
@@ -272,6 +255,9 @@ Counting sort is a sorting algorithm that sorts the elements of an array by coun
 *   Average Case: O(n + k)
 
 ## 11. Trees
+
+![Binary Tree Data Structure](img/dsa/binary_tree.png)
+
 A tree is a hierarchical data structure that consists of nodes connected by edges. (Tree เป็นโครงสร้างข้อมูลแบบลำดับชั้นที่ประกอบด้วยโหนดที่เชื่อมต่อกันด้วยขอบ)
 
 ```
