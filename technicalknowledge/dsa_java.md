@@ -31,7 +31,7 @@ Big-O notation is used to describe the performance or complexity of an algorithm
 *   **O(n!) - Factorial Time**: The runtime grows factorially with the input size. (เวลาในการทำงานเติบโตแบบแฟกทอเรียลตามขนาดของอินพุต)
     *   Example: Traveling Salesman Problem.
 
-[INSERT_IMAGE] A graph showing the growth rates of different Big-O complexities. The x-axis represents the input size, and the y-axis represents the number of operations.
+Visual reference: [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
 
 ## 2. Bit Manipulations
 Bit manipulation is the act of algorithmically manipulating bits or other pieces of data shorter than a word. (การจัดการบิตคือการจัดการบิตหรือข้อมูลอื่น ๆ ที่สั้นกว่าหนึ่งคำด้วยอัลกอริทึม)
@@ -58,7 +58,15 @@ Java does not have explicit pointers like C or C++. Instead, it uses references.
 ## 4. Linked Lists
 A linked list is a linear data structure where elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. (Linked list เป็นโครงสร้างข้อมูลเชิงเส้นที่องค์ประกอบไม่ได้ถูกจัดเก็บไว้ในตำแหน่งหน่วยความจำที่ต่อเนื่องกัน องค์ประกอบใน linked list จะถูกเชื่อมโยงโดยใช้พอยน์เตอร์)
 
-[INSERT_DIAGRAM] A diagram of a simple linked list with 3 nodes. Each node contains a data field and a `next` pointer to the next node. The last node's `next` pointer is null.
+```
+HEAD
+ │
+ ▼
+┌──────┬──────┐    ┌──────┬──────┐    ┌──────┬──────┐
+│  "A" │ next─┼───►│  "B" │ next─┼───►│  "C" │ null │
+└──────┴──────┘    └──────┴──────┘    └──────┴──────┘
+   Node 1             Node 2             Node 3
+```
 
 ### Singly Linked List
 Each node in a singly linked list contains a data field and a `next` field, which points to the next node in the sequence. (แต่ละโหนดใน singly linked list จะมีฟิลด์ข้อมูลและฟิลด์ `next` ซึ่งชี้ไปยังโหนดถัดไปในลำดับ)
@@ -87,7 +95,20 @@ This is a technique used in linked lists and arrays to solve problems like cycle
 ## 5. Stacks
 A stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle. (Stack เป็นโครงสร้างข้อมูลเชิงเส้นที่ทำงานตามหลักการ Last-In, First-Out (LIFO))
 
-[INSERT_DIAGRAM] A diagram of a stack, showing the push and pop operations.
+```
+ push(D)            pop()
+    │             returns D
+    ▼
+ ┌─────┐ ◄─ TOP    ┌─────┐ ◄─ TOP
+ │  D  │           │  C  │
+ ├─────┤           ├─────┤
+ │  C  │           │  B  │
+ ├─────┤           ├─────┤
+ │  B  │           │  A  │
+ ├─────┤           └─────┘
+ │  A  │
+ └─────┘
+```
 
 **Common Operations:**
 *   `push(element)`: Adds an element to the top of the stack. (เพิ่มองค์ประกอบที่ด้านบนของ stack)
@@ -96,7 +117,7 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 *   `isEmpty()`: Checks if the stack is empty. (ตรวจสอบว่า stack ว่างเปล่าหรือไม่)
 
 **Implementation:**
-*   Using an array or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์หรือ linked list)
+*   Using an array or a linked list. (สามารถ implement โดยใช้อาร์เรย์หรือ linked list)
 
 **Complexity (for both array and linked list implementations):**
 *   Push: O(1)
@@ -104,9 +125,10 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 *   Peek: O(1)
 
 ## 6. Queues
-A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. (Queue เป็นโครงสร้างข้อมูลเชิงเส้นที่ทำงานตามหลักการ First-In, First-Out (FIFO))
 
-[INSERT_DIAGRAM] A diagram of a queue, showing the enqueue and dequeue operations.
+![Queue Data Structure](img/dsa/queue.png)
+
+A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. (Queue เป็นโครงสร้างข้อมูลเชิงเส้นที่ทำงานตามหลักการ First-In, First-Out (FIFO))
 
 **Common Operations:**
 *   `enqueue(element)`: Adds an element to the rear of the queue. (เพิ่มองค์ประกอบที่ด้านหลังของคิว)
@@ -115,7 +137,7 @@ A queue is a linear data structure that follows the First-In, First-Out (FIFO) p
 *   `isEmpty()`: Checks if the queue is empty. (ตรวจสอบว่าคิวว่างเปล่าหรือไม่)
 
 **Implementation:**
-*   Using an array (with a circular buffer) or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์ (พร้อมบัฟเฟอร์แบบวงกลม) หรือ linked list)
+*   Using an array (with a circular buffer) or a linked list. (สามารถ implement โดยใช้อาร์เรย์ (พร้อมบัฟเฟอร์แบบวงกลม) หรือ linked list)
 
 **Complexity (for both array and linked list implementations):**
 *   Enqueue: O(1)
@@ -144,9 +166,21 @@ Binary search is an efficient algorithm for finding an item from a **sorted** li
 
 
 ## 8. Hash Tables
-A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. (Hash table เป็นโครงสร้างข้อมูลที่ υλο hóa ชนิดข้อมูลนามธรรมของอาร์เรย์ที่เชื่อมโยง ซึ่งเป็นโครงสร้างที่สามารถจับคู่คีย์กับค่าได้ Hash table ใช้ฟังก์ชันแฮชเพื่อคำนวณดัชนีลงในอาร์เรย์ของบักเก็ตหรือสล็อต ซึ่งสามารถค้นหาค่าที่ต้องการได้)
+A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. (Hash table เป็นโครงสร้างข้อมูลที่ implement ชนิดข้อมูลนามธรรมของอาร์เรย์ที่เชื่อมโยง ซึ่งเป็นโครงสร้างที่สามารถจับคู่คีย์กับค่าได้ Hash table ใช้ฟังก์ชันแฮชเพื่อคำนวณดัชนีลงในอาร์เรย์ของบักเก็ตหรือสล็อต ซึ่งสามารถค้นหาค่าที่ต้องการได้)
 
-[INSERT_DIAGRAM] A diagram of a hash table. It should show keys being passed through a hash function to generate an index. The diagram should also illustrate how collisions are handled, for example, by using a linked list at each index.
+```
+Key        Hash fn      Index   Buckets (Separate Chaining)
+"apple"  ──► h(k) = 2 ──► [2]: "apple" → null
+"banana" ──► h(k) = 4 ──► [4]: "banana" → null
+"cherry" ──► h(k) = 2 ──► [2]: "apple" → "cherry" → null  ← collision!
+
+[0]: null
+[1]: null
+[2]: "apple" → "cherry"
+[3]: null
+[4]: "banana"
+[5]: null
+```
 
 **Collision Handling:**
 *   **Separate Chaining**: Each bucket is independent, and has some sort of list of entries with the same index. (แต่ละบักเก็ตเป็นอิสระต่อกัน และมีรายการของรายการที่มีดัชนีเดียวกัน)
@@ -205,7 +239,7 @@ Quicksort is an efficient, in-place sorting algorithm. It works by selecting a '
 *   Average Case: O(n log n)
 
 ### Merge Sort
-Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ υλο hóa ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
+Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ implement ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
 
 **Complexity:**
 *   Best Case: O(n log n)
@@ -221,9 +255,18 @@ Counting sort is a sorting algorithm that sorts the elements of an array by coun
 *   Average Case: O(n + k)
 
 ## 11. Trees
+
+![Binary Tree Data Structure](img/dsa/binary_tree.png)
+
 A tree is a hierarchical data structure that consists of nodes connected by edges. (Tree เป็นโครงสร้างข้อมูลแบบลำดับชั้นที่ประกอบด้วยโหนดที่เชื่อมต่อกันด้วยขอบ)
 
-[INSERT_DIAGRAM] A diagram of a generic tree, showing the root, parent, child, and leaf nodes.
+```
+              [Root]          ← root node (no parent)
+             /      \
+          [A]        [B]      ← internal nodes (parent of children below)
+         /   \          \
+       [C]   [D]        [E]   ← leaf nodes (no children)
+```
 
 ### Tree Traversal
 *   **In-order Traversal**: Left, Root, Right. (ซ้าย, ราก, ขวา)
@@ -248,12 +291,32 @@ A heap is a specialized tree-based data structure that satisfies the heap proper
 ### Trie
 A trie, also called digital tree or prefix tree, is a type of search tree, a tree data structure used for locating specific keys from within a set. (Trie หรือที่เรียกว่า digital tree หรือ prefix tree เป็นประเภทของ search tree ซึ่งเป็นโครงสร้างข้อมูลแบบต้นไม้ที่ใช้สำหรับค้นหาคีย์เฉพาะจากภายในชุด)
 
-[INSERT_DIAGRAM] A diagram of a trie, showing how words like "cat", "can", and "car" are stored.
+```
+        (root)
+           │
+           c
+           │
+           a
+         / │ \
+        t  n   r
+       (*)  (*) (*)
+      "cat" "can" "car"
+
+(*) = end-of-word marker
+```
 
 ## 12. Graphs
 A graph is a data structure that consists of a set of vertices (or nodes) and a set of edges that connect these vertices. (กราฟเป็นโครงสร้างข้อมูลที่ประกอบด้วยชุดของจุดยอด (หรือโหนด) และชุดของขอบที่เชื่อมต่อจุดยอดเหล่านี้)
 
-[INSERT_DIAGRAM] A diagram of a simple graph with a few vertices and edges.
+```
+  (A)──────(B)
+   │  \      │
+   │   \     │
+  (C)  (D)──(E)
+
+Vertices: A, B, C, D, E
+Edges: A-B, A-C, A-D, B-E, D-E
+```
 
 ### Graph Traversal
 *   **Depth-First Search (DFS)**: Explores as far as possible along each branch before backtracking. (สำรวจไปตามแต่ละสาขาให้ไกลที่สุดเท่าที่จะทำได้ก่อนที่จะย้อนกลับ)
@@ -287,7 +350,27 @@ Backtracking is a general algorithm for finding all (or some) solutions to some 
 *   Sudoku
 *   Combinations and Permutations
 
-[INSERT_DIAGRAM] A diagram of a backtracking algorithm solving a maze. The diagram should show the algorithm exploring a path, hitting a dead end, and then backtracking to try another path.
+```
+┌───┬───┬───┐    Legend:  S = Start
+│ S →   │   │             E = End
+├───┼───┼───┤             → = path explored
+│   │ ✗ │   │             ✗ = dead end (backtrack)
+├───┼───┼───┤             * = correct path
+│   │   │ E │
+└───┴───┴───┘
+
+Step 1: S → right → dead end ✗  (backtrack to S)
+Step 2: S ↓ → ↓ → right → E ✓
+
+Correct path:
+┌───┬───┬───┐
+│ S │   │   │
+├───┼───┼───┤
+│ * │ ✗ │   │
+├───┼───┼───┤
+│ * → * → E │
+└───┴───┴───┘
+```
 
 ## 14. Greedy Algorithms
 A greedy algorithm is an algorithmic paradigm that follows the problem-solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum. (อัลกอริทึมแบบละโมบเป็นกระบวนทัศน์อัลกอริทึมที่ปฏิบัติตามฮิวริสติกการแก้ปัญหาของการเลือกตัวเลือกที่เหมาะสมที่สุดในแต่ละขั้นตอนโดยหวังว่าจะพบค่าที่เหมาะสมที่สุดทั่วโลก)
@@ -298,4 +381,3 @@ A greedy algorithm is an algorithmic paradigm that follows the problem-solving h
 *   Huffman Coding
 
 **Note:** Greedy algorithms do not always yield the optimal solution, but for many problems they do. (หมายเหตุ: อัลกอริทึมแบบละโมบไม่ได้รับประกันว่าจะให้ผลลัพธ์ที่ดีที่สุดเสมอไป แต่สำหรับหลาย ๆ ปัญหาก็สามารถทำได้)
-
