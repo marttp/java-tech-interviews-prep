@@ -29,6 +29,14 @@
 - [Back to back high level design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/high_level_design.md)
 - [System Design Interviews component must know](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/sdi_fundemental.md)
 
+### AI Fundamentals ✅
+
+- [AI Fundamentals](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/ai_fundamentals.md)
+
+### Microservice Design Patterns ✅
+
+- [Microservice Design Patterns](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/microservice_design_patterns.md)
+
 ### General topics ✅
 
 - [Object-Oriented Design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/ood.md)
