@@ -82,6 +82,45 @@ Multi-tenancy คือสถาปัตยกรรมที่แอปพล
 - **Runbooks**: มีขั้นตอนการปฏิบัติงานที่กำหนดไว้ชัดเจนสำหรับการจัดการปัญหาที่พบบ่อย
 - **Feature Flags**: ใช้ feature flags เพื่อเปิดหรือปิดฟีเจอร์โดยไม่ต้อง deploy โค้ดใหม่
 
+## How to Approach a HLD Interview Question
+
+ใช้ Framework นี้เป็นแนวทางในการตอบคำถาม System Design ทุกข้อ:
+
+### Step 1 — Clarify Requirements (5 min)
+- **Functional**: ระบบต้องทำอะไรได้บ้าง? (features)
+- **Non-functional**: Scale เท่าไหร่? Latency? Availability? Consistency?
+- **Out of scope**: ระบุสิ่งที่ไม่ต้องออกแบบในครั้งนี้
+
+### Step 2 — Estimate Scale (3 min)
+- DAU / QPS (Queries per second)
+- Storage ที่ต้องการ
+- Read vs Write ratio
+
+### Step 3 — High-Level Architecture (10 min)
+- วาด Components หลัก: Client → API → Service → DB
+- ระบุ Data flow คร่าว ๆ
+- เลือก SQL vs NoSQL พร้อมเหตุผล
+
+### Step 4 — API Design (5 min)
+- ระบุ Endpoints หลักที่จำเป็น
+- Request / Response format
+
+### Step 5 — Data Model (5 min)
+- ออกแบบ Schema หรือ Data structure หลัก
+- ระบุ Indexes ที่จำเป็น
+
+### Step 6 — Deep Dive (15 min)
+- เลือก 1–2 ส่วนที่ท้าทาย แล้วขุดลึก เช่น:
+  - How to handle high read traffic? → Cache strategy
+  - How to scale writes? → Sharding
+  - How to ensure reliability? → Replication, failover
+
+### Step 7 — Identify Bottlenecks & Trade-offs
+- ระบุ Single points of failure
+- พูดถึง Trade-offs ของการออกแบบที่เลือก
+
+---
+
 ## Common High-Level Design Interview Questions
 
 - Design a URL shortener (like TinyURL)

@@ -117,7 +117,7 @@ A stack is a linear data structure that follows the Last-In, First-Out (LIFO) pr
 *   `isEmpty()`: Checks if the stack is empty. (ตรวจสอบว่า stack ว่างเปล่าหรือไม่)
 
 **Implementation:**
-*   Using an array or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์หรือ linked list)
+*   Using an array or a linked list. (สามารถ implement โดยใช้อาร์เรย์หรือ linked list)
 
 **Complexity (for both array and linked list implementations):**
 *   Push: O(1)
@@ -154,7 +154,7 @@ FRONT        REAR
 *   `isEmpty()`: Checks if the queue is empty. (ตรวจสอบว่าคิวว่างเปล่าหรือไม่)
 
 **Implementation:**
-*   Using an array (with a circular buffer) or a linked list. (สามารถ υλο hóa โดยใช้อาร์เรย์ (พร้อมบัฟเฟอร์แบบวงกลม) หรือ linked list)
+*   Using an array (with a circular buffer) or a linked list. (สามารถ implement โดยใช้อาร์เรย์ (พร้อมบัฟเฟอร์แบบวงกลม) หรือ linked list)
 
 **Complexity (for both array and linked list implementations):**
 *   Enqueue: O(1)
@@ -183,7 +183,7 @@ Binary search is an efficient algorithm for finding an item from a **sorted** li
 
 
 ## 8. Hash Tables
-A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. (Hash table เป็นโครงสร้างข้อมูลที่ υλο hóa ชนิดข้อมูลนามธรรมของอาร์เรย์ที่เชื่อมโยง ซึ่งเป็นโครงสร้างที่สามารถจับคู่คีย์กับค่าได้ Hash table ใช้ฟังก์ชันแฮชเพื่อคำนวณดัชนีลงในอาร์เรย์ของบักเก็ตหรือสล็อต ซึ่งสามารถค้นหาค่าที่ต้องการได้)
+A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. (Hash table เป็นโครงสร้างข้อมูลที่ implement ชนิดข้อมูลนามธรรมของอาร์เรย์ที่เชื่อมโยง ซึ่งเป็นโครงสร้างที่สามารถจับคู่คีย์กับค่าได้ Hash table ใช้ฟังก์ชันแฮชเพื่อคำนวณดัชนีลงในอาร์เรย์ของบักเก็ตหรือสล็อต ซึ่งสามารถค้นหาค่าที่ต้องการได้)
 
 ```
 Key        Hash fn      Index   Buckets (Separate Chaining)
@@ -256,7 +256,7 @@ Quicksort is an efficient, in-place sorting algorithm. It works by selecting a '
 *   Average Case: O(n log n)
 
 ### Merge Sort
-Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ υλο hóa ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
+Merge sort is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. (Merge sort เป็นอัลกอริทึมการเรียงลำดับแบบเปรียบเทียบที่มีประสิทธิภาพและเสถียร การ implement ส่วนใหญ่จะให้การเรียงลำดับที่เสถียร ซึ่งหมายความว่าลำดับขององค์ประกอบที่เท่ากันจะเหมือนกันในอินพุตและเอาต์พุต)
 
 **Complexity:**
 *   Best Case: O(n log n)
