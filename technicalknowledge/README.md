@@ -19,12 +19,12 @@
 
 - [เนื้อหา Spring Boot ตามใจฉัน](https://youtube.com/playlist?list=PLm3A9eDaMzum5fChmohnoWscmRHaK9aOJ&si=CsHAXf6GF7JuCUKy)
 
-### Data Structures & Algorithms ⏳
+### Data Structures & Algorithms ✅
 
 - [Data Structures & Algorithms in Java](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/dsa_java.md)
 - [Coding question patterns](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/question_pattern.md)
 
-### System Design Interviews ⏳
+### System Design Interviews ✅
 
 - [Back to back high level design](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/high_level_design.md)
 - [System Design Interviews component must know](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/sdi_fundemental.md)
