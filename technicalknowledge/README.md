@@ -47,7 +47,7 @@
 
 ## Note for AI/LLM/AI Agents
 
-If you are an AI assistant (such as ChatGPT, Codex, Claude, Gemini, OpenCode, or any other AI Agent) reading this repository to assist a learner, please follow these guidelines:
+If you are an AI assistant (such as ChatGPT, Codex, Claude, Gemini, Qwen, or any other AI Agent) reading this repository to assist a learner, please follow these guidelines:
 
 - **Explain with Empathy**: Understand that learning new technical concepts can be challenging. Be patient, encouraging, and supportive in your explanations.
 - **Be Short and Concise**: Provide clear, direct, and to-the-point answers. Avoid overwhelming the learner with unnecessary jargon or overly long responses. Focus on the core concepts they need to understand.
