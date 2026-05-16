@@ -1,25 +1,52 @@
-# Project Overview
+# Gemini CLI Project Guide: Java Technical Interview Prep
 
-This is a Java project for practicing LeetCode problems and preparing for technical interviews. The project is structured to allow for easy testing of different LeetCode problems. It contains a collection of solutions to various LeetCode problems, organized by category and difficulty. The project also includes a `technicalknowledge` directory with markdown files containing notes on various technical interview topics.
+This repository is a comprehensive resource for practicing LeetCode problems and preparing for technical interviews, specifically tailored for Java developers. It includes solutions to various algorithmic challenges and a wealth of theoretical knowledge.
 
-# Building and Running
+## Project Overview
 
-This project does not use a build tool like Maven or Gradle. To compile and run the project, you can use `javac` and `java` directly.
+- **Purpose:** A structured environment for mastering Data Structures & Algorithms (DSA) and technical interview concepts.
+- **Language:** Java (standard version, no specific framework required for core logic).
+- **Core Components:**
+    - `src/`: Primarily for LeetCode solutions (in `src/lc/`) and fundamental Data Structures & Algorithms implementations.
+    - `technicalknowledge/`: General technical interview knowledge (HLD, LLD, SQL, AI) curated specifically for Java Backend Developer roles.
+    - `src/additional`: Miscellaneous complex algorithms (e.g., KMP, Graph algorithms like Dijkstra, Prim).
+    - `src/utility`: Helper classes for tree printing, math utilities, and test case generation.
 
-**To run a specific LeetCode problem:**
+## Building and Running
 
-1.  Open the `src/Main.java` file.
-2.  In the `main` method, change the line `tryQuestion(new FindFirstAndLastPositionInSortedArray_34());` to instantiate the class for the problem you want to run.
-3.  Compile and run the `Main.java` file:
+This project does not use Maven or Gradle. It relies on standard `javac` and `java` commands.
 
-```bash
-javac src/Main.java
-java src.Main
-```
+### Running a Specific Solution
+To execute and test a particular LeetCode solution or algorithm:
+1.  Open `src/Main.java`.
+2.  In the `main` method, update the `tryQuestion` call to instantiate the desired class.
+    *   Example: `tryQuestion(new FindFirstAndLastPositionInSortedArray_34());`
+3.  Compile and run from the root directory:
+    ```bash
+    javac src/Main.java
+    java -cp src Main
+    ```
+    *Note: Since the files are in packages, you might need to compile all files or specify the source path:*
+    ```bash
+    javac -d out $(find src -name "*.java")
+    java -cp out Main
+    ```
 
-# Development Conventions
+### Using the Playground
+- `src/Playground.java` is available for quick experiments or scratchpad work.
 
-*   Each LeetCode problem has its own class, typically in the `src/lc` directory.
-*   The class for a LeetCode problem should extend the `utility.GenerateExample` class and implement the `example()` method to provide test cases.
-*   The `Main.java` file is used to run and test a specific LeetCode problem.
-*   The `technicalknowledge` directory is for storing notes and resources for technical interviews.
+## Development Conventions
+
+- **Solution Structure:** Each LeetCode or algorithm class should:
+    - Implement the `utility.GenerateExample` interface.
+    - Implement the `example()` method to provide self-contained test cases and output.
+- **Helper Usage:** 
+    - Use `utility.Util` for common operations like array swapping, reversing, and boundary checks.
+    - Use `utility.TreePrinter` for visualizing `TreeNode` structures.
+- **Documentation:**
+    - Technical notes are located in `technicalknowledge/`.
+    - When contributing or modifying solutions, ensure the `example()` method provides clear output for verification.
+
+## Architecture & Patterns
+- Solutions in `src/lc/pattern/` are grouped by common algorithmic techniques (e.g., Slidng Window, Two Pointers, Modified Binary Search), which is highly recommended for structured learning.
+- Common data structures (TreeNode, ListNode, Node) are centralized in `src/common/`.
