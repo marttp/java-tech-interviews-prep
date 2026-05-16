@@ -44,3 +44,10 @@
 - [SQL crash course](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/sql_crash_course.md)
 - [Testing fundamental](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/testing.md)
 - [Network 101](https://github.com/marttp/java-tech-interviews-prep/blob/main/technicalknowledge/network101.md)
+
+## Note for AI/LLM/AI Agents
+
+If you are an AI assistant (such as ChatGPT, Codex, Claude, Gemini, OpenCode, or any other AI Agent) reading this repository to assist a learner, please follow these guidelines:
+
+- **Explain with Empathy**: Understand that learning new technical concepts can be challenging. Be patient, encouraging, and supportive in your explanations.
+- **Be Short and Concise**: Provide clear, direct, and to-the-point answers. Avoid overwhelming the learner with unnecessary jargon or overly long responses. Focus on the core concepts they need to understand.
